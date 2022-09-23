@@ -198,6 +198,7 @@ text-align: center;
 <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/member/MemberServletUpdate.do" name="form1">
 <div class="container">
     <div class="row">
+    <input type="hidden" name="memID" value="<%=memberVO.getMemID()%>">
 	<table class="table table-hover table-striped">
     
 	<tr>
@@ -229,10 +230,10 @@ text-align: center;
 		<td>${memberVO.memEmail}</td>
 	</tr>
 	<c:if test="${memberVO.memSupplier == 1}">
-	<tr>
-		<th id="test">會員統一編號:</th>
-		<td>${memberVO.memVatno}</td>
-	</tr>
+<!-- 	<tr> -->
+<!-- 		<th id="test">會員統一編號:</th> -->
+<%-- 		<td>${memberVO.memVatno}</td> --%>
+<!-- 	</tr> -->
 	</c:if>
 	<tr>
 		<th id="test">會員狀態:</th>		
@@ -303,7 +304,7 @@ text-align: center;
     </div>
 <br>
 <input type="hidden" name="action" value="updateADM">
-<input type="hidden" name="memID" value="<%=memberVO.getMemID()%>">
+<%-- <input type="hidden" name="memID" value="<%=memberVO.getMemID()%>"> --%>
 
 <input type="hidden" name="memUsername" value="<%=memberVO.getMemUsername()%>">
 <input type="hidden" name="memName" value="<%=memberVO.getMemName()%>">

@@ -32,9 +32,6 @@ public class MemberDAO implements MemberDAO_interface {
 			+ ",MEM_EMAIL=?,MEM_HEADSHOT=?,MEM_VATNO=?, MEM_USERNAME=? WHERE MEM_ID = ?";
 	private static final String ADM_UPDATE = "UPDATE `CFA104G5`.`MEMBER` SET MEM_LANDLORD= ?,MEM_SUPPLIER=?,MEM_SELLER=?,"
 			+ "MEM_STATUS=?,MEM_REPORTED=?,MEM_SUP_REPORTED=?, MEM_USERNAME=?, MEM_NAME=?,MEM_PHONE=?,MEM_ADDRESS=?,MEM_EMAIL=?, MEM_RED_COUNT=?, MEM_Red_SCORE=? WHERE MEM_ID = ?";
-//	private static final String ADM_UPDATE = "UPDATE `CFA104G5`.`MEMBER` SET MEM_LANDLORD= ?,MEM_SUPPLIER=?,MEM_SELLER=?,"
-//			+ "MEM_STATUS=?,MEM_REPORTED=?,MEM_SUP_REPORTED=? WHERE MEM_ID = ?";
-
 
 	private static final String VERIFY_MEM_STMT = "UPDATE `CFA104G5`.`MEMBER` SET mem_status = 1 WHERE mem_username = ?;";
 
@@ -320,6 +317,7 @@ public class MemberDAO implements MemberDAO_interface {
 		}
 
 	}
+	
 
 	@Override
 	public void updateADM(MemberVO memberVO) {
@@ -333,18 +331,18 @@ public class MemberDAO implements MemberDAO_interface {
 			pstmt.setByte(3, memberVO.getMemSeller());
 			pstmt.setByte(4, memberVO.getMemStatus());
 			pstmt.setInt(5, memberVO.getMemReported());
-			pstmt.setInt(6, memberVO.getMemSupReported());
-			pstmt.setInt(7, memberVO.getMemID());
-			
-			pstmt.setString(8, memberVO.getMemUsername());
-			pstmt.setString(9, memberVO.getMemName());
-			pstmt.setString(10, memberVO.getMemPhone());
-			pstmt.setString(11, memberVO.getMemAddress());
-			pstmt.setString(12, memberVO.getMemEmail());
-			pstmt.setInt(13, memberVO.getMemRedCount());
-			pstmt.setInt(14, memberVO.getMemRedScore());
+			pstmt.setInt(6, memberVO.getMemSupReported());		
+			pstmt.setString(7, memberVO.getMemUsername());
+			pstmt.setString(8, memberVO.getMemName());
+			pstmt.setString(9, memberVO.getMemPhone());
+			pstmt.setString(10, memberVO.getMemAddress());
+			pstmt.setString(11, memberVO.getMemEmail());
+			pstmt.setInt(12, memberVO.getMemRedCount());
+			pstmt.setInt(13, memberVO.getMemRedScore());
+			pstmt.setInt(14, memberVO.getMemID());
 
 			pstmt.executeUpdate();
+			System.out.println("admin update executed");
 
 		} catch (SQLException se) {
 			se.printStackTrace();

@@ -8,6 +8,10 @@
 	MemberVO memberVO = (MemberVO) request.getAttribute("memberVO");
 %>
 
+<%-- <% --%>
+// 	MemberVO memberVO = (MemberVO) request.getAttribute("memberVO");
+<%-- %> --%>
+
 <html>
 <head>
 
@@ -232,10 +236,10 @@ text-align: center;
 		<td>${memberVO.memEmail}</td>
 	</tr>
 	<c:if test="${memberVO.memSupplier == 1}">
-	<tr>
-		<th id="test">會員統一編號:</th>
-		<td>${memberVO.memVatno}</td>
-	</tr>
+<!-- 	<tr> -->
+<!-- 		<th id="test">會員統一編號:</th> -->
+<%-- 		<td>${memberVO.memVatno}</td> --%>
+<!-- 	</tr> -->
 	</c:if>
 	<tr>
 		<th id="test">會員狀態:</th>		

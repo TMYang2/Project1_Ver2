@@ -6,7 +6,8 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <%
-	MemberVO memberVO = (MemberVO) request.getAttribute("memberVO");
+Integer memID = (Integer) session.getAttribute("memID");
+MemberVO memberVO = (MemberVO) request.getAttribute("memberVO");
 %>
 
 <html>

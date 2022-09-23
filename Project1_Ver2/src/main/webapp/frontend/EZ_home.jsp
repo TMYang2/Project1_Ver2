@@ -168,19 +168,7 @@
 							</ul>
 						</div>
 						<br style="clear: both" class="hidden-sm-up">
-						<div class="col-xs-6 col-sm-3">
-							<h4 class="my-2">CFA104G5</h4>
-							<ul class="list-unstyled list-light">
-								<li><a href="#">李宛庭</a></li>
-								<li><a href="#">楊慈旻</a></li>
-								<li><a href="#">劉冠鳴</a></li>
-								<li><a href="#">林孟蓉</a></li>
-								<li><a href="#">謝豐睿</a></li>
-								<li><a href="#">陳富津</a></li>
-								<li><a href="#">賴傳韻</a></li>
-								<li><a href="#">巫詠琳</a></li>
-							</ul>
-						</div>
+						
 						<div class="col-xs-6 col-sm-3">
 							<h4 class="my-2">Connect</h4>
 							<ul class="list-unstyled list-light">
