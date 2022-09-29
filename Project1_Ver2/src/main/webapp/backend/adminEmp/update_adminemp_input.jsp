@@ -13,7 +13,7 @@ AdminEmpVO admEmpVO =  (AdminEmpVO) request.getAttribute("adminEmpVO"); //EmpSer
 <head>
 <meta charset="UTF-8">
 
-<title>EASY SPACE後台管理系統</title>
+<title>EASY SPACE MANAGEMENT SYSTEM</title>
 
 </head>
 

@@ -15,12 +15,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-<title>EASY SPACE後台管理系統</title>
+<title>EASY SPACE MANAGEMENT SYSTEM</title>
 
 <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
 <link href="<%=request.getContextPath()%>/css/styles.css" rel="stylesheet" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
-
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -73,7 +72,7 @@ text-align: center;
 					class="fas fa-user fa-fw"></i></a>
 				<ul class="dropdown-menu dropdown-menu-end"
 					aria-labelledby="navbarDropdown">
-					<li><a class="dropdown-item" href="<%= request.getContextPath()%>/admin_emp/AdminEmpServlet.do?action=logout">登出</a></li>
+					<li><a class="dropdown-item" href="<%= request.getContextPath()%>/admin_emp/AdminEmpServlet.do?action=logout">Log out</a></li>
 				</ul></li>
 		</ul>
 	</nav>
@@ -83,21 +82,21 @@ text-align: center;
 				id="sidenavAccordion">
 				<div class="sb-sidenav-menu">
 					<div class="nav">
-						<div class="sb-sidenav-menu-heading">後台管理專區</div>
+						<div class="sb-sidenav-menu-heading">BACKEND MANAGEMENT</div>
 						<a class="nav-link"
 							href="<%=request.getContextPath()%>/backend/adminEmp/adminEmp.jsp">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-tachometer-alt"></i>
-							</div> 員工管理
+							</div> Staff Management
 						</a>
 						<!-- ------------------------------------------------------------------------------------------------- -->
-						<div class="sb-sidenav-menu-heading">前台管理專區</div>
+						<div class="sb-sidenav-menu-heading">FRONTEND MANAGEMENT</div>
 						<a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
 							data-bs-target="#collapseLayouts" aria-expanded="false"
 							aria-controls="collapseLayouts">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-home"></i>
-							</div> 房屋租賃管理
+							</div> RENTAL MANAGEMENT
 							<div class="sb-sidenav-collapse-arrow">
 								<i class="fas fa-angle-down"></i>
 							</div>
@@ -106,9 +105,9 @@ text-align: center;
 							aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
 							<nav class="sb-sidenav-menu-nested nav">
 								<a class="nav-link"
-									href="<%=request.getContextPath()%>/backend/index.jsp">審核房源</a>
+									href="<%=request.getContextPath()%>/backend/index.jsp">Listings Verification</a>
 								<a class="nav-link"
-									href="<%=request.getContextPath()%>/backend/ren/select.jsp">審核房東</a>
+									href="<%=request.getContextPath()%>/backend/ren/select.jsp">Landlord Verification</a>
 							</nav>
 						</div>
 						<!-- ------------------------------------------------------------------------------------------------- -->
@@ -117,7 +116,7 @@ text-align: center;
 							aria-controls="collapsePages">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-couch"></i>
-							</div> 二手家電管理
+							</div> USED HOME APPLIANCES MANAGEMENT
 							<div class="sb-sidenav-collapse-arrow">
 								<i class="fas fa-angle-down"></i>
 							</div>
@@ -126,9 +125,9 @@ text-align: center;
 							aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
 							<nav class="sb-sidenav-menu-nested nav">
 								<a class="nav-link"
-									href="<%=request.getContextPath()%>/backend/index.jsp">退款審核</a>
+									href="<%=request.getContextPath()%>/backend/index.jsp">Refund Verification</a>
 								<a class="nav-link"
-									href="<%=request.getContextPath()%>/backend/sec_items/secitems.jsp">商品下架</a>
+									href="<%=request.getContextPath()%>/backend/sec_items/secitems.jsp">Product Management</a>
 							</nav>
 						</div>
 						<!-- ------------------------------------------------------------------------------------------------- -->
@@ -137,7 +136,7 @@ text-align: center;
 							aria-controls="collapsePages">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-wrench"></i>
-							</div> 居家服務管理
+							</div> SERVICE MANAGEMENT
 							<div class="sb-sidenav-collapse-arrow">
 								<i class="fas fa-angle-down"></i>
 							</div>
@@ -146,11 +145,11 @@ text-align: center;
 							aria-labelledby="headingThree" data-bs-parent="#sidenavAccordion">
 							<nav class="sb-sidenav-menu-nested nav">
 								<a class="nav-link"
-									href="<%=request.getContextPath()%>/backend/ser/ser_repo/select_page.jsp">服務檢舉管理</a>
+									href="<%=request.getContextPath()%>/backend/ser/ser_repo/select_page.jsp">Report Management</a>
 								<a class="nav-link"
-									href="<%=request.getContextPath()%>/backend/ser/ser_cla/select_page.jsp">服務類別管理</a>
+									href="<%=request.getContextPath()%>/backend/ser/ser_cla/select_page.jsp">Service Categories</a>
 								<a class="nav-link"
-									href="<%=request.getContextPath()%>/backend/ser/serAd/select_page.jsp">刊登服務管理</a>
+									href="<%=request.getContextPath()%>/backend/ser/serAd/select_page.jsp">Service Posts</a>
 							</nav>
 						</div>
 						<!-- ------------------------------------------------------------------------------------------------- -->
@@ -159,7 +158,7 @@ text-align: center;
 							aria-controls="collapsePages">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-user-circle"></i>
-							</div> 會員管理
+							</div> MEMBER MANAGEMENT
 							<div class="sb-sidenav-collapse-arrow">
 								<i class="fas fa-angle-down"></i>
 							</div>
@@ -168,7 +167,7 @@ text-align: center;
 							aria-labelledby="headingThree" data-bs-parent="#sidenavAccordion">
 							<nav class="sb-sidenav-menu-nested nav">
 								<a class="nav-link"
-									href="<%=request.getContextPath()%>/backend/member/listAllMember.jsp">會員資料管理</a>
+									href="<%=request.getContextPath()%>/backend/member/listAllMember.jsp">Member Information Management</a>
 							</nav>
 						</div>
 						<!-- ------------------------------------------------------------------------------------------------- -->
@@ -181,13 +180,13 @@ text-align: center;
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">會員資料管理</h1>
+                        <h1 class="mt-4">Member Information</h1>
 
 <!--       ***********************code從這行開始************************************** -->
 
 <%-- 錯誤表列 --%>
 <c:if test="${not empty errorMsgs}">
-	<font style="color:red">請修正以下錯誤:</font>
+	<font style="color:red">Fix:</font>
 	<ul>
 		<c:forEach var="message" items="${errorMsgs}">
 			<li style="color:red">${message}</li>
@@ -202,99 +201,122 @@ text-align: center;
 	<table class="table table-hover table-striped">
     
 	<tr>
-		<th id="test">會員頭像</th>
+		<th id="test">Profile Picture</th>
 		<td><img src="<%=request.getContextPath()%>/DBGifReader?mem_ID=${memberVO.memID}" height=200px width=200px></td>
 	</tr>
 	<tr>			
-		<th id="test">會員編號:</th>
+		<th id="test">Member ID:</th>
 		<td>${memberVO.memID}</td>
 	</tr>
 	<tr>
-		<th id="test">帳號:</th>
+		<th id="test">Account Name:</th>
 		<td>${memberVO.memUsername}</td>
 	</tr>
 	<tr>
-		<th id="test">姓名:</th>
+		<th id="test">Name:</th>
 		<td>${memberVO.memName}</td>
 	</tr>
 	<tr>
-		<th id="test">電話:</th>
+		<th id="test">Phone Number:</th>
 		<td>${memberVO.memPhone}</td>
 	</tr>
 	<tr>
-		<th id="test">地址:</th>
+		<th id="test">Address:</th>
 		<td>${memberVO.memAddress}</td>
 	</tr>
 	<tr>
 		<th id="test">email:</th>
 		<td>${memberVO.memEmail}</td>
 	</tr>
-	<c:if test="${memberVO.memSupplier == 1}">
+<%-- 	<c:if test="${memberVO.memSupplier == 1}"> --%>
 <!-- 	<tr> -->
-<!-- 		<th id="test">會員統一編號:</th> -->
+<!-- 		<th id="test">ID Card Number:</th> -->
 <%-- 		<td>${memberVO.memVatno}</td> --%>
 <!-- 	</tr> -->
-	</c:if>
+<%-- 	</c:if> --%>
+	
+<!-- 	<tr> -->
+<!-- 		<th id="test">Member Status:</th>		 -->
+<!-- 		<td> -->
+<%-- 		<c:set var="memStatus" scope="session" value="${memberVO.memStatus}"/> --%>
+			
+<%-- 			<c:choose> --%>
+<%--     			<c:when test="${memberVO.memStatus = 0}">Unverified</c:when> --%>
+<%--     			<c:when test="${memberVO.memStatus = 1}">Verified</c:when> --%>
+<%--     			<c:when test="${memberVO.memStatus = 2}">Suspended</c:when> --%>
+<%-- 			</c:choose> --%>
+			
+<!-- <select size="1" name="memStatus"> -->
+<%-- 				<option value="${memberVO.memStatus = 0}">Unverified</option> --%>
+<%-- 				<option value="${memberVO.memStatus = 1}">Verified</option> --%>
+<%-- 				<option value="${memberVO.memStatus = 2}">Suspended</option> --%>
+				
+<!-- 				<option value="1" id="memStatus1">Verified</option> -->
+<!-- 				<option value="0" id="memStatus0">Unverified</option> -->
+<!-- 				<option value="2" id="memStatus2">Suspended</option> -->
+<!-- 			</select></td> -->
+<!-- 	</tr> -->
+	
 	<tr>
-		<th id="test">會員狀態:</th>		
+		<th id="test">Member Status:</th>		
 		<td>
 			<select size="1" name="memStatus">
 <%-- 				<option value="${memberVO.memStatus}">${memberVO.memStatus} --%>
 				
-				<option value="1" id="memStatus1">已驗證</option>
-				<option value="0" id="memStatus0">未驗證</option>
-				<option value="2" id="memStatus2">停權</option>
+				<option value="1" id="memStatus1">Verified</option>
+				<option value="0" id="memStatus0">Unverified</option>
+				<option value="2" id="memStatus2">Suspended</option>
 			</select></td>
 	</tr>
 	<tr>
-		<th id="test">被評價總數:</th>
+		<th id="test">Reviewed Counts:</th>
 		<td>${memberVO.memRedCount}</td>
 	</tr>
 	<tr>
-		<th id="test">被評價總分:</th>
+		<th id="test">Reviewed Total Score:</th>
 		<td>${memberVO.memRedScore}</td>
 	</tr>
 	<tr>
-		<th id="test">被評價均分:</th>
+		<th id="test">Average Score:</th>
 		<td>
 			<c:choose>
-				<c:when test="${(memberVO.memRedCount) == 0}">尚無評分</c:when>
+				<c:when test="${(memberVO.memRedCount) == 0}">No reviews</c:when>
 			<c:otherwise>
 				<fmt:formatNumber type="number" maxFractionDigits="1" 
 					value="${(memberVO.memRedScore/memberVO.memRedCount)}"/>
 			</c:otherwise></c:choose></td>
 	</tr>
 	<tr>
-		<th id="test">被檢舉數:</th>
+		<th id="test">Reported Counts:</th>
 		<td><input type="TEXT" name="memReported" size="10" value=${memberVO.memReported} /></td>
 	</tr>
 	<tr>
-		<th id="test">房東身分:</th>
+		<th id="test">Landlord Status:</th>
 		<td>
 			<select size="1" name="memLandlord">
-				<option value="0" id="memLandlord0">未驗證</option>
-				<option value="1" id="memLandlord1">已驗證</option>
-				<option value="2" id="memLandlord2">停權</option>
+				<option value="0" id="memLandlord0">Unverified</option>
+				<option value="1" id="memLandlord1">Verified</option>
+				<option value="2" id="memLandlord2">Suspended</option>
 			</select></td>
 	</tr>
 	<tr>
-		<th id="test">廠商身分:</th>
+		<th id="test">Service Provider Status:</th>
 		<td>
 			<select size="1" name="memSupplier">
-				<option value="1" id="memSupplier1">啟用</option>
-				<option value="0" id="memSupplier0">停權</option>
+				<option value="1" id="memSupplier1">Activated</option>
+				<option value="0" id="memSupplier0">Suspended</option>
 			</select></td>
 	</tr>
 	<tr>
-		<th id="test">賣家身分:</th>
+		<th id="test">Seller Status:</th>
 		<td>
 			<select size="1" name="memSeller">
-				<option value="1" id="memSeller1">啟用</option>
-				<option value="0" id="memSeller0">停權</option>
+				<option value="1" id="memSeller1">Activated</option>
+				<option value="0" id="memSeller0">Suspended</option>
 			</select></td>
 	</tr>
 	<tr>
-		<th id="test">廠商被檢舉數:</th>
+		<th id="test">Service Provider Reported Counts:</th>
 		<td><input type="TEXT" name="memSupReported" size="10" value=${memberVO.memSupReported} /></td>
 	</tr>
 
@@ -315,9 +337,9 @@ text-align: center;
 <input type="hidden" name="memRedScore" value="<%=memberVO.getMemRedScore()%>">
 <input type="hidden" name="memAvgScore" value="<%=memberVO.getMemID()%>">
 
-<input type="submit" value="送出修改"></FORM>
+<input type="submit" value="Confirm edits"></FORM>
                         
-<a href='<%=request.getContextPath()%>/backend/member/listAllMember.jsp'>回會員資料管理首頁</a>              
+<a href='<%=request.getContextPath()%>/backend/member/listAllMember.jsp'>Return to Member Information Management front page</a>              
                         
                         
                      </div>

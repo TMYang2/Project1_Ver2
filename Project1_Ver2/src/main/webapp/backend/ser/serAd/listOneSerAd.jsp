@@ -14,7 +14,7 @@ SerAdVO serAdVO = (SerAdVO) request.getAttribute("serAdVO"); //EmpServlet.java(C
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<title>EASY SPACE後台管理系統</title>
+<title>EASY SPACE MANAGEMENT SYSTEM</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css"
 	rel="stylesheet" />
@@ -73,10 +73,10 @@ SerAdVO serAdVO = (SerAdVO) request.getAttribute("serAdVO"); //EmpServlet.java(C
 					class="fas fa-user fa-fw"></i></a>
 				<ul class="dropdown-menu dropdown-menu-end"
 					aria-labelledby="navbarDropdown">
-					<li><a class="dropdown-item" href="#!">設定</a></li>
+					<li><a class="dropdown-item" href="#!">Setting</a></li>
 					<li><a class="dropdown-item" href="#!">Activity Log</a></li>
 					<li><hr class="dropdown-divider" /></li>
-					<li><a class="dropdown-item" href="#!">登出</a></li>
+					<li><a class="dropdown-item" href="#!">Log out</a></li>
 				</ul></li>
 		</ul>
 	</nav>
@@ -86,21 +86,21 @@ SerAdVO serAdVO = (SerAdVO) request.getAttribute("serAdVO"); //EmpServlet.java(C
 				id="sidenavAccordion">
 				<div class="sb-sidenav-menu">
 					<div class="nav">
-						<div class="sb-sidenav-menu-heading">後台管理專區</div>
+						<div class="sb-sidenav-menu-heading">BACKEND MANAGEMENT</div>
 						<a class="nav-link"
 							href="<%=request.getContextPath()%>/backend/adminEmp/adminEmp.jsp">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-tachometer-alt"></i>
-							</div> 員工管理
+							</div> Staff Management
 						</a>
 						<!-- ------------------------------------------------------------------------------------------------- -->
-						<div class="sb-sidenav-menu-heading">前台管理專區</div>
+						<div class="sb-sidenav-menu-heading">FRONTEND MANAGEMENT</div>
 						<a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
 							data-bs-target="#collapseLayouts" aria-expanded="false"
 							aria-controls="collapseLayouts">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-home"></i>
-							</div> 房屋租賃管理
+							</div> RENTAL MANAGEMENT
 							<div class="sb-sidenav-collapse-arrow">
 								<i class="fas fa-angle-down"></i>
 							</div>
@@ -109,9 +109,9 @@ SerAdVO serAdVO = (SerAdVO) request.getAttribute("serAdVO"); //EmpServlet.java(C
 							aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
 							<nav class="sb-sidenav-menu-nested nav">
 								<a class="nav-link"
-									href="<%=request.getContextPath()%>/backend/index.jsp">審核房源</a>
+									href="<%=request.getContextPath()%>/backend/index.jsp">Listings Verification</a>
 								<a class="nav-link"
-									href="<%=request.getContextPath()%>/backend/ren/select.jsp">審核房東</a>
+									href="<%=request.getContextPath()%>/backend/ren/select.jsp">Landlord Verification</a>
 							</nav>
 						</div>
 						<!-- ------------------------------------------------------------------------------------------------- -->
@@ -120,7 +120,7 @@ SerAdVO serAdVO = (SerAdVO) request.getAttribute("serAdVO"); //EmpServlet.java(C
 							aria-controls="collapsePages">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-couch"></i>
-							</div> 二手家電管理
+							</div> USED HOME APPLIANCES MANAGEMENT
 							<div class="sb-sidenav-collapse-arrow">
 								<i class="fas fa-angle-down"></i>
 							</div>
@@ -129,9 +129,9 @@ SerAdVO serAdVO = (SerAdVO) request.getAttribute("serAdVO"); //EmpServlet.java(C
 							aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
 							<nav class="sb-sidenav-menu-nested nav">
 								<a class="nav-link"
-									href="<%=request.getContextPath()%>/backend/index.jsp">退款審核</a>
+									href="<%=request.getContextPath()%>/backend/index.jsp">Refund Verification</a>
 								<a class="nav-link"
-									href="<%=request.getContextPath()%>/backend/sec_items/secitems.jsp">商品下架</a>
+									href="<%=request.getContextPath()%>/backend/sec_items/secitems.jsp">Product Management</a>
 							</nav>
 						</div>
 						<!-- ------------------------------------------------------------------------------------------------- -->
@@ -140,7 +140,7 @@ SerAdVO serAdVO = (SerAdVO) request.getAttribute("serAdVO"); //EmpServlet.java(C
 							aria-controls="collapsePages">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-wrench"></i>
-							</div> 居家服務管理
+							</div> SERVICE MANAGEMENT
 							<div class="sb-sidenav-collapse-arrow">
 								<i class="fas fa-angle-down"></i>
 							</div>
@@ -149,11 +149,11 @@ SerAdVO serAdVO = (SerAdVO) request.getAttribute("serAdVO"); //EmpServlet.java(C
 							aria-labelledby="headingThree" data-bs-parent="#sidenavAccordion">
 							<nav class="sb-sidenav-menu-nested nav">
 								<a class="nav-link"
-									href="<%=request.getContextPath()%>/backend/ser/ser_repo/select_page.jsp">服務檢舉管理</a>
+									href="<%=request.getContextPath()%>/backend/ser/ser_repo/select_page.jsp">Report Management</a>
 								<a class="nav-link"
-									href="<%=request.getContextPath()%>/backend/ser/ser_cla/select_page.jsp">服務類別管理</a>
+									href="<%=request.getContextPath()%>/backend/ser/ser_cla/select_page.jsp">Service Categories</a>
 								<a class="nav-link"
-									href="<%=request.getContextPath()%>/backend/ser/serAd/select_page.jsp">刊登服務管理</a>
+									href="<%=request.getContextPath()%>/backend/ser/serAd/select_page.jsp">Service Posts</a>
 							</nav>
 						</div>
 						<!-- ------------------------------------------------------------------------------------------------- -->
@@ -162,7 +162,7 @@ SerAdVO serAdVO = (SerAdVO) request.getAttribute("serAdVO"); //EmpServlet.java(C
 							aria-controls="collapsePages">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-user-circle"></i>
-							</div> 會員管理
+							</div> MEMBER MANAGEMENT
 							<div class="sb-sidenav-collapse-arrow">
 								<i class="fas fa-angle-down"></i>
 							</div>
@@ -171,7 +171,7 @@ SerAdVO serAdVO = (SerAdVO) request.getAttribute("serAdVO"); //EmpServlet.java(C
 							aria-labelledby="headingThree" data-bs-parent="#sidenavAccordion">
 							<nav class="sb-sidenav-menu-nested nav">
 								<a class="nav-link"
-									href="<%=request.getContextPath()%>/backend/member/listAllMember.jsp">會員資料管理</a>
+									href="<%=request.getContextPath()%>/backend/member/listAllMember.jsp">Member Information Management</a>
 							</nav>
 						</div>
 						<!-- ------------------------------------------------------------------------------------------------- -->

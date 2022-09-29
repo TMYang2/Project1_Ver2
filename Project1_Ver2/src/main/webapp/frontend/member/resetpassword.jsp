@@ -22,7 +22,7 @@
     <div align="center">
         <h2>重設密碼</h2>
         <p>
-        請重新輸入註冊時信箱，我們將寄發重新設定密碼驗證信給您:
+        請重新輸入註冊時信箱，我們將寄發重新Setting密碼驗證信給您:
         </p>
          
         <form id="resetForm" ACTION="<%=request.getContextPath()%>/member/ForgetPasswordServlet.do" method="post">

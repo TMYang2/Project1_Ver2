@@ -383,7 +383,7 @@ public class SecOrdDAO implements SecOrdDAO_interface {
 		try {
 			con = ds.getConnection();
 
-			// 1●設定於 pstmt.executeUpdate()之前
+			// 1●Setting於 pstmt.executeUpdate()之前
 			con.setAutoCommit(false);
 
 			// 先新增部門
@@ -424,7 +424,7 @@ public class SecOrdDAO implements SecOrdDAO_interface {
 				dao.insert2(aSecOrdDetails, con);
 			}
 
-			// 2●設定於 pstmt.executeUpdate()之後
+			// 2●Setting於 pstmt.executeUpdate()之後
 			con.commit();
 			con.setAutoCommit(true);
 //			System.out.println("list.size()-B=" + list.size());
@@ -434,7 +434,7 @@ public class SecOrdDAO implements SecOrdDAO_interface {
 		} catch (SQLException se) {
 			if (con != null) {
 				try {
-					// 3●設定於當有exception發生時之catch區塊內
+					// 3●Setting於當有exception發生時之catch區塊內
 					System.err.print("Transaction is being ");
 					System.err.println("rolled back-由-secOrd");
 					con.rollback();

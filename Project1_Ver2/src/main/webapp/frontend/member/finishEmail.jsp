@@ -21,7 +21,7 @@ MemberVO memberVO = (MemberVO) request.getAttribute("memberVO");
 
 	<div align="center">
 		<h2>驗證信</h2>
-		<p>系統已成功寄出驗證信，煩請於30分鐘內開啟驗證信，並重新設定密碼</p>
+		<p>系統已成功寄出驗證信，煩請於30分鐘內開啟驗證信，並重新Setting密碼</p>
 
 	
 			

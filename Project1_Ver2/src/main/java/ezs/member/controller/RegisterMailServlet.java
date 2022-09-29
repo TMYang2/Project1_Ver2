@@ -91,11 +91,11 @@ public class RegisterMailServlet extends HttpServlet {
 			return authCode.toString();
 		}
 
-	// 設定傳送郵件:至收信人的Email信箱,Email主旨,Email內容
+	// Setting傳送郵件:至收信人的Email信箱,Email主旨,Email內容
 	public void sendMail(String to, String subject, String messageText) {
 
 			try {
-				// 設定使用SSL連線至 Gmail smtp Server
+				// Setting使用SSL連線至 Gmail smtp Server
 				Properties props = new Properties();
 				props.put("mail.smtp.host", "smtp.gmail.com");
 				props.put("mail.smtp.socketFactory.port", "465");
@@ -103,7 +103,7 @@ public class RegisterMailServlet extends HttpServlet {
 				props.put("mail.smtp.auth", "true");
 				props.put("mail.smtp.port", "465");
 
-				// ●設定 gmail 的帳號 & 密碼 (將藉由你的Gmail來傳送Email)
+				// ●Setting gmail 的帳號 & 密碼 (將藉由你的Gmail來傳送Email)
 				// ●須將myGmail的【安全性較低的應用程式存取權】打開
 				final String myGmail = "ixlogic.wu@gmail.com";
 				final String myGmail_password = "BBB45678BBB";
@@ -117,9 +117,9 @@ public class RegisterMailServlet extends HttpServlet {
 				message.setFrom(new InternetAddress(myGmail));
 				message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
 
-				// 設定信中的主旨
+				// Setting信中的主旨
 				message.setSubject(subject);
-				// 設定信中的內容
+				// Setting信中的內容
 				message.setText(messageText);
 
 				Transport.send(message);

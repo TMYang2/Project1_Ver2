@@ -198,7 +198,7 @@ public class SecOrdServlet extends HttpServlet {
 
 				/*************************** 3.新增完成,準備轉交(Send the Success view) ************/
 
-				String url = "/frontend/EZ_home.jsp"; // 暫時設定跳轉到首頁
+				String url = "/frontend/EZ_home.jsp"; // 暫時Setting跳轉到首頁
 				RequestDispatcher successView = req.getRequestDispatcher(url);
 				successView.forward(req, res);
 

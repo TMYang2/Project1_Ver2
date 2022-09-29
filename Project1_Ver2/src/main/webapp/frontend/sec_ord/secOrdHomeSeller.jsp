@@ -127,7 +127,7 @@ th, td {
 								href="<%=request.getContextPath()%>/frontend/sec_items/shoppingCart.jsp">購物車</a>
 							<div class="dropdown-divider"></div>
 							<a class="dropdown-item"
-								href="<%=request.getContextPath()%>/member/MemberServlet.do?action=logout">登出</a>
+								href="<%=request.getContextPath()%>/member/MemberServlet.do?action=logout">Log out</a>
 						</div></li>
 					<%
 					} else {
@@ -347,7 +347,7 @@ th, td {
 				<td><c:if test="${secOrdVO.shOrdStatus == 8}">取消訂單</c:if> <c:if
 						test="${secOrdVO.shOrdStatus == 2}">待出貨</c:if> <c:if
 						test="${secOrdVO.shOrdStatus == 3}">已出貨</c:if> <c:if
-						test="${secOrdVO.shOrdStatus == 6}">退款審核中</c:if> <c:if
+						test="${secOrdVO.shOrdStatus == 6}">Refund Verification中</c:if> <c:if
 						test="${secOrdVO.shOrdStatus == 7}">訂單完成</c:if></td>
 
 

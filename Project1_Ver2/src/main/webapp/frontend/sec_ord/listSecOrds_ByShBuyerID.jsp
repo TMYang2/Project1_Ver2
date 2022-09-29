@@ -140,7 +140,7 @@ th, td {
 								href="<%=request.getContextPath()%>/frontend/sec_items/shoppingCart.jsp">購物車</a>
 							<div class="dropdown-divider"></div>
 							<a class="dropdown-item"
-								href="<%=request.getContextPath()%>/member/MemberServlet.do?action=logout">登出</a>
+								href="<%=request.getContextPath()%>/member/MemberServlet.do?action=logout">Log out</a>
 						</div></li>
 					<%
 					} else {
@@ -177,7 +177,7 @@ th, td {
 						<a class="nav-link" href="<%= request.getContextPath() %>/frontend/member/listOneMember.jsp">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-tachometer-alt"></i>
-							</div> 會員資料管理
+							</div> Member Information Management
 						</a>
 						<!-- ------------------------------------------------------------------------------------------------- -->
 						<div class="sb-sidenav-menu-heading">買家管理專區</div>
@@ -208,7 +208,7 @@ th, td {
 							aria-controls="collapsePages">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-couch"></i>
-							</div> 二手家電管理
+							</div> USED HOME APPLIANCES MANAGEMENT
 							<div class="sb-sidenav-collapse-arrow">
 								<i class="fas fa-angle-down"></i>
 							</div>
@@ -308,7 +308,7 @@ th, td {
 												<c:if test="${secOrdVO.shOrdStatus == 2}">訂單已成立</c:if> <c:if
 													test="${secOrdVO.shOrdStatus == 8}">訂單取消</c:if> <c:if
 													test="${secOrdVO.shOrdStatus == 3}">訂單已出貨</c:if> <c:if
-													test="${secOrdVO.shOrdStatus == 6}">退款審核中</c:if> <c:if
+													test="${secOrdVO.shOrdStatus == 6}">Refund Verification中</c:if> <c:if
 													test="${secOrdVO.shOrdStatus == 7}">訂單完成</c:if></td>
 											<td>${secOrdVO.shPrice}</td>
 											<td>${secOrdVO.shDate}</td>

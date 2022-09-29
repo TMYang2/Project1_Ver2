@@ -119,7 +119,7 @@ SerDmdVO serDmdVO = (SerDmdVO) request.getAttribute("serDmdVO");
 								href="<%=request.getContextPath()%>/frontend/sec_items/shoppingCart.jsp">購物車</a>
 							<div class="dropdown-divider"></div>
 							<a class="dropdown-item"
-								href="<%=request.getContextPath()%>/member/MemberServlet.do?action=logout">登出</a>
+								href="<%=request.getContextPath()%>/member/MemberServlet.do?action=logout">Log out</a>
 						</div></li>
 					<%
 					} else {
@@ -157,7 +157,7 @@ SerDmdVO serDmdVO = (SerDmdVO) request.getAttribute("serDmdVO");
 						<a class="nav-link" href="<%= request.getContextPath()%>/frontend/member/listOneMember.jsp">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-tachometer-alt"></i>
-							</div> 會員資料管理
+							</div> Member Information Management
 						</a>
 						<!-- ------------------------------------------------------------------------------------------------- -->
 						<div class="sb-sidenav-menu-heading">買家管理專區</div>
@@ -185,7 +185,7 @@ SerDmdVO serDmdVO = (SerDmdVO) request.getAttribute("serDmdVO");
 							aria-controls="collapsePages">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-couch"></i>
-							</div> 二手家電管理
+							</div> USED HOME APPLIANCES MANAGEMENT
 							<div class="sb-sidenav-collapse-arrow">
 								<i class="fas fa-angle-down"></i>
 							</div>

@@ -188,7 +188,7 @@ public class SecOrdDetailsDAO implements SecOrdDetailsDAO_interface {
 		} catch (SQLException se) {
 			if (con != null) {
 				try {
-					// 3●設定於當有exception發生時之catch區塊內
+					// 3●Setting於當有exception發生時之catch區塊內
 					System.err.print("Transaction is being ");
 					System.err.println("rolled back-由-secOrdDetails");
 					con.rollback();

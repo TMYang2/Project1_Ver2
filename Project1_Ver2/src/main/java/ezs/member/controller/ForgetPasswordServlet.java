@@ -74,7 +74,7 @@ public class ForgetPasswordServlet extends HttpServlet {
 				if (memberVO == null) {
 					errorMsgs.add("查無資料，請重新輸入註冊信箱");
 				} else {
-					String subject = "密碼重新設定通知";
+					String subject = "密碼重新Setting通知";
 					String messageText = "親愛的 " + memberVO.getMemName() +"您好!"+ " 請立即開啟連結，完成密碼變更 " +  "\n" 
 							+ "貼心提醒：\r\n"
 							+ "1.此密碼有效時間為30分鐘，如逾時失效，請至EASY SPACE重新申請「忘記密碼」，系統將重新派送。\r\n"

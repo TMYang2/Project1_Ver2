@@ -127,7 +127,7 @@ SerVdrVO servdrVO = (SerVdrVO) request.getAttribute("servdrVO");
 								href="<%=request.getContextPath()%>/frontend/sec_items/shoppingCart.jsp">購物車</a>
 							<div class="dropdown-divider"></div>
 							<a class="dropdown-item"
-								href="<%=request.getContextPath()%>/member/MemberServlet.do?action=logout">登出</a>
+								href="<%=request.getContextPath()%>/member/MemberServlet.do?action=logout">Log out</a>
 						</div></li>
 					<%
 					} else {

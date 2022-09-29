@@ -8,7 +8,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<title>EASY SPACE後台管理系統</title>
+<title>EASY SPACE MANAGEMENT SYSTEM</title>
 <link href="<%=request.getContextPath()%>/css/backendLogin.css"
 	rel="stylesheet" />
 <script
@@ -31,7 +31,7 @@
 						<div class="col-lg-5">
 							<div class="card shadow-lg border-0 rounded-lg mt-5">
 								<div class="card-header">
-									<h3 class="text-center font-weight-light my-4">後台登入</h3>
+									<h3 class="text-center font-weight-light my-4">BACKEND LOGIN</h3>
 								</div>
 								<div class="card-body">
 
@@ -43,14 +43,14 @@
 
 											<input class="form-control" id="inputEmail" type="text"
 												placeholder="name@example.com" name="admUsername" /> <label
-												for="inputEmail">管理員帳號</label>
+												for="inputEmail">USER NAME</label>
 
 										</div>
 										<div class="form-floating mb-3">
 
 											<input class="form-control" id="inputPassword"
 												type="password" placeholder="Password" name="admPassword" />
-											<label for="inputPassword">密碼</label>
+											<label for="inputPassword">PASSWORD</label>
 
 										</div>
 										<div class="form-check mb-3" style='padding-left:0'>
@@ -66,7 +66,7 @@
 										<div
 											class="d-flex align-items-center justify-content-between mt-4 mb-0">
 											<%-- <a class="btn btn-primary" href="<%=request.getContextPath() %>/backend/ind.jsp">Login</a> --%>
-											<input type="submit" value="登入" align="center"class="btn btn-primary" >
+											<input type="submit" value="LOG IN" align="center"class="btn btn-primary" >
 										</div>
 
 									</form>

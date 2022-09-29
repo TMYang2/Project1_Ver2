@@ -253,7 +253,7 @@ System.out.println(successView);
 		
 		
 
-//		登出設定
+//		Log outSetting
 		if ("logout".equals(action)) {
 			HttpSession session = req.getSession(false);
 			if (session != null) {

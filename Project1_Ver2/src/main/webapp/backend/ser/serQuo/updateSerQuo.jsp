@@ -124,7 +124,7 @@ SerQuoVO serQuoVO = (SerQuoVO) request.getAttribute("serQuoVO");
 <input type="hidden" name="quoID" value="<%=serQuoVO.getQuoID()%>">
 <input type="submit" value="送出修改"></FORM>
 </body>
-<!-- =========================================以下為 datetimepicker 之相關設定========================================== -->
+<!-- =========================================以下為 datetimepicker 之相關Setting========================================== -->
 
 
 <% 

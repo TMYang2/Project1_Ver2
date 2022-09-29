@@ -15,7 +15,7 @@ public class AdminFuncTest {
 //		2. 修改
 //		AdminFuncVO admFuncVO2 = new AdminFuncVO();
 //		admFuncVO2.setFunID(4);
-//		admFuncVO2.setFunName("員工管理");
+//		admFuncVO2.setFunName("Staff Management");
 //		System.out.println("成功");
 //		dao.update(admFuncVO2);
 //
