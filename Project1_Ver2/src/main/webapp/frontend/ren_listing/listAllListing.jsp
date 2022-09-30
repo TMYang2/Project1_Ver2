@@ -64,13 +64,13 @@
 <table id="table-1">
 	<tr><td>
 		<h3>所有房源資料 - listingAllListing.jsp</h3>
-		<h4><a href="listing_select_page.jsp">回首頁</a></h4>
+		<h4><a href="listing_select_page.jsp">回HOME PAGE</a></h4>
 	</td></tr>
 
 </table>
 <%-- 錯誤表列 --%>
 <c:if test="${not empty errorMsgs}">
-	<font style="color:red">請修正以下錯誤:</font>
+	<font style="color:red">Fix:</font>
 	<ul>
 		<c:forEach var="message" items="${errorMsgs}">
 			<li style="color:red">${message}</li>
@@ -86,7 +86,7 @@
 		<th>區域ID</th>
 		<th>房源標題</th>
 <!-- 		<th>房源介紹</th> -->
-		<th>詳細地址</th>
+		<th>詳細Address</th>
 		<th>租金</th>
 <!-- 		<th>管理費</th> -->
 <!-- 		<th>停車費</th> -->

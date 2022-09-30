@@ -31,7 +31,7 @@ pageContext.setAttribute("list", list);
 
 				<h4>
 					<a
-						href="<%=request.getContextPath()%>/backend/ser/serDmd/select_page.jsp">回首頁</a>
+						href="<%=request.getContextPath()%>/backend/ser/serDmd/select_page.jsp">回HOME PAGE</a>
 				</h4>
 			</td>
 		</tr>
@@ -39,7 +39,7 @@ pageContext.setAttribute("list", list);
 
 	<%-- 錯誤表列 --%>
 	<c:if test="${not empty errorMsgs}">
-		<font style="color: red">請修正以下錯誤:</font>
+		<font style="color: red">Fix:</font>
 		<ul>
 			<c:forEach var="message" items="${errorMsgs}">
 				<li style="color: red">${message}</li>
@@ -65,18 +65,18 @@ pageContext.setAttribute("list", list);
 							<th>需求單狀態</th>
 							<th>會員ID</th>
 							<th>服務類別ID</th>
-							<th>需求人姓名</th>
-							<th>需求人電話</th>
+							<th>需求人Name</th>
+							<th>需求人Phone Number</th>
 							<th>需求人信箱</th>
 							<th>案場縣市</th>
 							<th>案場地區</th>
-							<th>案場詳細地址</th>
+							<th>案場詳細Address</th>
 							<th>空間類別</th>
 							<th>坪數</th>
 							<th>預算</th>
 							<th>需求簡介</th>
 							<th>照片</th>
-							<th>修改</th>
+							<th>Edit</th>
 							<th>刪除</th>
 						</tr>
 					</thead>
@@ -109,7 +109,7 @@ pageContext.setAttribute("list", list);
 									<FORM METHOD="post"
 										ACTION="<%=request.getContextPath()%>/ser_dmd/SerDmdServlet.do"
 										style="margin-bottom: 0px;">
-										<input type="submit" value="修改"> <input type="hidden"
+										<input type="submit" value="Edit"> <input type="hidden"
 											name="dmdID" value="${serDmdVO.dmdID}"> <input
 											type="hidden" name="action" value="getOne_For_Update">
 									</FORM>

@@ -26,7 +26,7 @@ public class ResetPasswordMailService {
 				props.put("mail.smtp.auth", "true");
 				props.put("mail.smtp.port", "465");
 
-				// ●Setting gmail 的帳號 & 密碼 (將藉由你的Gmail來傳送Email)
+				// ●Setting gmail 的Account Name & 密碼 (將藉由你的Gmail來傳送Email)
 				// ●須將myGmail的【安全性較低的應用程式存取權】打開
 				final String myGmail = "dodohello71@gmail.com";
 				final String myGmail_password = "uiopjkl0000";
@@ -68,7 +68,7 @@ public class ResetPasswordMailService {
 //			String messageText = "親愛的 " + ch_name +"您好!"+ " 請立即開啟連結，完成密碼變更 " +  "\n" 
 //					+ "貼心提醒：\r\n"
 //					+ "1.此密碼有效時間為30分鐘，如逾時失效，請至EASY SPACE重新申請「忘記密碼」，系統將重新派送。\r\n"
-//					+ "2.密碼變更完成後，請使用新密碼重新登入，並請妥善保管您的個人資料，切勿提供他人，以保障您的帳號安全。";
+//					+ "2.密碼變更完成後，請使用新密碼重新Log in，並請妥善保管您的個人資料，切勿提供他人，以保障您的Account Name安全。";
 //
 //			ResetPasswordMailService mailService = new ResetPasswordMailService();
 //			mailService.sendMail(to, subject, messageText);

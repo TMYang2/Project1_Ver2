@@ -33,7 +33,7 @@ public class MemberServlet extends HttpServlet {
 
 		req.setCharacterEncoding("UTF-8");
 		String action = req.getParameter("action");
-// 登入Setting
+// Log inSetting
 		if ("getOne_For_Display".equals(action)) {
 
 			List<String> errorMsgs = new LinkedList<String>();
@@ -46,7 +46,7 @@ public class MemberServlet extends HttpServlet {
 				String memPassword = req.getParameter("psw");
 
 				if (memUsername == null || (memUsername.trim()).length() == 0) {
-					errorMsgs.add("帳號密碼不得為空");
+					errorMsgs.add("Account Name密碼不得為空");
 				}
 				if (!errorMsgs.isEmpty()) {
 					RequestDispatcher failureView = req.getRequestDispatcher("/frontend/member/login.jsp");
@@ -55,7 +55,7 @@ public class MemberServlet extends HttpServlet {
 				}
 
 				if (memPassword == null || (memPassword.trim()).length() == 0) {
-					errorMsgs.add("帳號密碼不得為空");
+					errorMsgs.add("Account Name密碼不得為空");
 				}
 				if (!errorMsgs.isEmpty()) {
 					RequestDispatcher failureView = req.getRequestDispatcher("/frontend/member/login.jsp");
@@ -66,11 +66,11 @@ public class MemberServlet extends HttpServlet {
 				MemberService memberserivce = new MemberService();
 				MemberVO memberVO = memberserivce.Search(memUsername, memPassword);
 				if (memberVO == null) {
-					errorMsgs.add("● 帳號或密碼有誤，請重新輸入");
+					errorMsgs.add("● Account Name或密碼有誤，請重新輸入");
 				} else if (memberVO.getMemSupReported() >= 5) {// *************被檢舉次數****************
-					errorMsgs.add("● 該帳號被檢舉次數已達上限，如有相關問題清洽客服人員");
-				} else if (memberVO.getMemStatus() == 0) {// *************帳號未開通****************
-					errorMsgs.add("● 該帳號尚未開通，請先進行信箱驗證後再登入");
+					errorMsgs.add("● 該Account Name被檢舉次數已達上限，如有相關問題清洽客服人員");
+				} else if (memberVO.getMemStatus() == 0) {// *************Account Name未開通****************
+					errorMsgs.add("● 該Account Name尚未開通，請先進行信箱驗證後再Log in");
 
 				}
 
@@ -123,12 +123,12 @@ public class MemberServlet extends HttpServlet {
 
 				String memUsername = req.getParameter("memUsername");
 				if (memUsername == null || memUsername.trim().length() == 0) {
-					errorMsgs.add("帳號請勿空白");
+					errorMsgs.add("Account Name請勿空白");
 				}
 				MemberService memberSvc = new MemberService();
 				MemberVO memberVO2 = memberSvc.searchUsername(memUsername);
 				if (memberVO2 != null) {
-					errorMsgs.add("此帳號名稱已被使用");
+					errorMsgs.add("此Account Name名稱已被使用");
 				}
 
 				String memPassword = req.getParameter("memPassword");
@@ -142,13 +142,13 @@ public class MemberServlet extends HttpServlet {
 				}
 				String memPhone = req.getParameter("memPhone");
 				if (memPhone == null || memPhone.trim().length() == 0) {
-					errorMsgs.add("電話請勿空白");
+					errorMsgs.add("Phone Number請勿空白");
 				} else if (!memPhone.trim().matches(memPhoneReg)) {
-					errorMsgs.add("電話格式不符，請重新輸入");
+					errorMsgs.add("Phone Number格式不符，請重新輸入");
 				}
 				String memAddress = req.getParameter("memAddress");
 				if (memAddress == null || memAddress.trim().length() == 0) {
-					errorMsgs.add("地址請勿空白");
+					errorMsgs.add("Address請勿空白");
 				}
 				String memEmail = req.getParameter("memEmail");
 

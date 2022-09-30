@@ -98,7 +98,7 @@ public class SerVdrTest {
 //		ven.setVdrRevScore(5);
 //		dao.insert(ven);
 
-		// 修改 測試ok
+		// Edit 測試ok
 //		SerVdrVO ven2 = new SerVdrVO();
 //		ven2.setVdrID(5);
 //		ven2.setVdrStatus((byte) 1);

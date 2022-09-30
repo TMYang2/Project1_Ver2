@@ -20,7 +20,7 @@ MemberVO memberVO = (MemberVO) request.getAttribute("memberVO");
 <body>
 	<%-- 錯誤表列 --%>
 	<c:if test="${not empty errorMsgs}">
-		<font style="color: red">請修正以下錯誤:</font>
+		<font style="color: red">Fix:</font>
 		<ul>
 			<c:forEach var="message" items="${errorMsgs}">
 				<li style="color: red">${message}</li>
@@ -30,17 +30,17 @@ MemberVO memberVO = (MemberVO) request.getAttribute("memberVO");
 
 	<div align="center">
 		<h2>重設密碼</h2>
-		<p>請輸入帳號及密碼:</p>
+		<p>請輸入Account Name及密碼:</p>
 		<form method="post" action="<%=request.getContextPath()%>/member/ResetPasswordServlet.do">
 		
 			<div class="col-sm-12">
 				<div class="row">
 					<div class="col-xs-4">
-						<label class="memID">帳號 :</label>
+						<label class="memID">Account Name :</label>
 <!-- 					</div> -->
 <!-- 					<div class="col-xs-8"> -->
 						<input type="text" name="memID" id="memID"
-							placeholder="請輸入帳號" class="form-control "
+							placeholder="請輸入Account Name" class="form-control "
 							value="<%=(memberVO == null) ? "" : memberVO.getMemID()%>">
 					</div>
 				</div>

@@ -28,7 +28,7 @@ public class SecOrdTest {
 //		Integer shOrdID = 5;
 //		dao.delete(shOrdID);
 //		
-//		3. 修改
+//		3. Edit
 //		secOrdVO.setShBuyerID(3);
 //		secOrdVO.setShSellerID(4);
 //		secOrdVO.setShPostcode(100);

@@ -366,16 +366,16 @@
 							    <div class="qtyminus" id="qtyminus">-</div>
 							    <input type="text" name="quantity" value="1" class="qty" id="addQuantity1">
 							    <div class="qtyplus" id="qtyplus">+</div>
-<!-- 							    <input type="submit" value="加入購物車" class="round-black-btn"> -->
+<!-- 							    <input type="submit" value="加入Cart" class="round-black-btn"> -->
 								<label for="size" id="stock-label">尚有 <span id="stock">${secItemsVO.shQTY}</span> 件</label><br>
-<!-- 								<input id="mySubmit" type="submit" value="加入購物車" class="round-black-btn" style="display: none;"> -->
+<!-- 								<input id="mySubmit" type="submit" value="加入Cart" class="round-black-btn" style="display: none;"> -->
 								<input type="hidden" name="shID" value="${secItemsVO.shID}">								
 								<input type="hidden" name="shName" value="${secItemsVO.shName}">								
 								<input type="hidden" name="shPrice" value="${secItemsVO.shPrice}">								
 								<input type="hidden" name="shQTY" id="addQuantity2" value="1">								
 								<input type="hidden" name="action" value="ADD">		
 							</form>
-							<input id="mySubmit" type="submit" value="加入購物車" class="round-black-btn">
+							<input id="mySubmit" type="submit" value="加入Cart" class="round-black-btn">
 	        			</div>
 	        		</div>
 	        	</div>

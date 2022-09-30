@@ -131,14 +131,14 @@ public class SerDmdServlet extends HttpServlet {
 				String dmdName = req.getParameter("dmdName");
 				String nameReg = "^[(\u4e00-\u9fa5)(a-zA-Z_)]{2,50}$";
 				if (dmdName == null || dmdName.trim().length() == 0) {
-					errorMsgs.add("請輸入姓名");
+					errorMsgs.add("請輸入Name");
 				} else if (!dmdName.trim().matches(nameReg)) {
-					errorMsgs.add("姓名: 只能是中、英文字母和_ , 且長度必需在2到50之間");
+					errorMsgs.add("Name: 只能是中、英文字母和_ , 且長度必需在2到50之間");
 				}
 				String dmdTel = req.getParameter("dmdTel");
 //				String TelReg = "0\\\\d{2,3}[-]?\\\\d{7,8}||0\\\\d{2,3}\\\\s?\\\\d{7,8}|13[0-9]\\\\d{8}|15[1089]\\\\d{8}";
 				if (dmdTel == null || dmdTel.trim().length() == 0) {
-					errorMsgs.add("請輸入電話號碼");
+					errorMsgs.add("請輸入Phone Number號碼");
 				}
 				String dmdMail = req.getParameter("dmdMail");
 				String emailReg = "^\\w{1,63}@[a-zA-Z0-9]{2,63}\\.[a-zA-Z]{2,63}(\\.[a-zA-Z]{2,63})?$";
@@ -201,12 +201,12 @@ public class SerDmdServlet extends HttpServlet {
 					return;
 				}
 
-				/*************************** 2.開始修改資料 ***************************************/
+				/*************************** 2.開始Edit資料 ***************************************/
 				SerDmdService serDmdSvc = new SerDmdService();
 				serDmdVO = serDmdSvc.updateSerDmd(serDmdID, dmdStatus, dmdMemID, dmdSerClaID, dmdName, dmdTel, dmdMail,
 						dmdCounty, dmdRegion, dmdAddress, dmdSpaceClass, dmdSquare, dmdBudget, dmdIntro, dmdPic);
 
-				/*************************** 3.修改完成,準備轉交(Send the Success view) ***********/
+				/*************************** 3.Edit完成,準備轉交(Send the Success view) ***********/
 				String url = "/frontend/ser_dmd/getByDmdMemID.jsp";
 				RequestDispatcher successView = req.getRequestDispatcher(url); // 新增成功後轉交listAllEmp.jsp
 				successView.forward(req, res);
@@ -233,14 +233,14 @@ public class SerDmdServlet extends HttpServlet {
 				String dmdName = req.getParameter("dmdName");
 				String nameReg = "^[(\u4e00-\u9fa5)(a-zA-Z_)]{2,50}$";
 				if (dmdName == null || dmdName.trim().length() == 0) {
-					errorMsgs.add("請輸入姓名");
+					errorMsgs.add("請輸入Name");
 				} else if (!dmdName.trim().matches(nameReg)) {
-					errorMsgs.add("姓名: 只能是中、英文字母和_ , 且長度必需在2到50之間");
+					errorMsgs.add("Name: 只能是中、英文字母和_ , 且長度必需在2到50之間");
 				}
 				String dmdTel = req.getParameter("dmdTel");
 //				String TelReg = "0\\\\d{2,3}[-]?\\\\d{7,8}||0\\\\d{2,3}\\\\s?\\\\d{7,8}|13[0-9]\\\\d{8}|15[1089]\\\\d{8}";
 				if (dmdTel == null || dmdTel.trim().length() == 0) {
-					errorMsgs.add("請輸入電話號碼");
+					errorMsgs.add("請輸入Phone Number號碼");
 				}
 				String dmdMail = req.getParameter("dmdMail");
 				String emailReg = "^\\w{1,63}@[a-zA-Z0-9]{2,63}\\.[a-zA-Z]{2,63}(\\.[a-zA-Z]{2,63})?$";

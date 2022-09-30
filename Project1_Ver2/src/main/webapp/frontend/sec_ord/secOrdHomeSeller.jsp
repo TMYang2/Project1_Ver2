@@ -93,14 +93,14 @@ th, td {
 			<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
 				<ul class="navbar-nav ms-auto me-sm-2 mt-2 mt-lg-0">
 					<li class="nav-item active me-3"><a class="nav-link text-dark"
-						href="<%=request.getContextPath()%>/frontend/EZ_home.jsp">首頁 </a></li>
+						href="<%=request.getContextPath()%>/frontend/EZ_home.jsp">HOME PAGE </a></li>
 					<li class="nav-item me-3"><a class="nav-link text-dark"
-						href="#">租賃服務</a></li>
+						href="#">RENTAL</a></li>
 					<li class="nav-item me-3"><a class="nav-link text-dark"
-						href="<%=request.getContextPath()%>/frontend/sec_items/secItemsViewPage.jsp">二手家電</a>
+						href="<%=request.getContextPath()%>/frontend/sec_items/secItemsViewPage.jsp">USED HOME APPLIANCES</a>
 					</li>
 					<li class="nav-item me-3"><a class="nav-link text-dark"
-						href="<%=request.getContextPath()%>/frontend/ser_ad/serAdViewPage.jsp">居家服務</a>
+						href="<%=request.getContextPath()%>/frontend/ser_ad/serAdViewPage.jsp">SERVICE</a>
 					</li>
 
 					<%
@@ -118,13 +118,13 @@ th, td {
 							class="fa fa-angle-down   "></i></a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<a class="dropdown-item"
-								href="<%=request.getContextPath()%>/frontend/member/memberCenter/buyerMemberCenter.jsp">會員中心</a>
+								href="<%=request.getContextPath()%>/frontend/member/memberCenter/buyerMemberCenter.jsp">Member Centre</a>
 							<a class="dropdown-item"
-								href="<%=request.getContextPath()%>/frontend/member/memberCenter/sellerMemberCenter.jsp">賣家中心</a>
+								href="<%=request.getContextPath()%>/frontend/member/memberCenter/sellerMemberCenter.jsp">Seller Centre</a>
 							<a class="dropdown-item"
-								href="<%=request.getContextPath()%>/frontend/chat/index.jsp">聊聊</a>
+								href="<%=request.getContextPath()%>/frontend/chat/index.jsp">Chat</a>
 							<a class="dropdown-item"
-								href="<%=request.getContextPath()%>/frontend/sec_items/shoppingCart.jsp">購物車</a>
+								href="<%=request.getContextPath()%>/frontend/sec_items/shoppingCart.jsp">Cart</a>
 							<div class="dropdown-divider"></div>
 							<a class="dropdown-item"
 								href="<%=request.getContextPath()%>/member/MemberServlet.do?action=logout">Log out</a>
@@ -133,7 +133,7 @@ th, td {
 					} else {
 					%>
 					<li class="nav-item me-3"><a class="nav-link text-dark"
-						href="<%=request.getContextPath()%>/frontend/member/login.jsp">登入</a></li>
+						href="<%=request.getContextPath()%>/frontend/member/login.jsp">Log in</a></li>
 					<%
 					}
 					%>
@@ -161,13 +161,13 @@ th, td {
 				<div class="sb-sidenav-menu">
 					<div class="nav">
 						<!-- ------------------------------------------------------------------------------------------------- -->
-						<div class="sb-sidenav-menu-heading">賣家管理專區</div>
+						<div class="sb-sidenav-menu-heading">SELLER MANAGEMENT</div>
 						<a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
 							data-bs-target="#collapseLayouts" aria-expanded="false"
 							aria-controls="collapseLayouts">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-home"></i>
-							</div> 租賃相關管理
+							</div> RENTAL RELATED MANAGEMENT
 							<div class="sb-sidenav-collapse-arrow">
 								<i class="fas fa-angle-down"></i>
 							</div>
@@ -175,11 +175,11 @@ th, td {
 						<div class="collapse" id="collapseLayouts"
 							aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
 							<nav class="sb-sidenav-menu-nested nav">
-								<a class="nav-link" href="layout-static.html">申請成為房東</a> <a
-									class="nav-link" href="layout-static.html">房源管理</a> <a
+								<a class="nav-link" href="layout-static.html">Apply to be a Landlord</a> <a
+									class="nav-link" href="layout-static.html">Listing Management</a> <a
 									class="nav-link"
-									href="<%=request.getContextPath()%>/frontend/ren_appointment/listRenAppByLDD.jsp">預約單管理</a>
-								<a class="nav-link" href="layout-sidenav-light.html">租賃單管理</a>
+									href="<%=request.getContextPath()%>/frontend/ren_appointment/listRenAppByLDD.jsp">Appointment Management</a>
+								<a class="nav-link" href="layout-sidenav-light.html">Lease Management</a>
 							</nav>
 						</div>
 						<!-- ------------------------------------------------------------------------------------------------- -->
@@ -188,7 +188,7 @@ th, td {
 							aria-controls="collapsePages">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-couch"></i>
-							</div> 二手相關管理
+							</div> USED HOME APPLIANCES MANAGEMENT
 							<div class="sb-sidenav-collapse-arrow">
 								<i class="fas fa-angle-down"></i>
 							</div>
@@ -197,9 +197,9 @@ th, td {
 							aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
 							<nav class="sb-sidenav-menu-nested nav">
 								<a class="nav-link"
-									href="<%=request.getContextPath()%>/frontend/sec_items/select_page.jsp">商品管理</a>
+									href="<%=request.getContextPath()%>/frontend/sec_items/select_page.jsp">Product Management</a>
 								<a class="nav-link"
-									href="<%=request.getContextPath()%>/frontend/sec_ord/listAllSecOrd.jsp">訂單管理</a>
+									href="<%=request.getContextPath()%>/frontend/sec_ord/listAllSecOrd.jsp">Order Management</a>
 							</nav>
 						</div>
 						<!-- ------------------------------------------------------------------------------------------------- -->
@@ -208,7 +208,7 @@ th, td {
 							aria-controls="collapsePages">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-wrench"></i>
-							</div> 服務相關管理
+							</div> SERVICE MANAGEMENT
 							<div class="sb-sidenav-collapse-arrow">
 								<i class="fas fa-angle-down"></i>
 							</div>
@@ -217,8 +217,8 @@ th, td {
 							aria-labelledby="headingThree" data-bs-parent="#sidenavAccordion">
 							<nav class="sb-sidenav-menu-nested nav">
 								<a class="nav-link" href="layout-static.html">服務管理</a> <a
-									class="nav-link" href="layout-sidenav-light.html">需求單管理</a> <a
-									class="nav-link" href="layout-sidenav-light.html">訂單管理</a>
+									class="nav-link" href="layout-sidenav-light.html">Requests Management</a> <a
+									class="nav-link" href="layout-sidenav-light.html">Order Management</a>
 							</nav>
 						</div>
 						<!-- ------------------------------------------------------------------------------------------------- -->
@@ -290,7 +290,7 @@ th, td {
 					<a
 						href="<%=request.getContextPath()%>/frontend/sec_ord/listAllSecOrd.jsp"><img
 						src="<%=request.getContextPath()%>/images/cmn/index/EASYSPACE.png"
-						width="100" height="60" border="0">回查詢首頁</a>
+						width="100" height="60" border="0">回查詢HOME PAGE</a>
 				</h4>
 			</td>
 		</tr>
@@ -298,7 +298,7 @@ th, td {
 
 	<%-- 錯誤表列 --%>
 	<c:if test="${not empty errorMsgs}">
-		<font style="color: red">請修正以下錯誤:</font>
+		<font style="color: red">Fix:</font>
 		<ul>
 			<c:forEach var="message" items="${errorMsgs}">
 				<li style="color: red">${message}</li>
@@ -311,10 +311,10 @@ th, td {
 			<th>商品訂單編號</th>
 			<th>買家編號</th>
 			<th>賣家編號</th>
-			<th>收件地址郵遞區號</th>
+			<th>收件Address郵遞區號</th>
 			<th>收件縣市</th>
 			<th>收件鄉鎮區</th>
-			<th>收件地址</th>
+			<th>收件Address</th>
 			<th>付款方式</th>
 			<th>訂單狀態</th>
 			<th>商品價格</th>
@@ -325,7 +325,7 @@ th, td {
 			<!-- 			<th>賣家評價買家內容</th> -->
 			<!-- 			<th>撥款日期</th> -->
 			<!-- 			<th>買家備註</th> -->
-			<th>修改</th>
+			<th>Edit</th>
 			<th>取消訂單<font color=red></font></th>
 			<th>查詢訂單明細</th>
 		</tr>
@@ -364,7 +364,7 @@ th, td {
 					<FORM METHOD="post"
 						ACTION="<%=request.getContextPath()%>/sec_ord/UpdateSecOrdBySellerServlet.do"
 						style="margin-bottom: 0px;">
-						<input type="submit" value="修改"> <input type="hidden"
+						<input type="submit" value="Edit"> <input type="hidden"
 							name="shOrdID" value="${secOrdVO.shOrdID}"> <input
 							type="hidden" name="action" value="getOne_For_Update">
 					</FORM>

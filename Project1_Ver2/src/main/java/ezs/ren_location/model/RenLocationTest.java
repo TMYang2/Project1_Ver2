@@ -12,7 +12,7 @@ public class RenLocationTest {
 //		locationVO1.setLocDist("苗栗市");
 //		dao.insert(locationVO1);
 
-		// 修改
+		// Edit
 //		RenLocationVO locationVO2 = new RenLocationVO();		
 //		locationVO2.setLocID(65);		
 //		locationVO2.setLocCity("苗栗縣");

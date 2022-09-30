@@ -184,17 +184,17 @@ RenLandlordVO renLandlordVO = (RenLandlordVO) request.getAttribute("renLandlordV
 		<div id="layoutSidenav_content">
 			<main>
 				<div class="container-fluid px-4">
-					<h1 class="mt-4">房東資料修改</h1>
+					<h1 class="mt-4">房東資料Edit</h1>
 								<h4>
 									<a href="<%=request.getContextPath()%>/backend/ren/select.jsp"><img
 										src="<%=request.getContextPath()%>/images/ren/back_icon.png"
-										width="60" height="60" border="0">回首頁</a>
+										width="60" height="60" border="0">回HOME PAGE</a>
 								</h4>
 			
 
 					<%-- 錯誤表列 --%>
 					<c:if test="${not empty errorMsgs}">
-						<font style="color: red">請修正以下錯誤:</font>
+						<font style="color: red">Fix:</font>
 						<ul>
 							<c:forEach var="message" items="${errorMsgs}">
 								<li style="color: red">${message}</li>
@@ -214,7 +214,7 @@ RenLandlordVO renLandlordVO = (RenLandlordVO) request.getAttribute("renLandlordV
 								<td><%=renLandlordVO.getLddId()%></td>
 							</tr>
 							<tr>
-								<th id="test">會員編號:</th>
+								<th id="test">Member ID:</th>
 								<td><%=renLandlordVO.getLddMemId()%></td>
 								
 							</tr>
@@ -234,7 +234,7 @@ RenLandlordVO renLandlordVO = (RenLandlordVO) request.getAttribute("renLandlordV
 						<br> <input type="hidden" name="action" value="update">
 						<input type="hidden" name="lddMemId" value="<%=renLandlordVO.getLddMemId()%>"/>
 						<input type="hidden" name="lddId" value="<%=renLandlordVO.getLddId()%>"> 
-						<input type="submit" value="送出修改">
+						<input type="submit" value="送出Edit">
 					</FORM>
 
 				</div>

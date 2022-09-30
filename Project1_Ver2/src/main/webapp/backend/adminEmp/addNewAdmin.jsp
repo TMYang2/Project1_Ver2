@@ -179,7 +179,7 @@
 				<div class="container-fluid px-4">
 					<h1 class="mt-4">新增管理員</h1>
 
-					<a href="<%=request.getContextPath()%>/backend/adminEmp/adminEmp.jsp">回首頁</a>
+					<a href="<%=request.getContextPath()%>/backend/adminEmp/adminEmp.jsp">回HOME PAGE</a>
 					
 					<form method="post" action="<%=request.getContextPath()%>/admin_emp/AdminEmpServlet.do">
 						<div class="container">
@@ -210,7 +210,7 @@
 
 					<%-- 錯誤表列 --%>
 					<c:if test="${not empty errorMsgs}">
-						<font style="color: red">請修正以下錯誤:</font>
+						<font style="color: red">Fix:</font>
 						<ul>
 							<c:forEach var="message" items="${errorMsgs}">
 								<li style="color: red">${message}</li>

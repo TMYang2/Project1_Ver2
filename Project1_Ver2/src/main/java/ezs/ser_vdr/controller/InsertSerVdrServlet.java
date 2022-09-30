@@ -55,9 +55,9 @@ public class InsertSerVdrServlet extends HttpServlet {
 				String vdrTel = req.getParameter("vdrTel").trim();
 				String telReg = "^[(0-9)]{10}$";// 檢查手機看市話需不需要
 				if (vdrTel == null || vdrTel.trim().length() == 0) {
-					errorMsgs.add("電話請勿空白");
+					errorMsgs.add("Phone Number請勿空白");
 				} else if (!vdrTel.trim().matches(telReg)) { // 以下練習正則(規)表示式(regular-expression)
-					errorMsgs.add("請重新輸入電話");
+					errorMsgs.add("請重新輸入Phone Number");
 				}
 
 				String vdrVatno = req.getParameter("vdrVatno").trim();
@@ -86,9 +86,9 @@ public class InsertSerVdrServlet extends HttpServlet {
 				String vdrAddr = req.getParameter("vdrAddr").trim();
 				String addrReg = "^[(\\u4e00-\\u9fa5)(0-9)]{5,50}$";
 				if (vdrAddr == null || vdrAddr.trim().length() == 0) {
-					errorMsgs.add("詳細地址請勿空白");
+					errorMsgs.add("詳細Address請勿空白");
 				} else if (!vdrAddr.trim().matches(addrReg)) { // 以下練習正則(規)表示式(regular-expression)
-					errorMsgs.add("請重新輸入詳細地址，最少五個字");
+					errorMsgs.add("請重新輸入詳細Address，最少五個字");
 				}
 
 				String vdrOpen = req.getParameter("vdrOpen").trim();

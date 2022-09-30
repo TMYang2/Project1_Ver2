@@ -158,7 +158,7 @@ public class RenLeaseServlet extends HttpServlet {
 	//
 	//				/***************************其他可能的錯誤處理**********************************/
 	//			} catch (Exception e) {
-	//				errorMsgs.add("無法取得要修改的資料:" + e.getMessage());
+	//				errorMsgs.add("無法取得要Edit的資料:" + e.getMessage());
 	//				RequestDispatcher failureView = req
 	//						.getRequestDispatcher("/frontend/ren_lease/listAllLease.jsp");
 	//				failureView.forward(req, res);
@@ -180,9 +180,9 @@ public class RenLeaseServlet extends HttpServlet {
 //				String ename = req.getParameter("ename");
 //				String enameReg = "^[(\u4e00-\u9fa5)(a-zA-Z0-9_)]{2,10}$";
 //				if (ename == null || ename.trim().length() == 0) {
-//					errorMsgs.add("員工姓名: 請勿空白");
+//					errorMsgs.add("員工Name: 請勿空白");
 //				} else if(!ename.trim().matches(enameReg)) { //以下練習正則(規)表示式(regular-expression)
-//					errorMsgs.add("員工姓名: 只能是中、英文字母、數字和_ , 且長度必需在2到10之間");
+//					errorMsgs.add("員工Name: 只能是中、英文字母、數字和_ , 且長度必需在2到10之間");
 //	            }
 //				
 //				String job = req.getParameter("job").trim();
@@ -233,19 +233,19 @@ public class RenLeaseServlet extends HttpServlet {
 //					return; //程式中斷
 //				}
 //				
-//				/***************************2.開始修改資料*****************************************/
+//				/***************************2.開始Edit資料*****************************************/
 //				RenLeaseService renLeaseSvc = new RenLeaseService();
 //				empVO = renLeaseSvc.updateEmp(empno, ename, job, hiredate, sal,comm, deptno);
 //				
-//				/***************************3.修改完成,準備轉交(Send the Success view)*************/
+//				/***************************3.Edit完成,準備轉交(Send the Success view)*************/
 //				req.setAttribute("empVO", empVO); // 資料庫update成功後,正確的的empVO物件,存入req
 //				String url = "/frontend/ren_lease/leaseOneLease.jsp";
-//				RequestDispatcher successView = req.getRequestDispatcher(url); // 修改成功後,轉交listOneEmp.jsp
+//				RequestDispatcher successView = req.getRequestDispatcher(url); // Edit成功後,轉交listOneEmp.jsp
 //				successView.forward(req, res);
 //
 //				/***************************其他可能的錯誤處理*************************************/
 //			} catch (Exception e) {
-//				errorMsgs.add("修改資料失敗:"+e.getMessage());
+//				errorMsgs.add("Edit資料失敗:"+e.getMessage());
 //				RequestDispatcher failureView = req
 //						.getRequestDispatcher("/frontend/ren_lease/update_lease_input.jsp");
 //				failureView.forward(req, res);

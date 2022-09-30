@@ -215,7 +215,7 @@ pageContext.setAttribute("list2", list2);
 
 <%-- 錯誤表列 --%>
 <c:if test="${not empty errorMsgs}">
-	<font style="color: red">請修正以下錯誤:</font>
+	<font style="color: red">Fix:</font>
 	<ul>
 		<c:forEach var="message" items="${errorMsgs}">
 			<li style="color: red">${message}</li>
@@ -229,11 +229,11 @@ pageContext.setAttribute("list2", list2);
 	<thead>
 		<tr class="thead-dark" style="text-align: left;">							
 			<th>房東編號</th>
-			<th>會員編號</th>
+			<th>Member ID</th>
 			<th>會員名稱</th>
 			<th>申請照片</th>
 			<th>審核狀態</th>
-			<th>修改</th>
+			<th>Edit</th>
 			<th>刪除</th>
 		</tr>
 	</thead>
@@ -258,7 +258,7 @@ pageContext.setAttribute("list2", list2);
 					<FORM METHOD="post"
 						ACTION="<%=request.getContextPath()%>/ren_landlord/RenLandlordServlet.do"
 						style="margin-bottom: 0px;">
-						<input type="submit" value="修改"> <input type="hidden"
+						<input type="submit" value="Edit"> <input type="hidden"
 							name="lddId" value="${renLandlordVO.lddId}"> <input
 							type="hidden" name="action" value="getOne_For_Update">
 					</FORM>

@@ -60,7 +60,7 @@ public class UpdateSecOrdBySellerServlet extends HttpServlet {
 				/***************************其他可能的錯誤處理**********************************/
 			} catch (Exception e) {
 				e.printStackTrace();
-				errorMsgs.add("無法取得要修改的資料:" + e.getMessage());
+				errorMsgs.add("無法取得要Edit的資料:" + e.getMessage());
 				RequestDispatcher failureView = req
 						.getRequestDispatcher("/frontend/sec_ord/listAllSecOrd.jsp");
 				failureView.forward(req, res);
@@ -93,22 +93,22 @@ public class UpdateSecOrdBySellerServlet extends HttpServlet {
 					return; //程式中斷
 				}
 				
-				/***************************2.開始修改資料*****************************************/
+				/***************************2.開始Edit資料*****************************************/
 				SecOrdService secOrdSvc = new SecOrdService();
 				secOrdVO = secOrdSvc.updateSecOrdStatus(shOrdID, shOrdStatus);
 			
 				System.out.println(shOrdStatus);
 				
-				/***************************3.修改完成,準備轉交(Send the Success view)*************/
+				/***************************3.Edit完成,準備轉交(Send the Success view)*************/
 				req.setAttribute("secOrdVO", secOrdVO); // 資料庫update成功後,正確的的secOrdVO物件,存入req
 				String url = "/frontend/sec_ord/listAllSecOrd.jsp";
-				RequestDispatcher successView = req.getRequestDispatcher(url); // 修改成功後,轉交listSecOrdsByShSeller.jsp
+				RequestDispatcher successView = req.getRequestDispatcher(url); // Edit成功後,轉交listSecOrdsByShSeller.jsp
 				successView.forward(req, res);
 				System.out.println(successView);
 				/***************************其他可能的錯誤處理*************************************/
 			} catch (Exception e) {
 				e.printStackTrace();
-				errorMsgs.add("修改資料失敗:"+e.getMessage());
+				errorMsgs.add("Edit資料失敗:"+e.getMessage());
 				RequestDispatcher failureView = req
 						.getRequestDispatcher("/frontend/sec_ord/update_secord_input.jsp");
 				failureView.forward(req, res);

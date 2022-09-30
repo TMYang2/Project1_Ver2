@@ -32,11 +32,11 @@ h4 {
 <body>
 
 
-	<h2>後台需求單管理</h2>
+	<h2>後台Requests Management</h2>
 
 	<%-- 錯誤表列 --%>
 	<c:if test="${not empty errorMsgs}">
-		<font style="color: red">請修正以下錯誤:</font>
+		<font style="color: red">Fix:</font>
 		<ul>
 			<c:forEach var="message" items="${errorMsgs}">
 				<li style="color: red">${message}</li>
@@ -73,7 +73,7 @@ h4 {
 		<li>
 			<FORM METHOD="post"
 				ACTION="<%=request.getContextPath()%>/ser_dmd/SerDmdServlet.do">
-				<b>選擇需求人姓名:</b> <select size="1" name="serDmdID">
+				<b>選擇需求人Name:</b> <select size="1" name="serDmdID">
 					<c:forEach var="serDmdVO" items="${serDmdDao.all}">
 						<option value="${serDmdVO.dmdID}">${serDmdVO.dmdName}
 					</c:forEach>
@@ -86,7 +86,7 @@ h4 {
 	
 
 	<ul>
-		<li><a href="<%=request.getContextPath()%>/backend/ser/serDmd/addSerDmd.jsp">新增需求單</a> </li>
+		<li><a href="<%=request.getContextPath()%>/backend/ser/serDmd/addSerDmd.jsp">Add Requests</a> </li>
 	</ul>
 
 </body>

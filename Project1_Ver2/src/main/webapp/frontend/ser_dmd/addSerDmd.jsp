@@ -82,14 +82,14 @@
 			<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
 				<ul class="navbar-nav ms-auto me-sm-2 mt-2 mt-lg-0">
 					<li class="nav-item active me-3"><a class="nav-link text-dark"
-						href="<%=request.getContextPath()%>/frontend/EZ_home.jsp">首頁 </a></li>
+						href="<%=request.getContextPath()%>/frontend/EZ_home.jsp">HOME PAGE </a></li>
 					<li class="nav-item me-3"><a class="nav-link text-dark"
-						href="<%=request.getContextPath()%>/frontend/ren_listing/listingView.jsp">租賃服務</a></li>
+						href="<%=request.getContextPath()%>/frontend/ren_listing/listingView.jsp">RENTAL</a></li>
 					<li class="nav-item me-3"><a class="nav-link text-dark"
-						href="<%=request.getContextPath()%>/frontend/sec_items/secItemsViewPage.jsp">二手家電</a>
+						href="<%=request.getContextPath()%>/frontend/sec_items/secItemsViewPage.jsp">USED HOME APPLIANCES</a>
 					</li>
 					<li class="nav-item me-3"><a class="nav-link text-dark"
-						href="<%=request.getContextPath()%>/frontend/ser_ad/serAdViewPage.jsp">居家服務</a>
+						href="<%=request.getContextPath()%>/frontend/ser_ad/serAdViewPage.jsp">SERVICE</a>
 					</li>
 
 					<%
@@ -107,13 +107,13 @@
 							class="fa fa-angle-down   "></i></a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<a class="dropdown-item"
-								href="<%=request.getContextPath()%>/frontend/member/memberCenter/buyerMemberCenter.jsp">會員中心</a>
+								href="<%=request.getContextPath()%>/frontend/member/memberCenter/buyerMemberCenter.jsp">Member Centre</a>
 							<a class="dropdown-item"
-								href="<%=request.getContextPath()%>/frontend/member/memberCenter/sellerMemberCenter.jsp">賣家中心</a>
+								href="<%=request.getContextPath()%>/frontend/member/memberCenter/sellerMemberCenter.jsp">Seller Centre</a>
 							<a class="dropdown-item"
-								href="<%=request.getContextPath()%>/frontend/chat/index.jsp">聊聊</a>
+								href="<%=request.getContextPath()%>/frontend/chat/index.jsp">Chat</a>
 							<a class="dropdown-item"
-								href="<%=request.getContextPath()%>/frontend/sec_items/shoppingCart.jsp">購物車</a>
+								href="<%=request.getContextPath()%>/frontend/sec_items/shoppingCart.jsp">Cart</a>
 							<div class="dropdown-divider"></div>
 							<a class="dropdown-item"
 								href="<%=request.getContextPath()%>/member/MemberServlet.do?action=logout">Log out</a>
@@ -122,7 +122,7 @@
 					} else {
 					%>
 					<li class="nav-item me-3"><a class="nav-link text-dark"
-						href="<%=request.getContextPath()%>/frontend/member/login.jsp">登入</a></li>
+						href="<%=request.getContextPath()%>/frontend/member/login.jsp">Log in</a></li>
 					<%
 					}
 					%>
@@ -150,20 +150,20 @@
 				<div class="sb-sidenav-menu">
 					<div class="nav">
 
-						<div class="sb-sidenav-menu-heading">管理專區</div>
+						<div class="sb-sidenav-menu-heading">INFORMATION MANAGEMENT</div>
 						<a class="nav-link" href="<%= request.getContextPath()%>/frontend/member/listOneMember.jsp">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-tachometer-alt"></i>
 							</div> Member Information Management
 						</a>
 						<!-- ------------------------------------------------------------------------------------------------- -->
-						<div class="sb-sidenav-menu-heading">買家管理專區</div>
+						<div class="sb-sidenav-menu-heading">BUYER MANAGEMENT</div>
 						<a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
 							data-bs-target="#collapseLayouts" aria-expanded="false"
 							aria-controls="collapseLayouts">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-home"></i>
-							</div> 租賃相關管理
+							</div> RENTAL RELATED MANAGEMENT
 							<div class="sb-sidenav-collapse-arrow">
 								<i class="fas fa-angle-down"></i>
 							</div>
@@ -171,9 +171,9 @@
 						<div class="collapse" id="collapseLayouts"
 							aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
 							<nav class="sb-sidenav-menu-nested nav">
-								<a class="nav-link" href="<%=request.getContextPath()%>/frontend/ren_appointment/listRenAppByMEM.jsp">預約單管理</a>
-								<a class="nav-link" href="<%=request.getContextPath()%>/frontend/ren_lease/MEMlistOneLease.jsp">租賃單管理</a>
-                                <a class="nav-link" href="<%=request.getContextPath()%>/frontend/ren_favorites/listOneRenFavorites.jsp">收藏房源管理</a>
+								<a class="nav-link" href="<%=request.getContextPath()%>/frontend/ren_appointment/listRenAppByMEM.jsp">Appointment Management</a>
+								<a class="nav-link" href="<%=request.getContextPath()%>/frontend/ren_lease/MEMlistOneLease.jsp">Lease Management</a>
+                                <a class="nav-link" href="<%=request.getContextPath()%>/frontend/ren_favorites/listOneRenFavorites.jsp">Favourites</a>
 							</nav>
 						</div>
 						<!-- ------------------------------------------------------------------------------------------------- -->
@@ -190,7 +190,7 @@
 						<div class="collapse" id="collapsePages"
 							aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
 							<nav class="sb-sidenav-menu-nested nav">
-								<a class="nav-link" href="<%=request.getContextPath()%>/sec_ord/SecOrdServlet.do?action=listSecOrd_ByShBuyerID">二手訂單管理</a>
+								<a class="nav-link" href="<%=request.getContextPath()%>/sec_ord/SecOrdServlet.do?action=listSecOrd_ByShBuyerID">Order Management</a>
 							</nav>
 						</div>
 						<!-- ------------------------------------------------------------------------------------------------- -->
@@ -199,7 +199,7 @@
 							aria-controls="collapsePages">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-wrench"></i>
-							</div> 居家服務專區
+							</div> SERVICE
 							<div class="sb-sidenav-collapse-arrow">
 								<i class="fas fa-angle-down"></i>
 							</div>
@@ -207,9 +207,9 @@
 						<div class="collapse" id="collapsePages2"
 							aria-labelledby="headingThree" data-bs-parent="#sidenavAccordion">
 							<nav class="sb-sidenav-menu-nested nav">
-								<a class="nav-link" href="<%=request.getContextPath()%>/frontend/ser_dmd/addSerDmd.jsp">新增需求單</a>
-								<a class="nav-link" href="<%=request.getContextPath()%>/frontend/ser_dmd/getByDmdMemID.jsp">需求單/報價單管理</a>
-                                <a class="nav-link" href="<%=request.getContextPath()%>/frontend/ser_ord/getOrdByMemID.jsp">服務訂單管理</a>
+								<a class="nav-link" href="<%=request.getContextPath()%>/frontend/ser_dmd/addSerDmd.jsp">Add Requests</a>
+								<a class="nav-link" href="<%=request.getContextPath()%>/frontend/ser_dmd/getByDmdMemID.jsp">Requests & Quotations Management</a>
+                                <a class="nav-link" href="<%=request.getContextPath()%>/frontend/ser_ord/getOrdByMemID.jsp">Order Management</a>
 							</nav>
 						</div>
 						<!-- ------------------------------------------------------------------------------------------------- -->
@@ -227,7 +227,7 @@
 
 <%-- 錯誤表列 --%>
 <c:if test="${not empty errorMsgs}">
- <font style="color:red">請修正以下錯誤:</font>
+ <font style="color:red">Fix:</font>
  <ul>
   <c:forEach var="message" items="${errorMsgs}">
    <li style="color:red">${message}</li>
@@ -250,12 +250,12 @@
  </tr>
  
  <tr>
-  <td>需求人姓名:<font color=red><b>*</b></font></td>
+  <td>需求人Name:<font color=red><b>*</b></font></td>
   <td><input type="TEXT" name="dmdName" 
     value="<%= (serDmdVO==null)? "劉冠鳴" : serDmdVO.getDmdName() %>"/></td>
  </tr>
  <tr>
-  <td>需求人電話:<font color=red><b>*</b></font></td>
+  <td>需求人Phone Number:<font color=red><b>*</b></font></td>
   <td><input type="TEXT" name="dmdTel" 
     value="<%= (serDmdVO==null)? "066220167" : serDmdVO.getDmdTel() %>"/></td>
  </tr>
@@ -275,7 +275,7 @@
     value="<%= (serDmdVO==null)? "柳營區" : serDmdVO.getDmdRegion() %>"/></td>
  </tr>
  <tr>
-  <td>案場詳細地址:<font color=red><b>*</b></font></td>
+  <td>案場詳細Address:<font color=red><b>*</b></font></td>
   <td><input type="TEXT" name="dmdAddress" size="50"
     value="<%= (serDmdVO==null)? "大林里123號" : serDmdVO.getDmdAddress() %>"/></td>
  </tr>
@@ -311,7 +311,7 @@
  
  <tr>
   <td>
-   <input type="submit" value="送出新增">
+   <input type="submit" value="Confirm">
 
   </td>
  </tr>

@@ -23,7 +23,7 @@ public class SecTranRecordTest {
 //		2. 刪除
 //		dao.delete(3);
 
-//		3. 修改
+//		3. Edit
 //		SecTranRecordVO secTranRecordVO2 = new SecTranRecordVO();
 //
 //		secTranRecordVO2.setShTranMemID(2);

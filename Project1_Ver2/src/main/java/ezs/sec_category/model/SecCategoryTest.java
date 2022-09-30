@@ -18,7 +18,7 @@ public class SecCategoryTest {
 //		Integer shCateID= 6;
 //		dao.delete(shCateID);
 //
-//		3. 修改
+//		3. Edit
 		secCategoryVO.setShCateID(5);
 		secCategoryVO.setShCateName("xxx");
 		dao.update(secCategoryVO);

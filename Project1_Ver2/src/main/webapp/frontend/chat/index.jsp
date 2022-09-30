@@ -49,9 +49,9 @@ html, body {
 </head>
 <body>
 	<div id="outPopUp">
-		<h1 align="center">聊聊</h1>
+		<h1 align="center">Chat</h1>
 		<form id="myForm" action="<%=request.getContextPath() %>/NameServlet.do" method="POST">
-			<input id="userName" name="userName" class="text-field" type="text" placeholder="輸入會員帳號 開始聊天吧!" /> 
+			<input id="userName" name="userName" class="text-field" type="text" placeholder="輸入會員Account Name 開始聊天吧!" /> 
 			<input type="submit" id="send" class="button" value="送出" onclick="sendName();" />
 		</form>
 	</div>

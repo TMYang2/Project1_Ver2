@@ -176,7 +176,7 @@ figure img {
 
 
 <ul>
-  <li><a href='<%=request.getContextPath()%>/backend/ser/ser_cla/viewSerCla.jsp'>檢視服務類別</a><br></li>
+  <li><a href='<%=request.getContextPath()%>/backend/ser/ser_cla/viewSerCla.jsp'>Check Services類別</a><br></li>
   </ul>
   
   <ul>
@@ -189,7 +189,7 @@ figure img {
 </ul>
 
 <ul>
-  <li><a href='<%=request.getContextPath()%>/backend/ser/ser_cla/listAllSerCla.jsp'>修改服務類別</a></li>
+  <li><a href='<%=request.getContextPath()%>/backend/ser/ser_cla/listAllSerCla.jsp'>Edit服務類別</a></li>
 </ul>
 
 </div>

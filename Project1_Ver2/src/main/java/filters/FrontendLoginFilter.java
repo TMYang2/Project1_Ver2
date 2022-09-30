@@ -31,7 +31,7 @@ public class FrontendLoginFilter implements Filter {
 		HttpServletResponse res = (HttpServletResponse) response;
 		// 【取得 session】
 		HttpSession session = req.getSession();
-		// 【從 session 判斷此user是否登入過】
+		// 【從 session 判斷此user是否Log in過】
 		Object account = session.getAttribute("memUsername");
 		if (account == null) {
 			session.setAttribute("location", req.getRequestURI());

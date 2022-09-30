@@ -193,7 +193,7 @@
       <a href="#" class="probootstrap-close-menu js-probootstrap-close-menu d-md-none"><span class="oi oi-arrow-left"></span> Close</a>
       <div class="probootstrap-site-logo probootstrap-animate" data-animate-effect="fadeInLeft">
         
-        <a href="<%=request.getContextPath() %>/frontend/sec_items/secItemsViewPage.jsp" class="mb-2 d-block probootstrap-logo">二手家電</a>
+        <a href="<%=request.getContextPath() %>/frontend/sec_items/secItemsViewPage.jsp" class="mb-2 d-block probootstrap-logo">USED HOME APPLIANCES</a>
 <!--         <p class="mb-0">這是說明文字這是說明文字這是說明文字這是說明文字 </p> -->
       </div>
       <div class="probootstrap-overflow">
@@ -202,7 +202,7 @@
             <li class="probootstrap-animate active" data-animate-effect="fadeInLeft"><a href="<%=request.getContextPath() %>/frontend/sec_items/secItemsViewPage.jsp">瀏覽全部商品</a></li>
             <c:forEach var="secCategoryVO" items="${secCategorylist}">
 	         	 <li class="probootstrap-animate" data-animate-effect="fadeInLeft">
-<!-- 	         	 		嘗試修改的版本 -->
+<!-- 	         	 		嘗試Edit的版本 -->
 <%--  	         	 	<form id="CateForm" method="get" action="<%=request.getContextPath() %>/frontend/sec_items/secItemsViewPageAJAX.jsp"> --%>
 <%-- 	         	 		<a id="Cate${secCategoryVO.shCateID}" style="text-decoration:none;" href="#"> --%>
 <%-- 	         	 			${secCategoryVO.shCateName} --%>
@@ -256,7 +256,7 @@
 					<c:forEach var="secItemsVO" items="${secItemslist}">
 						<c:if test="${secItemsVO.shID==secPicsVO.shID}">
 							<form method="post" action="<%=request.getContextPath()%>/sec_items/ShoppingServlet.do">
-								<input type="submit" value="加入購物車" class="btn btn-outline-success text-nowrap" id="btn1">
+								<input type="submit" value="加入Cart" class="btn btn-outline-success text-nowrap" id="btn1">
 								<input type="hidden" name="shID" value="${secItemsVO.shID}">
 								<input type="hidden" name="shName" value="${secItemsVO.shName}">
 								<input type="hidden" name="shPrice" value="${secItemsVO.shPrice}">
@@ -371,7 +371,7 @@
 <!-- //         var btn1 = document.getElementById('btn1'); -->
 
 <!-- //         btn1.addEventListener('click', function() { -->
-<!-- //             swal('已加入購物車', '', 'success') -->
+<!-- //             swal('已加入Cart', '', 'success') -->
 
 <!-- //             .then(function(){ -->
 <!-- //             		var delay = 2000 // 凍結 2 秒 -->

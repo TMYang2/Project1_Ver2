@@ -49,7 +49,7 @@ public class GetOneForUpdateSerVdrServlet extends HttpServlet {
 
 				/*************************** 其他可能的錯誤處理 **********************************/
 			} catch (Exception e) {
-				errorMsgs.add("無法取得要修改的資料:" + e.getMessage());
+				errorMsgs.add("無法取得要Edit的資料:" + e.getMessage());
 				RequestDispatcher failureView = req.getRequestDispatcher("/frontend/ser_vdr/select_page.jsp.jsp");
 				failureView.forward(req, res);
 			}

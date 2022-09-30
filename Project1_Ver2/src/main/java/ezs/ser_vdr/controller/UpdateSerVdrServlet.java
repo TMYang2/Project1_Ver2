@@ -49,9 +49,9 @@ public class UpdateSerVdrServlet extends HttpServlet {
 			String vdrTel = req.getParameter("vdrTel").trim();
 			String telReg = "^[(0-9)]{10}$";// 檢查手機看市話需不需要
 			if (vdrTel == null || vdrTel.trim().length() == 0) {
-				errorMsgs.add("電話請勿空白");
+				errorMsgs.add("Phone Number請勿空白");
 			} else if (!vdrTel.trim().matches(telReg)) { // 以下練習正則(規)表示式(regular-expression)
-				errorMsgs.add("請重新輸入電話");
+				errorMsgs.add("請重新輸入Phone Number");
 			}
 
 			String vdrVatno = req.getParameter("vdrVatno").trim();
@@ -82,9 +82,9 @@ public class UpdateSerVdrServlet extends HttpServlet {
 			String vdrAddr = req.getParameter("vdrAddr").trim();
 			String addrReg = "^[(\\u4e00-\\u9fa5)(0-9)]{5,50}$";
 			if (vdrAddr == null || vdrAddr.trim().length() == 0) {
-				errorMsgs.add("詳細地址請勿空白");
+				errorMsgs.add("詳細Address請勿空白");
 			} else if (!vdrAddr.trim().matches(addrReg)) { // 以下練習正則(規)表示式(regular-expression)
-				errorMsgs.add("請重新輸入詳細地址");
+				errorMsgs.add("請重新輸入詳細Address");
 			}
 
 			String vdrOpen = req.getParameter("vdrOpen").trim();
@@ -139,20 +139,20 @@ public class UpdateSerVdrServlet extends HttpServlet {
 				return; // 程式中斷
 			}
 
-			/*************************** 2.開始修改資料 *****************************************/
+			/*************************** 2.開始Edit資料 *****************************************/
 			SerVdrService serVdrSvc = new SerVdrService();
 			serVdrSvc.updateSerVdr(vdrStatus, vdrName, vdrTel, vdrVatno, vdrCounty, vdrDist, vdrAddr, vdrOpen, vdrIntro,
 					vdrPic, vdrRevCount, vdrRevScore, vdrID);
 
-			/*************************** 3.修改完成,準備轉交(Send the Success view) *************/
+			/*************************** 3.Edit完成,準備轉交(Send the Success view) *************/
 			req.setAttribute("serVdrVO", serVdrVO);// 資料庫update成功後,正確的的empVO物件,存入req
 			String url = "/frontend/ser_vdr/listOneSerVdr.jsp";// 傳到前端
-			RequestDispatcher successView = req.getRequestDispatcher(url); // 修改成功後,轉交listOneEmp.jsp
+			RequestDispatcher successView = req.getRequestDispatcher(url); // Edit成功後,轉交listOneEmp.jsp
 			successView.forward(req, res);
 
 			/*************************** 其他可能的錯誤處理 *************************************/
 			} catch (Exception e) {
-				errorMsgs.add("修改資料失敗:" + e.getMessage());
+				errorMsgs.add("Edit資料失敗:" + e.getMessage());
 				RequestDispatcher failureView = req.getRequestDispatcher("/frontend/ser_vdr/updateVdr.jsp");
 				failureView.forward(req, res);
 			}

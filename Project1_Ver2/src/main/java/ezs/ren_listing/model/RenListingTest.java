@@ -46,7 +46,7 @@ public class RenListingTest {
 //		listingVO1.setLisApproval(2);
 //		dao.insert(listingVO1);
 
-		// 修改
+		// Edit
 //		RenListingVO listingVO2 = new RenListingVO();	
 //		listingVO2.setLisID(11);
 //		listingVO2.setLisLddID(3);

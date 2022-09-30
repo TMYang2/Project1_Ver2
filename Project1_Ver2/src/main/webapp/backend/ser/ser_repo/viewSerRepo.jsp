@@ -191,11 +191,11 @@ pageContext.setAttribute("list", list);
 		<div id="layoutSidenav_content">
 			<main>
 				<div class="container-fluid px-4">
-					<h1 class="mt-4">所有刊登服務</h1>
+					<h1 class="mt-4">所有Post an Ad</h1>
 				</div>
 	
 
-	<a href="<%=request.getContextPath()%>/backend/ser/ser_repo/select_page.jsp">回首頁</a>
+	<a href="<%=request.getContextPath()%>/backend/ser/ser_repo/select_page.jsp">回HOME PAGE</a>
 	
 
 	<div class="container">
@@ -205,7 +205,7 @@ pageContext.setAttribute("list", list);
 								<tr class="thead-dark" style="text-align: left;">
 									<th>檢舉編號</th>
 							<th>訂單編號</th>
-							<th>會員編號</th>
+							<th>Member ID</th>
 							<th>檢舉內容</th>
 							<th>檢舉時間</th>
 							<th>檢舉狀態</th>
@@ -239,7 +239,7 @@ pageContext.setAttribute("list", list);
 	<%@ include file="page2.file"%>
 	<%-- 錯誤表列 --%>
 	<c:if test="${not empty errorMsgs}">
-		<font style="color: red">請修正以下錯誤:</font>
+		<font style="color: red">Fix:</font>
 		<ul>
 			<c:forEach var="message" items="${errorMsgs}">
 				<li style="color: red">${message}</li>

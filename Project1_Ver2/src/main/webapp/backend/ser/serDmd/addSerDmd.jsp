@@ -56,12 +56,12 @@ th, td {
 	<table id="table-1">
 		<tr>
 			<td>
-				<h3>新增需求單 - addSerDmd.jsp</h3>
+				<h3>Add Requests - addSerDmd.jsp</h3>
 			</td>
 			<td style="text-align: center">
 				<h4>
 					<a
-						href="<%=request.getContextPath()%>/backend/ser/serDmd/select_page.jsp">回首頁</a>
+						href="<%=request.getContextPath()%>/backend/ser/serDmd/select_page.jsp">回HOME PAGE</a>
 				</h4>
 			</td>
 		</tr>
@@ -71,7 +71,7 @@ th, td {
 
 	<%-- 錯誤表列 --%>
 	<c:if test="${not empty errorMsgs}">
-		<font style="color: red">請修正以下錯誤:</font>
+		<font style="color: red">Fix:</font>
 		<ul>
 			<c:forEach var="message" items="${errorMsgs}">
 				<li style="color: red">${message}</li>
@@ -109,12 +109,12 @@ th, td {
 					value="<%=(serDmdVO == null) ? "2" : serDmdVO.getDmdSerClaID()%>" /></td>
 			</tr>
 			<tr>
-				<td>需求人姓名:</td>
+				<td>需求人Name:</td>
 				<td><input type="TEXT" name="dmdName"
 					value="<%=(serDmdVO == null) ? "劉冠鳴" : serDmdVO.getDmdName()%>" /></td>
 			</tr>
 			<tr>
-				<td>需求人電話:</td>
+				<td>需求人Phone Number:</td>
 				<td><input type="TEXT" name="dmdTel"
 					value="<%=(serDmdVO == null) ? "066220167" : serDmdVO.getDmdTel()%>" /></td>
 			</tr>
@@ -134,7 +134,7 @@ th, td {
 					value="<%=(serDmdVO == null) ? "柳營區" : serDmdVO.getDmdRegion()%>" /></td>
 			</tr>
 			<tr>
-				<td>案場詳細地址:</td>
+				<td>案場詳細Address:</td>
 				<td><input type="TEXT" name="dmdAddress" size="20"
 					value="<%=(serDmdVO == null) ? "是鄰里123號" : serDmdVO.getDmdAddress()%>" /></td>
 			</tr>
@@ -181,7 +181,7 @@ th, td {
 
 		</table>
 		<br> <input type="hidden" name="action" value="insert"> <input
-			type="submit" value="送出新增">
+			type="submit" value="Confirm">
 	</FORM>
 </body>
 

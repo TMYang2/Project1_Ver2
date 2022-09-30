@@ -55,13 +55,13 @@
 <table id="table-1">
 	<tr><td>
 		 <h3>所有商品列表</h3>
-		 <h4><a href="select_page.jsp"><img src="images/back1.gif" width="100" height="32" border="0">回首頁</a></h4>
+		 <h4><a href="select_page.jsp"><img src="images/back1.gif" width="100" height="32" border="0">回HOME PAGE</a></h4>
 	</td></tr>
 </table>
 
 <%-- 錯誤表列 --%>
 <c:if test="${not empty errorMsgs}">
-	<font style="color:red">請修正以下錯誤:</font>
+	<font style="color:red">Fix:</font>
 	<ul>
 		<c:forEach var="message" items="${errorMsgs}">
 			<li style="color:red">${message}</li>
@@ -85,7 +85,7 @@
 		<th>狀態</th>
 		<th>所在縣市</th>
 		<th>所在鄉鎮區</th>
-		<th>修改</th>
+		<th>Edit</th>
 		<th>刪除</th>
 	</tr>
 <!-- 	分頁功能 -->
@@ -110,7 +110,7 @@
 		
 			<td>
 			  <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/sec_items/sec_items.do" style="margin-bottom: 0px;">
-			     <input type="submit" value="修改">
+			     <input type="submit" value="Edit">
 			     <input type="hidden" name="shID"  value="${secItemsVO.shID}">
 			     <input type="hidden" name="action"	value="getOne_For_Update"></FORM>
 			</td>

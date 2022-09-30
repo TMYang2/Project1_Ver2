@@ -16,7 +16,7 @@ public class AdminEmpTest {
 //		
 //		dao.insert(adminEmpVO1);
 
-//		// 2. 修改
+//		// 2. Edit
 //		AdminEmpVO adminEmpVO2 = new AdminEmpVO();
 //		
 //		adminEmpVO2.setAdmUsername("unhappyjavaman");

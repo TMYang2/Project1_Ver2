@@ -159,18 +159,18 @@ public class RenListingPicServlet extends HttpServlet{
 				
 				}
 				
-				/*********************2.開始修改資料************************/
+				/*********************2.開始Edit資料************************/
 				RenListingPicService renListingPicSvc = new RenListingPicService();
 				renListingPicVO = renListingPicSvc.updateRenListingPic(lspID,lspLisID,lspPic);
 				
 				req.setAttribute("renListingPicVO", renListingPicVO);
 				String url = "/frontend/ren_listing/listOneListing.jsp";
-				RequestDispatcher successView = req.getRequestDispatcher(url); // 修改成功後,轉交listOneEmp.jsp
+				RequestDispatcher successView = req.getRequestDispatcher(url); // Edit成功後,轉交listOneEmp.jsp
 				successView.forward(req, res);
 				
 				/*****************************其他可能錯誤處理****************/
 			}catch (Exception e) {
-				errorMsgs.add("修改資料失敗:"+e.getMessage());
+				errorMsgs.add("Edit資料失敗:"+e.getMessage());
 				RequestDispatcher failureView = req
 						.getRequestDispatcher("/frontend/update_renListing_input.jsp");
 				failureView.forward(req, res);
@@ -213,7 +213,7 @@ public class RenListingPicServlet extends HttpServlet{
 			
 			}
 			
-			/***********************2.開始修改資料****************/
+			/***********************2.開始Edit資料****************/
 			RenListingPicService renListingPicSvc = new RenListingPicService();
 			renListingPicVO = renListingPicSvc.addRenListingPic(lspLisID,lspPic);
 			

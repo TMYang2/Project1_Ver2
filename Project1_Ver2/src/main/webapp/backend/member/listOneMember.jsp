@@ -233,12 +233,6 @@ text-align: center;
 		<th id="test">email:</th>
 		<td>${memberVO.memEmail}</td>
 	</tr>
-<%-- 	<c:if test="${memberVO.memSupplier == 1}"> --%>
-<!-- 	<tr> -->
-<!-- 		<th id="test">會員統一編號:</th> -->
-<%-- 		<td>${memberVO.memVatno}</td> --%>
-<!-- 	</tr> -->
-<%-- 	</c:if> --%>
 	<tr>
 		<th id="test">Member Status:</th>		
 		<td>

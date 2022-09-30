@@ -506,7 +506,7 @@
 
     	<%-- 錯誤表列 --%>
 			<c:if test="${not empty errorMsgs}">
-				<font style="color: red">請修正以下錯誤:</font>
+				<font style="color: red">Fix:</font>
 				<ul>
 					<c:forEach var="message" items="${errorMsgs}">
 						<li style="color: red">${message}</li>
@@ -519,11 +519,11 @@
 		        <div class="form">
 		          <div class="fields fields--2">
 		            <label class="field">
-		              <span class="field__label" for="shRecipID">收件人姓名</span>
+		              <span class="field__label" for="shRecipID">收件人Name</span>
 		              <input class="field__input" type="text" id="shRecipName" name="shRecipName" value="<%=(secOrdVO == null) ? "" : secOrdVO.getShRecipName()%>" />
 		            </label>
 		            <label class="field">
-		              <span class="field__label" for="shRecipPhone">收件人電話號碼</span>
+		              <span class="field__label" for="shRecipPhone">收件人Phone Number號碼</span>
 		              <input class="field__input" type="text" id="shRecipPhone" name="shRecipPhone" value="<%=(secOrdVO == null) ? "" : secOrdVO.getShRecipPhone()%>" />
 		            </label>
 		          </div>
@@ -542,7 +542,7 @@
 		            </label>
 		          </div>
 		          <label class="field">
-		            <span class="field__label" for="shRoad">地址</span>
+		            <span class="field__label" for="shRoad">Address</span>
 		            <input class="field__input" type="text" id="shRoad" name="shRoad" value="<%=(secOrdVO == null) ? "" : secOrdVO.getShRoad()%>"/>
 		          </label>
 		          <label class="field">
@@ -666,7 +666,7 @@
     </div>
     <div class="form-container">
         <div class="field-container">
-            <label for="name">持卡人姓名</label>
+            <label for="name">持卡人Name</label>
             <input id="name" maxlength="20" type="text" required>
         </div>
         <div class="field-container">

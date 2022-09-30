@@ -69,7 +69,7 @@
 <table id="table-1">
 	<tr><td>
 		<h3>房屋詳情 - ListOneListing.jsp</h3>
-		<h4><a href="listing_select_page.jsp">回首頁</a></h4>
+		<h4><a href="listing_select_page.jsp">回HOME PAGE</a></h4>
 	</td></tr>
 </table>
 <table>
@@ -80,7 +80,7 @@
 		<th>區域ID</th>
 		<th>房源標題</th>
 		<th>房源介紹</th>
-		<th>詳細地址</th>
+		<th>詳細Address</th>
 		<th>租金</th>
 		<th>管理費</th>
 		<th>停車費</th>
@@ -196,14 +196,14 @@
 <div>
 
 
-<button id="addFav" class="float-left submit-button" >收藏房源</button>
+<button id="addFav" class="float-left submit-button" >Add to Favourites</button>
 <script type="text/javascript">
     document.getElementById("addFav").onclick = function () {
         location.href = "<%=request.getContextPath()%>/frontend/ren_favorites/addRenFavorites.jsp?favLisId=${renListingVO.lisID}";
     };
 </script>
 
-<button id="addApp" class="float-left submit-button" >預約看房</button>
+<button id="addApp" class="float-left submit-button" >Book an Appointment</button>
 <script type="text/javascript">
     document.getElementById("addApp").onclick = function () {
         location.href = "<%=request.getContextPath()%>/frontend/ren_appointment/addRenAppointment.jsp?aptLisId=${renListingVO.lisID}&aptLddId=${renListingVO.lisLddID}";

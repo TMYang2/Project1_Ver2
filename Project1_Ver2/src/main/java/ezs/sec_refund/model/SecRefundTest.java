@@ -29,7 +29,7 @@ public class SecRefundTest {
 //		2. 刪除
 //		dao.delete(2);
 
-//		3. 修改
+//		3. Edit
 		SecRefundVO secRefundVO2 = new SecRefundVO();
 		secRefundVO2.setShOrdID(4);
 		

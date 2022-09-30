@@ -192,12 +192,12 @@ SerRepVO serRepVO = (SerRepVO) request.getAttribute("serRepVO"); //EmpServlet.ja
 				<div class="container-fluid px-4">
 				<h1 class="mt-4">檢舉單審核</h1>
 				</div>
-				<a href="<%=request.getContextPath()%>/backend/ser/ser_repo/select_page.jsp">回首頁</a>
+				<a href="<%=request.getContextPath()%>/backend/ser/ser_repo/select_page.jsp">回HOME PAGE</a>
 			
 
 	<%-- 錯誤表列 --%>
 	<c:if test="${not empty errorMsgs}">
-		<font style="color: red">請修正以下錯誤:</font>
+		<font style="color: red">Fix:</font>
 		<ul>
 			<c:forEach var="message" items="${errorMsgs}">
 				<li style="color: red">${message}</li>
@@ -224,7 +224,7 @@ SerRepVO serRepVO = (SerRepVO) request.getAttribute("serRepVO"); //EmpServlet.ja
 			</tr>
 
 			<tr>
-				<th id="test">會員編號:</th>
+				<th id="test">Member ID:</th>
 				<td><%=serRepVO.getRpMemID()%></td>
 
 			</tr>
@@ -255,7 +255,7 @@ SerRepVO serRepVO = (SerRepVO) request.getAttribute("serRepVO"); //EmpServlet.ja
 		<input	type="hidden" name="rpOrdID" value="<%=serRepVO.getRpOrdID()%>"> 
 		<input	type="hidden" name="rpDate" value="<%=serRepVO.getRpDate()%>"> 
 		<input	type="hidden" name="rpTxt" value="<%=serRepVO.getRpTxt()%>"> 
-		<input type="submit" value="送出修改">
+		<input type="submit" value="送出Edit">
 	</FORM>
 
 			</main>

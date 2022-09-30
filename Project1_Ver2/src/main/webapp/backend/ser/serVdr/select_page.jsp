@@ -27,15 +27,15 @@
 						<ul
 							class="nav nav-items justify-content-between align-items-center col-9">
 							<li class="nav-item"><a class="nav-link" role="button"
-								href="#">房屋租賃</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">居家服務</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">二手家電</a></li>
+								href="#">RENTAL</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">SERVICE</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">USED HOME APPLIANCES</a></li>
 						</ul>
 						<div
 							class="nav-menu-shopping-bag d-flex col-3 justify-content-sm-end  align-items-center">
 							<a href="#"><i class="bi bi-cart3 mx-2"
 								style="font-size: 3rem; color: #8C4E37;"></i></a> <a class="btn"
-								href="#" role="button" style="background-color: #FD9843">會員登入</a>
+								href="#" role="button" style="background-color: #FD9843">會員Log in</a>
 						</div>
 
 					</div>
@@ -45,7 +45,7 @@
 								id="searchinput" aria-describedby="search-input"
 								placeholder="Search" value="">
 							<button type="submit" class="btn btn-primary " id="search-button"
-								style="background-color: #1AA179">開始搜尋</button>
+								style="background-color: #1AA179">開始Search</button>
 						</div>
 					</form>
 				</div>
@@ -62,7 +62,7 @@
 
 	<%-- 錯誤表列 --%>
 	<c:if test="${not empty errorMsgs}">
-		<font style="color: red">請修正以下錯誤:</font>
+		<font style="color: red">Fix:</font>
 		<ul>
 			<c:forEach var="message" items="${errorMsgs}">
 				<li style="color: red">${message}</li>
@@ -77,7 +77,7 @@
 		<li><a href='readSerVdr.jsp'>檢視廠商資料(依條件)</a>  <br></li></ul>
 		
 		<ul>
-		<li><a href='listAllSerVdr.jsp'>修改廠商資料</a>  <br></li></ul>
+		<li><a href='listAllSerVdr.jsp'>Edit廠商資料</a>  <br></li></ul>
 
 
 	
@@ -104,14 +104,14 @@
 					<div class="footer-service col-xs-6 col-sm-3">
 						<h4 class="my-2">功能服務</h4>
 						<ul class="list-unstyled list-light">
-							<li><a href="#">房屋租賃</a></li>
-							<li><a href="#">居家服務</a></li>
-							<li><a href="#">二手家電</a></li>
+							<li><a href="#">RENTAL</a></li>
+							<li><a href="#">SERVICE</a></li>
+							<li><a href="#">USED HOME APPLIANCES</a></li>
 
 						</ul>
 					</div>
 					<div class="footer-center col-xs-6 col-sm-3">
-						<h4 class="my-2">會員中心</h4>
+						<h4 class="my-2">Member Centre</h4>
 						<ul class="list-unstyled list-light">
 							<li><a href="#">會員註冊</a></li>
 							<li><a href="#">忘記密碼</a></li>

@@ -183,7 +183,7 @@ SerClaVO serClaVO = (SerClaVO) request.getAttribute("serClaVO");
 
 	<%-- 錯誤表列 --%>
 	<c:if test="${not empty errorMsgs}">
-		<font style="color: red">請修正以下錯誤:</font>
+		<font style="color: red">Fix:</font>
 		<ul>
 			<c:forEach var="message" items="${errorMsgs}">
 				<li style="color: red">${message}</li>
@@ -208,7 +208,7 @@ SerClaVO serClaVO = (SerClaVO) request.getAttribute("serClaVO");
 
 		</table>
 		<br> <input type="hidden" name="action" value="insert"> <input
-			type="submit" value="送出新增">
+			type="submit" value="Confirm">
 	</FORM>
 </div>
 			</main>

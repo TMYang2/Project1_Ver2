@@ -61,22 +61,22 @@ th, td {
 	<table id="table-1">
 		<tr>
 			<td>
-				<h3>訂單資料修改 - updateSerOrd.jsp</h3>
+				<h3>訂單資料Edit - updateSerOrd.jsp</h3>
 				<h4>
 					<a
-						href="<%=request.getContextPath()%>/backend/ser/serOrd/ordBackend.jsp">回首頁</a>
+						href="<%=request.getContextPath()%>/backend/ser/serOrd/ordBackend.jsp">回HOME PAGE</a>
 				</h4>
 			</td>
 		</tr>
 	</table>
 	<div style="text-align: center">
-		<h3>訂單修改</h3>
+		<h3>訂單Edit</h3>
 	</div>
 
 
 	<%-- 錯誤表列 --%>
 	<c:if test="${not empty errorMsgs}">
-		<font style="color: red">請修正以下錯誤:</font>
+		<font style="color: red">Fix:</font>
 		<ul>
 			<c:forEach var="message" items="${errorMsgs}">
 				<li style="color: red">${message}</li>
@@ -139,12 +139,12 @@ th, td {
 					value="<%=serOrdVO.getOrdVdrVatno()%>" /></td>
 			</tr>
 			<tr>
-				<td>業主姓名:</td>
+				<td>業主Name:</td>
 				<td><input type="TEXT" name="ordClnName" size="50"
 					value="<%=serOrdVO.getOrdClnName()%>" /></td>
 			</tr>
 			<tr>
-				<td>業主電話:</td>
+				<td>業主Phone Number:</td>
 				<td><input type="TEXT" name="ordClnTel" size="50"
 					value="<%=serOrdVO.getOrdClnTel()%>" /></td>
 			</tr>
@@ -163,7 +163,7 @@ th, td {
 					value="<%=serOrdVO.getOrdDist()%>" /></td>
 			</tr>
 			<tr>
-				<td>案場詳細地址:</td>
+				<td>案場詳細Address:</td>
 				<td><input type="TEXT" name="ordAddr" size="50"
 					value="<%=serOrdVO.getOrdAddr()%>" /></td>
 			</tr>
@@ -235,7 +235,7 @@ th, td {
 		</table>
 		<br> <input type="hidden" name="action" value="update"> <input
 			type="hidden" name="ordID" value="<%=serOrdVO.getOrdID()%>">
-		<input type="submit" value="送出修改">
+		<input type="submit" value="送出Edit">
 	</FORM>
 </body>
 <!-- =========================================以下為 datetimepicker 之相關Setting========================================== -->

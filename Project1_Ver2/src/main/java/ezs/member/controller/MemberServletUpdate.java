@@ -43,7 +43,7 @@ public class MemberServletUpdate extends HttpServlet {
 				/*************************** 1.接收請求參數 - 輸入格式的錯誤處理 **********************/
 				String str = req.getParameter("memID");
 				if (str == null || (str.trim()).length() == 0) {
-					errorMsgs.add("請輸入會員編號");
+					errorMsgs.add("請輸入Member ID");
 				}
 
 				if (!errorMsgs.isEmpty()) {
@@ -56,7 +56,7 @@ public class MemberServletUpdate extends HttpServlet {
 				try {
 					memID = new Integer(str);
 				} catch (Exception e) {
-					errorMsgs.add("會員編號格式不正確");
+					errorMsgs.add("Member ID格式不正確");
 				}
 
 				if (!errorMsgs.isEmpty()) {
@@ -102,7 +102,7 @@ public class MemberServletUpdate extends HttpServlet {
 				/*************************** 1.接收請求參數 - 輸入格式的錯誤處理 **********************/
 				String str = req.getParameter("memID");
 				if (str == null || (str.trim()).length() == 0) {
-					errorMsgs.add("請輸入會員編號");
+					errorMsgs.add("請輸入Member ID");
 				}
 
 				if (!errorMsgs.isEmpty()) {
@@ -115,7 +115,7 @@ public class MemberServletUpdate extends HttpServlet {
 				try {
 					memID = new Integer(str);
 				} catch (Exception e) {
-					errorMsgs.add("會員編號格式不正確");
+					errorMsgs.add("Member ID格式不正確");
 				}
 
 				if (!errorMsgs.isEmpty()) {
@@ -171,7 +171,7 @@ public class MemberServletUpdate extends HttpServlet {
 				successView.forward(req, res);
 
 			} catch (Exception e) {
-				errorMsgs.add("無法取得要修改的資料:" + e.getMessage());
+				errorMsgs.add("無法取得要Edit的資料:" + e.getMessage());
 				RequestDispatcher failureView = req.getRequestDispatcher("/frontend/member/listOneMember.jsp");
 				failureView.forward(req, res);
 			}
@@ -202,13 +202,13 @@ public class MemberServletUpdate extends HttpServlet {
 			}
 			String memPhone = req.getParameter("memPhone");
 			if (memPhone == null || memPhone.trim().length() == 0) {
-				errorMsgs.add("電話請勿空白");
+				errorMsgs.add("Phone Number請勿空白");
 			}else if (!memPhone.trim().matches(memPhoneReg)) {
-				errorMsgs.add("電話格式不符，請重新輸入");
+				errorMsgs.add("Phone Number格式不符，請重新輸入");
 			}
 			String memAddress = req.getParameter("memAddress");
 			if (memAddress == null || memAddress.trim().length() == 0) {
-				errorMsgs.add("地址請勿空白");
+				errorMsgs.add("Address請勿空白");
 			}
 			String memEmail = req.getParameter("memEmail");
 			if (memEmail == null || memEmail.trim().length() == 0) {
@@ -318,7 +318,7 @@ public class MemberServletUpdate extends HttpServlet {
 				successView.forward(req, res);
 
 			} catch (Exception e) {
-				errorMsgs.add("無法取得要修改的資料:" + e.getMessage());
+				errorMsgs.add("無法取得要Edit的資料:" + e.getMessage());
 				RequestDispatcher failureView = req.getRequestDispatcher("/backend/member/listOneMember.jsp");
 				failureView.forward(req, res);
 			}

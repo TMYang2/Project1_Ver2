@@ -32,7 +32,7 @@ SerAdVO serAdVO = (SerAdVO) request.getAttribute("serAdVO");
 			<td>
 				
 				<h4>
-					<a href="serAdHome.jsp">回首頁</a>
+					<a href="serAdHome.jsp">回HOME PAGE</a>
 				</h4>
 			</td>
 		</tr>
@@ -44,7 +44,7 @@ SerAdVO serAdVO = (SerAdVO) request.getAttribute("serAdVO");
 				<table
 					class="table table-striped table-hover align-middle text-center caption-top">
 					<caption>
-						<h2>刊登服務</h2>
+						<h2>Post an Ad</h2>
 						
 					</caption>
 					<thead class="table-success">

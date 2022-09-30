@@ -57,7 +57,7 @@ th, td {
 			<td>
 				<h3>估價單資料 - listOneSerQuo.jsp</h3>
 				<h4>
-					<a href="<%=request.getContextPath()%>/backend/ser/serQuo/quoBackend.jsp">回首頁</a>
+					<a href="<%=request.getContextPath()%>/backend/ser/serQuo/quoBackend.jsp">回HOME PAGE</a>
 				</h4>
 			</td>
 		</tr>
@@ -73,7 +73,7 @@ th, td {
 			<th>有效限期</th>
 			<th>估價項目</th>
 			<th>估價總價</th>
-			<th>修改</th>
+			<th>Edit</th>
 			<th>刪除</th>
 		</tr>
 		<tr>
@@ -89,7 +89,7 @@ th, td {
 					<FORM METHOD="post"
 						ACTION="<%=request.getContextPath()%>/ser_quo/UpdateQuoServlet.do"
 						style="margin-bottom: 0px;">
-						<input type="submit" value="修改"> 
+						<input type="submit" value="Edit"> 
 						<input type="hidden"name="quoID" value="${serQuoVO.quoID}"> 
 						<input type="hidden" name="action" value="updateOneQuo">
 					</FORM>

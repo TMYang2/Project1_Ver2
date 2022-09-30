@@ -59,7 +59,7 @@ public class InsertRenListingServlet extends HttpServlet {
 			
 			String lisAddress = req.getParameter("lisAddress").trim();
 			if (lisAddress == null || lisAddress.trim().length() == 0) {
-				errorMsgs.add("地址請勿空白");
+				errorMsgs.add("Address請勿空白");
 			}	
 			BigDecimal lisRent = null;
 			try {

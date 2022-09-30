@@ -89,7 +89,7 @@
 // 	   	 <span class="item_text">三菱16L高效節能清淨除濕機 MJ-E160HN-TW</span>
 // 	   	 <span class="item_price">$9000</span>
 // 			 </a>
-// 		<a class="btn btn-buy" href="/CFA104G5/sec_items/ShoppingServlet.do?shID=1&shName=三菱16L高效節能清淨除濕機 MJ-E160HN-TW&shPrice=9000&shQTY=1&action=ADD">加入購物車</a>
+// 		<a class="btn btn-buy" href="/CFA104G5/sec_items/ShoppingServlet.do?shID=1&shName=三菱16L高效節能清淨除濕機 MJ-E160HN-TW&shPrice=9000&shQTY=1&action=ADD">加入Cart</a>
 // 	</li>	
 	
 	

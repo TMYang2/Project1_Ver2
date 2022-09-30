@@ -49,13 +49,13 @@
 <table id="table-1">
 	<tr><td>
 		 <h3>所有買家 - listAllMember.jsp</h3>
-		 <h4><a href="<%=request.getContextPath()%>/frontend/sec_ord/listAllMember.jsp"><img src="images/back1.gif" width="100" height="32" border="0">回首頁</a></h4>
+		 <h4><a href="<%=request.getContextPath()%>/frontend/sec_ord/listAllMember.jsp"><img src="images/back1.gif" width="100" height="32" border="0">回HOME PAGE</a></h4>
 	</td></tr>
 </table>
 
 <%-- 錯誤表列 --%>
 <c:if test="${not empty errorMsgs}">
-	<font style="color:red">請修正以下錯誤:</font>
+	<font style="color:red">Fix:</font>
 	<ul>
 		<c:forEach var="message" items="${errorMsgs}">
 			<li style="color:red">${message}</li>
@@ -66,7 +66,7 @@
 <table>
 	<tr>
 		<th>買家會員ID</th>
-		<th>買家會員帳號</th>
+		<th>買家會員Account Name</th>
 		<th>查詢買家會員訂單</th>
 	</tr>
 	

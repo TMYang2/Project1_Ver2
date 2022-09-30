@@ -58,21 +58,21 @@ th, td {
 	<table id="table-1">
 		<tr>
 			<td>
-				<h3>訂單資料修改 - update_secord_input.jsp</h3>
+				<h3>訂單資料Edit - update_secord_input.jsp</h3>
 				<h4>
 					<a
 						href="<%=request.getContextPath()%>/frontend/sec_ord/secOrdHomeSeller.jsp"><img
-						src="images/back1.gif" width="100" height="32" border="0">回首頁</a>
+						src="images/back1.gif" width="100" height="32" border="0">回HOME PAGE</a>
 				</h4>
 			</td>
 		</tr>
 	</table>
 
-	<h3>資料修改:</h3>
+	<h3>資料Edit:</h3>
 
 	<%-- 錯誤表列 --%>
 	<c:if test="${not empty errorMsgs}">
-		<font style="color: red">請修正以下錯誤:</font>
+		<font style="color: red">Fix:</font>
 		<ul>
 			<c:forEach var="message" items="${errorMsgs}">
 				<li style="color: red">${message}</li>
@@ -115,19 +115,19 @@ th, td {
 					value="<%=secOrdVO.getShSellerID()%>" /></td>
 			</tr>
 			<tr>
-				<td>收件地址郵遞區號:</td>
+				<td>收件Address郵遞區號:</td>
 				<td><%=secOrdVO.getShPostcode()%></td>
 			</tr>
 			<tr>
-				<td>收件地址縣市:</td>
+				<td>收件Address縣市:</td>
 				<td><%=secOrdVO.getShCounty()%></td>
 			</tr>
 			<tr>
-				<td>收件地址鄉鎮區:</td>
+				<td>收件Address鄉鎮區:</td>
 				<td><%=secOrdVO.getShDist()%></td>
 			</tr>
 			<tr>
-				<td>收件地址路街弄:</td>
+				<td>收件Address路街弄:</td>
 				<td><%=secOrdVO.getShRoad()%></td>
 			</tr>
 			<tr>
@@ -154,7 +154,7 @@ th, td {
 
 		<br> <input type="hidden" name="action" value="update"> <input
 			type="hidden" name="shOrdID" value="<%=secOrdVO.getShOrdID()%>">
-		<input type="submit" value="修改">
+		<input type="submit" value="Edit">
 
 
 	</FORM>

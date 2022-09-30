@@ -171,11 +171,11 @@ figure img {
 			<main>
 				<div class="container-fluid px-4">
 					<h1 class="mt-4">新增檢舉單</h1>
-					<a href="select_page.jsp">回首頁</a>
+					<a href="select_page.jsp">回HOME PAGE</a>
 				
 	<%-- 錯誤表列 --%>
 	<c:if test="${not empty errorMsgs}">
-		<font style="color: red">請修正以下錯誤:</font>
+		<font style="color: red">Fix:</font>
 		<ul>
 			<c:forEach var="message" items="${errorMsgs}">
 				<li style="color: red">${message}</li>
@@ -199,7 +199,7 @@ figure img {
 
 
 			<tr>
-				<td>會員編號:</td>
+				<td>Member ID:</td>
 				<td><input type="TEXT" name="rpMemID" size="45"
 					value="<%=(serRepVO == null) ? "" : serRepVO.getRpMemID()%>" /></td>
 			</tr>
@@ -226,7 +226,7 @@ figure img {
 
 		</table>
 		<br> <input type="hidden" name="action" value="insert"> <input
-			type="submit" value="送出新增">
+			type="submit" value="Confirm">
 	</FORM>
 </div>
 			</main>

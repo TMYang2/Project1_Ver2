@@ -38,19 +38,19 @@
 						class="nav-link nav-icon rounded p-3 shadow-sm active show"
 						id="home-tab" data-toggle="tab" href="#home" role="tab"
 						aria-controls="home" aria-selected="true" style="height: 45px;"> <i
-							class=" far fa-gem fa-lg  me-2"></i> 房屋租賃
+							class=" far fa-gem fa-lg  me-2"></i> RENTAL
 					</a></li>
 					<li class="nav-item me-md-4"><a
 						class="nav-link nav-icon rounded p-3 shadow-sm" id="profile-tab"
 						data-toggle="tab" href="#profile" role="tab"
 						aria-controls="profile" aria-selected="false" style="height: 45px;"> <i
-							class="fab fa-html5 fa-lg me-2"></i> 居家服務
+							class="fab fa-html5 fa-lg me-2"></i> SERVICE
 					</a></li>
 					<li class="nav-item me-md-4"><a
 						class="nav-link nav-icon p-3 shadow-sm" id="contact-tab"
 						data-toggle="tab" href="#contact" role="tab"
 						aria-controls="contact" aria-selected="false" style="height: 45px;"> <i
-							class="fa fa-suitcase fa-lg me-2"></i> 二手商城
+							class="fa fa-suitcase fa-lg me-2"></i> USED HOME APPLIANCES
 					</a></li>
 				</ul>
 			</div>
@@ -66,7 +66,7 @@
 					</div>
 		
 					<div class="col-lg-3 col-sm-12 form-group" style="width:100px">
-						<button class="btn btn-primary" type="submit" style="font-size:15px;">搜尋</button>
+						<button class="btn btn-primary" type="submit" style="font-size:15px;">Search</button>
 					</div>
 				</div>
 			</form>

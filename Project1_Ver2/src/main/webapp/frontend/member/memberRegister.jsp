@@ -200,11 +200,11 @@
 			<div class="col-sm-12">
 				<div class="row">
 					<div class="col-xs-4">
-						<label class="Username">帳號(*) :</label>
+						<label class="Username">Account Name(*) :</label>
 					</div>
 					<div class="col-xs-8">
 						<input type="text" name="memUsername" id="memUsername"
-							placeholder="請輸入帳號" class="form-control "
+							placeholder="請輸入Account Name" class="form-control "
 							value="<%=(memberVO == null) ? "" : memberVO.getMemUsername()%>">
 					</div>
 				</div>
@@ -239,11 +239,11 @@
 			<div class="col-sm-12">
 				<div class="row">
 					<div class="col-xs-4">
-						<label class="Phone">電話(*) :</label>
+						<label class="Phone">Phone Number(*) :</label>
 					</div>
 					<div class="col-xs-8">
 						<input type="text" name="memPhone" id="memPhone"
-							placeholder="請輸入電話" class="form-control "
+							placeholder="請輸入Phone Number" class="form-control "
 							value="<%=(memberVO == null) ? "" : memberVO.getMemPhone()%>">
 					</div>
 				</div>
@@ -252,11 +252,11 @@
 			<div class="col-sm-12">
 				<div class="row">
 					<div class="col-xs-4">
-						<label class="Address">地址(*) :</label>
+						<label class="Address">Address(*) :</label>
 					</div>
 					<div class="col-xs-8">
 						<input type="text" name="memAddress" id="memAddress"
-							placeholder="請輸入地址" class="form-control "
+							placeholder="請輸入Address" class="form-control "
 							value="<%=(memberVO == null) ? "" : memberVO.getMemAddress()%>">
 					</div>
 				</div>
@@ -291,7 +291,7 @@
 			<div class="col-sm-12">
 				<div class="row">
 					<div class="col-xs-4">
-						<label class="Headshot">個人頭像 :</label>
+						<label class="Headshot">Profile Picture :</label>
 					</div>
 					<div class="col-xs-8">
 						<input type="file" name="memHeadshot" id="memHeadshot" accept="image/gif, image/jpeg, image/png"
@@ -305,13 +305,13 @@
 			</div>
 			<!-------------------->
 			<input type="hidden" name="action" value="insert"> 
-			<input type="submit" value="送出新增" class="btn btn-submit">
+			<input type="submit" value="Confirm" class="btn btn-submit">
 			
 		</form>
 		<%-- 錯誤表列 --%>
 		<c:if test="${not empty errorMsgs}">
 			<div style="margin: 0px auto; ">
-<!-- 				<font style="color: #F96;">請修正以下錯誤:</font> -->
+<!-- 				<font style="color: #F96;">Fix:</font> -->
 				<ul style="list-style-type: none;">
 					<c:forEach var="message" items="${errorMsgs}">
 						<li style="color: #F96;">${message}</li>

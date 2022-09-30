@@ -23,7 +23,7 @@ public class BackendLoginFilter implements Filter {
 		HttpServletResponse res = (HttpServletResponse) response;
 		// 【取得 session】
 		HttpSession session = req.getSession();
-		//【從 session 判斷此user是否登入過】
+		//【從 session 判斷此user是否Log in過】
 		Object admUsername = session.getAttribute("admUsername");
 		
 		if (admUsername == null) {

@@ -43,7 +43,7 @@ public class UpdateSerAdServlet extends HttpServlet {
 				String adDist = req.getParameter("adDist");
 				String adDistReg = "^[(\u4e00-\u9fa5)(0-9)]{2,20}$";
 				if (adDist == null || adDist.trim().length() == 0) {
-					errorMsgs.add("員工姓名: 請勿空白");
+					errorMsgs.add("員工Name: 請勿空白");
 				} else if (!adDist.trim().matches(adDistReg)) { // 以下練習正則(規)表示式(regular-expression)
 					errorMsgs.add("服務地區: 只能是中文、數字, 且長度必需在2到20之間");
 				}
@@ -80,19 +80,19 @@ public class UpdateSerAdServlet extends HttpServlet {
 					return; // 程式中斷
 				}
 
-				/*************************** 2.開始修改資料 *****************************************/
+				/*************************** 2.開始Edit資料 *****************************************/
 				SerAdService serAdSvc = new SerAdService();
 				serAdSvc.updateSerAd(adStatus, adDist, adTxt, adPic, adVdrID, adSerClaID);
 
-				/*************************** 3.修改完成,準備轉交(Send the Success view) *************/
+				/*************************** 3.Edit完成,準備轉交(Send the Success view) *************/
 				req.setAttribute("serAdVO", serAdVO); // 資料庫update成功後,正確的的empVO物件,存入req
 				String url = "/frontend/ser_ad/listAllSerAd.jsp";
-				RequestDispatcher successView = req.getRequestDispatcher(url); // 修改成功後,轉交listOneEmp.jsp
+				RequestDispatcher successView = req.getRequestDispatcher(url); // Edit成功後,轉交listOneEmp.jsp
 				successView.forward(req, res);
 
 				/*************************** 其他可能的錯誤處理 *************************************/
 			} catch (Exception e) {
-				errorMsgs.add("修改資料失敗:" + e.getMessage());
+				errorMsgs.add("Edit資料失敗:" + e.getMessage());
 				RequestDispatcher failureView = req.getRequestDispatcher("/frontend/ser_ad/update_SerAd_input.jsp");
 				failureView.forward(req, res);
 			}

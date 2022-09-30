@@ -11,7 +11,7 @@ public class RenLandlordTest {
 //		landlordVO1.setLddApproval(2);
 //		dao.insert(landlordVO1);
 //
-//		// 修改
+//		// Edit
 //		RenLandlordVO landlordVO2 = new RenLandlordVO();
 //		landlordVO2.setLddId(10);
 //		landlordVO2.setLddMemId(2);

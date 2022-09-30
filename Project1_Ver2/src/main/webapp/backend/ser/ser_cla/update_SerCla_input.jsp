@@ -171,7 +171,7 @@ figure img {
 		<div id="layoutSidenav_content">
 			<main>
 				<div class="container-fluid px-4">
-					<h1 class="mt-4">服務類別修改</h1>
+					<h1 class="mt-4">服務類別Edit</h1>
 					
 <table id="table-1">
 	<tr><td>
@@ -183,7 +183,7 @@ figure img {
 
 <%-- 錯誤表列 --%>
 <c:if test="${not empty errorMsgs}">
-	<font style="color:red">請修正以下錯誤:</font>
+	<font style="color:red">Fix:</font>
 	<ul>
 		<c:forEach var="message" items="${errorMsgs}">
 			<li style="color:red">${message}</li>
@@ -208,7 +208,7 @@ figure img {
 <br>
 <input type="hidden" name="action" value="update">
 <input type="hidden" name="serClaID" value="<%=serClaVO.getSerClaID()%>">
-<input type="submit" value="送出修改"></FORM>
+<input type="submit" value="送出Edit"></FORM>
 
 </div>
 			</main>

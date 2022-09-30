@@ -80,7 +80,7 @@
 <table id="table-1">
 	<tr><td>
 		 <h3>出租刊登 - addEmp.jsp</h3></td><td>
-		 <h4><a href="listing_select_page.jsp">回首頁</a></h4>
+		 <h4><a href="listing_select_page.jsp">回HOME PAGE</a></h4>
 	</td></tr>
 </table>
 
@@ -89,7 +89,7 @@
 
 <%-- 錯誤表列 --%>
 <c:if test="${not empty errorMsgs}">
-	<font style="color:red">請修正以下錯誤:</font>
+	<font style="color:red">Fix:</font>
 	<ul>
 		<c:forEach var="message" items="${errorMsgs}">
 			<li style="color:red">${message}</li>
@@ -131,7 +131,7 @@
 	</tr>
 	
 	<tr>
-		<td>詳細地址<font color = red><b>*</b></font></td>
+		<td>詳細Address<font color = red><b>*</b></font></td>
 		<td><input type="TEXT" name="lisAddress" size="45"	
 			value="<%= (renListingVO==null)? "範例:中北路200號": renListingVO.getLisAddress() %>"/></td>
 	</tr>
@@ -176,7 +176,7 @@
 			value="<%= (renListingVO==null)? "1000": renListingVO.getLisPfee() %>"/>  元/月，無請填0</td>
 	</tr>
 	<tr>
-		<td>詳細地址<font color = red><b>*</b></font></td>
+		<td>詳細Address<font color = red><b>*</b></font></td>
 		<td><input type="TEXT" name="lisAddress" size="45"	
 			value="<%= (renListingVO==null)? "範例:中北路200號": renListingVO.getLisAddress() %>"/></td>
 	</tr>
@@ -350,7 +350,7 @@
 		<td></td>
 		<td>
 			<input type="hidden" name="action" value="insert">
-			<input type="submit" value="送出新增">
+			<input type="submit" value="Confirm">
 		<td>
 		</td>
 	</tr>	

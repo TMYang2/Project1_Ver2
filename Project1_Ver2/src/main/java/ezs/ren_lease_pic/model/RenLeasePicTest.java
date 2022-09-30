@@ -14,7 +14,7 @@ public class RenLeasePicTest {
 //		path = "items/logo.JPG";
 //		dao.insert(lease_picVO1);
 
-		// 修改
+		// Edit
 //		RenLeasePicVO lease_picVO2 = new RenLeasePicVO();
 //		lease_picVO2.setLpId(9);
 //		lease_picVO2.setLpLeaseId(2);

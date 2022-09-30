@@ -19,7 +19,7 @@ public class SecFavTest {
 //		2. 刪除
 //		dao.delete(1, 3);
 
-//		3. 修改
+//		3. Edit
 //		SecFavVO secFavVO2 = new SecFavVO();
 //
 //		secFavVO2.setShAddFavTime(Date.valueOf("2020-12-11"));

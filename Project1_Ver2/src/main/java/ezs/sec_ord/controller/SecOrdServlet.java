@@ -94,7 +94,7 @@ public class SecOrdServlet extends HttpServlet {
 				throw new ServletException(e);
 			}
 		}
-// 買家會員結帳並新增訂單 (接收來自Checkout.jsp請求)
+// 買家會員結帳並Add an Order (接收來自Checkout.jsp請求)
 
 		if ("insert".equals(action)) {
 
@@ -102,7 +102,7 @@ public class SecOrdServlet extends HttpServlet {
 			req.setAttribute("errorMsgs", errorMsgs);
 			HttpSession session = req.getSession();
 			
-				/*************************** 0.確認使用者已登入 ****************************************/
+				/*************************** 0.確認使用者已Log in ****************************************/
 			try{
 				String memID = session.getAttribute("memID").toString();
 			} catch (Exception e) {
@@ -115,11 +115,11 @@ public class SecOrdServlet extends HttpServlet {
 			try {
 				String shRecipName = (String) req.getParameter("shRecipName");
 				if (shRecipName == null || shRecipName.trim().length() == 0) {
-					errorMsgs.add("收件人姓名請勿空白");
+					errorMsgs.add("收件人Name請勿空白");
 				}
 				String shRecipPhone = (String) req.getParameter("shRecipPhone");
 				if (shRecipPhone == null || shRecipPhone.trim().length() == 0) {
-					errorMsgs.add("收件人電話請勿空白");
+					errorMsgs.add("收件人Phone Number請勿空白");
 				}
 				
 				Integer shSellerID = 1;
@@ -141,7 +141,7 @@ public class SecOrdServlet extends HttpServlet {
 					}
 				String shRoad = (String) req.getParameter("shRoad");
 					if (shRoad == null || shRoad.trim().length() == 0) {
-						errorMsgs.add("地址請勿空白");
+						errorMsgs.add("Address請勿空白");
 					}
 				Integer shPayment = 11;
 				Integer shOrdStatus = 2;
@@ -198,7 +198,7 @@ public class SecOrdServlet extends HttpServlet {
 
 				/*************************** 3.新增完成,準備轉交(Send the Success view) ************/
 
-				String url = "/frontend/EZ_home.jsp"; // 暫時Setting跳轉到首頁
+				String url = "/frontend/EZ_home.jsp"; // 暫時Setting跳轉到HOME PAGE
 				RequestDispatcher successView = req.getRequestDispatcher(url);
 				successView.forward(req, res);
 
@@ -220,7 +220,7 @@ public class SecOrdServlet extends HttpServlet {
 				/*************************** 1.接收請求參數 ****************************************/
 				Integer secOrdID = Integer.valueOf(req.getParameter("secOrdID"));
 
-				/*************************** 2.開始修改資料 ****************************************/
+				/*************************** 2.開始Edit資料 ****************************************/
 				
 				if("completeOrder".equals(action)) {
 					SecOrdService secOrdSvc = new SecOrdService();
@@ -230,7 +230,7 @@ public class SecOrdServlet extends HttpServlet {
 					secOrdSvc.refundOrder(secOrdID);
 				}
 				
-				/*************************** 3.修改完成,準備轉交(Send the Success view) ************/
+				/*************************** 3.Edit完成,準備轉交(Send the Success view) ************/
 
 				String url = "/frontend/sec_ord/listSecOrds_ByShBuyerID.jsp";
 				RequestDispatcher successView = req.getRequestDispatcher(url);

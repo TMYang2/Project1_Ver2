@@ -66,22 +66,22 @@ th, td {
 	<table id="table-1">
 		<tr>
 			<td>
-				<h3>商品資料修改 - update_secItems_input.jsp</h3>
+				<h3>商品資料Edit - update_secItems_input.jsp</h3>
 				<h4>
 					<a
 						href="<%=request.getContextPath()%>/frontend/sec_items/select_page.jsp"><img
 						src="<%=request.getContextPath()%>/images/cmn/index/EASYSPACE.png"
-						width="100" height="60" border="0">回查詢首頁 </a>
+						width="100" height="60" border="0">回查詢HOME PAGE </a>
 				</h4>
 			</td>
 		</tr>
 	</table>
 
-	<h3>資料修改:</h3>
+	<h3>資料Edit:</h3>
 
 	<%-- 錯誤表列 --%>
 	<c:if test="${not empty errorMsgs}">
-		<font style="color: red">請修正以下錯誤:</font>
+		<font style="color: red">Fix:</font>
 		<ul>
 			<c:forEach var="message" items="${errorMsgs}">
 				<li style="color: red">${message}</li>
@@ -112,7 +112,7 @@ th, td {
 				</select></td>
 			<tr>
 			<tr>
-				<!-- 		<td>會員編號:</td> -->
+				<!-- 		<td>Member ID:</td> -->
 				<!-- 		<td><input type="hidden" name="id" size="45" -->
 				<%-- 			 value="<%=secItemsVO.getShSellerID()%>" /></td> --%>
 				<td><input type="hidden" name="shSellerID"
@@ -202,7 +202,7 @@ th, td {
 		</table>
 		<br> <input type="hidden" name="action" value="update"> <input
 			type="hidden" name="shID" value="<%=secItemsVO.getShID()%>">
-		<input type="submit" value="送出修改">
+		<input type="submit" value="送出Edit">
 	</FORM>
 </body>
 

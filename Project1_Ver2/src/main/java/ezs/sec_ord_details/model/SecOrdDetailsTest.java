@@ -21,7 +21,7 @@ public class SecOrdDetailsTest {
 		
 //		dao.delete(3, 1);
 
-//		3. 修改
+//		3. Edit
 //		SecOrdDetailsVO secOrdDetailsVO2 = new SecOrdDetailsVO();
 //		secOrdDetailsVO2.setShName("測試測試");
 //		secOrdDetailsVO2.setShPrice(1000);

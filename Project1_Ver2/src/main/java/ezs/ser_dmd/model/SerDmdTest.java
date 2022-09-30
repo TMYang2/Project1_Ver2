@@ -25,7 +25,7 @@ public class SerDmdTest {
 //		dem1.setDmdPic(null);
 //		dao.insert(dem1);
 //
-		// 修改 測試OK
+		// Edit 測試OK
 		SerDmdVO dem2 = new SerDmdVO();
 		dem2.setDmdID(1);
 		dem2.setDmdStatus((byte)1);

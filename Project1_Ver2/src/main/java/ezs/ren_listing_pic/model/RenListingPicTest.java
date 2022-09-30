@@ -10,7 +10,7 @@ public class RenListingPicTest {
 		path = "items/1-4.jpg";
 		dao.insert(listingPicVO1);
 
-		// 修改
+		// Edit
 		RenListingPicVO listingPicVO2 = new RenListingPicVO();
 		listingPicVO2.setLspID(6);
 		listingPicVO2.setLspLisID(3);

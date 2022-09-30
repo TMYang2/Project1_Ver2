@@ -20,7 +20,7 @@ public class SecPostcodeTest {
 //		Integer shPostCode2 = 999;
 //		dao.delete(shPostCode2);
 //		
-//		3. 修改
+//		3. Edit
 		secPostcodeVO.setShPostCode(999);
 		secPostcodeVO.setShPostCounty("test2");
 		secPostcodeVO.setShPostDist("test2");

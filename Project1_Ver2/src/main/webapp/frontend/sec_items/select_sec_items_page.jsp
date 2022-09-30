@@ -9,7 +9,7 @@
 <body bgcolor="lightblue">
 	<%-- 錯誤表列 --%>
 	<c:if test="${not empty errorMsgs}">
-		<font style="color: red">請修正以下錯誤:</font>
+		<font style="color: red">Fix:</font>
 		<ul>
 			<c:forEach var="message" items="${errorMsgs}">
 				<li style="color: red">${message}</li>
@@ -31,7 +31,7 @@
 <!-- 	新增單筆 -->
 	<a href="addSecItems.jsp"><b>新增一筆二手商品</b></a>
 	
-<!-- 	修改單筆 -->
+<!-- 	Edit單筆 -->
 
 </body>
 </html>

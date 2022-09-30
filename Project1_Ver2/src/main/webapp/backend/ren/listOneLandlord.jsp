@@ -159,7 +159,7 @@ RenLandlordVO renLandlordVO = (RenLandlordVO) request.getAttribute("renLandlordV
 				<h4>
 					<a href="<%=request.getContextPath()%>/backend/ren/select.jsp"><img
 						src="<%=request.getContextPath()%>/images/ren/back_icon.png"
-						width="60" height="60" border="0">回首頁</a>
+						width="60" height="60" border="0">回HOME PAGE</a>
 				</h4>
 <div class="container">
 					<div class="row">
@@ -168,7 +168,7 @@ RenLandlordVO renLandlordVO = (RenLandlordVO) request.getAttribute("renLandlordV
 								<tr class="thead-dark" style="text-align: left;">
 									
 			<th>房東編號</th>
-			<th>會員編號</th>
+			<th>Member ID</th>
 			<th>會員名稱</th>
 			<th>審核狀態</th>
 		</tr>

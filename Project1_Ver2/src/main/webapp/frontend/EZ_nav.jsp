@@ -36,13 +36,13 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
 				<ul class="navbar-nav ms-auto me-sm-2 mt-2 mt-lg-0">
-					<li class="nav-item active me-3"><a class="nav-link text-dark" href="<%= request.getContextPath()%>/frontend/EZ_home.jsp">首頁
+					<li class="nav-item active me-3"><a class="nav-link text-dark" href="<%= request.getContextPath()%>/frontend/EZ_home.jsp">HOME PAGE
 					</a></li>
-					<li class="nav-item me-3"><a class="nav-link text-dark" href="<%=request.getContextPath()%>/frontend/ren_listing/listingView.jsp">租賃服務</a>
+					<li class="nav-item me-3"><a class="nav-link text-dark" href="<%=request.getContextPath()%>/frontend/ren_listing/listingView.jsp">RENTAL</a>
 					</li>
-					<li class="nav-item me-3"><a class="nav-link text-dark" href="<%= request.getContextPath()%>/frontend/sec_items/secItemsViewPage.jsp">二手家電</a>
+					<li class="nav-item me-3"><a class="nav-link text-dark" href="<%= request.getContextPath()%>/frontend/sec_items/secItemsViewPage.jsp">USED HOME APPLIANCES</a>
 					</li>
-					<li class="nav-item me-3"><a class="nav-link text-dark" href="<%= request.getContextPath()%>/frontend/ser_ad/serAdViewPage.jsp">居家服務</a>
+					<li class="nav-item me-3"><a class="nav-link text-dark" href="<%= request.getContextPath()%>/frontend/ser_ad/serAdViewPage.jsp">SERVICE</a>
 					</li>
 					
 					<% 
@@ -56,16 +56,16 @@
 									height="25" src=" https://dummyimage.com/100/007bff/efefef"
 									alt="Htmlstream"> ${memUsername} <i class="fa fa-angle-down   "></i></a>
 								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-									<a class="dropdown-item" href="<%= request.getContextPath()%>/frontend/member/memberCenter/buyerMemberCenter.jsp">會員中心</a> 
-									<a class="dropdown-item" href="<%= request.getContextPath()%>/frontend/member/memberCenter/sellerMemberCenter.jsp">賣家中心</a> 
-									<a class="dropdown-item" href="<%=request.getContextPath()%>/frontend/chat/index.jsp">聊聊</a>
-									<a class="dropdown-item" href="<%=request.getContextPath()%>/frontend/sec_items/shoppingCart.jsp">購物車</a>
+									<a class="dropdown-item" href="<%= request.getContextPath()%>/frontend/member/memberCenter/buyerMemberCenter.jsp">Member Centre</a> 
+									<a class="dropdown-item" href="<%= request.getContextPath()%>/frontend/member/memberCenter/sellerMemberCenter.jsp">Seller Centre</a> 
+									<a class="dropdown-item" href="<%=request.getContextPath()%>/frontend/chat/index.jsp">Chat</a>
+									<a class="dropdown-item" href="<%=request.getContextPath()%>/frontend/sec_items/shoppingCart.jsp">Cart</a>
 									<div class="dropdown-divider"></div>
 									<a class="dropdown-item" href="<%=request.getContextPath()%>/member/MemberServlet.do?action=logout">Log out</a>
 								</div>
 							</li>
 						<%} else {%>
-							<li class="nav-item me-3"><a class="nav-link text-dark" href="<%= request.getContextPath()%>/frontend/member/login.jsp">登入</a></li>
+							<li class="nav-item me-3"><a class="nav-link text-dark" href="<%= request.getContextPath()%>/frontend/member/login.jsp">Log in</a></li>
 						<% }%>
 				</ul>
 

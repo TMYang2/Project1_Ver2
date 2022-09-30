@@ -202,7 +202,7 @@ if("listRenListing_ByLisLddID".equals(action)) {
 		        
 			} catch (Exception e) {
 				e.printStackTrace();
-				errorMsgs.add("無法取得修改的資料:" + e.getMessage());
+				errorMsgs.add("無法取得Edit的資料:" + e.getMessage());
 				RequestDispatcher failureView = req
 						.getRequestDispatcher("/frontend/ren_listing/listAllListing.jsp");
 				failureView.forward(req, res);
@@ -242,7 +242,7 @@ if("listRenListing_ByLisLddID".equals(action)) {
 	            }
 				String lisAddress = req.getParameter("lisAddress").trim();
 				if (lisAddress == null || lisAddress.trim().length() == 0) {
-					errorMsgs.add("地址請勿空白");
+					errorMsgs.add("Address請勿空白");
 				}	
 				BigDecimal lisRent = null;
 				try {
@@ -390,7 +390,7 @@ if("listRenListing_ByLisLddID".equals(action)) {
 					return; //程式中斷
 				}
 //				System.out.print(renListingVO);
-				/***************************2.開始修改資料*****************************************/
+				/***************************2.開始Edit資料*****************************************/
 				RenListingService renListingSvc = new RenListingService();
 				renListingVO = renListingSvc.updateRenListing(lisID,lisLddID,lisRtID,lisAreaID,lisTitle,lisAbt,
 						lisAddress,lisRent,lisMngFee,lisPfee,lisSqft,lisFlr,lisRmNo,
@@ -401,16 +401,16 @@ if("listRenListing_ByLisLddID".equals(action)) {
 				RenListingPicService renListingPicSvc = new RenListingPicService();
 				renListingPicSvc.updateRenListingPic(lspID, lspLisID,lspPic);
 				
-				/***************************3.修改完成,準備轉交(Send the Success view)*************/
+				/***************************3.Edit完成,準備轉交(Send the Success view)*************/
 				req.setAttribute("renListingVO", renListingVO); // 資料庫update成功後,正確的的empVO物件,存入req
 				String url = "/frontend/ren_listing/listOneListing.jsp";
-				RequestDispatcher successView = req.getRequestDispatcher(url); // 修改成功後,轉交listOneEmp.jsp
+				RequestDispatcher successView = req.getRequestDispatcher(url); // Edit成功後,轉交listOneEmp.jsp
 				successView.forward(req, res);
 //				System.out.print(renListingVO);
 				/***************************其他可能的錯誤處理*************************************/
 			} catch (Exception e) {
 				e.printStackTrace();
-				errorMsgs.add("修改資料失敗:"+e.getMessage());
+				errorMsgs.add("Edit資料失敗:"+e.getMessage());
 				RequestDispatcher failureView = req
 						.getRequestDispatcher("/frontend/ren_listing/update_listing_input.jsp");
 				failureView.forward(req, res);
@@ -443,7 +443,7 @@ if("listRenListing_ByLisLddID".equals(action)) {
 			
 			String lisAddress = req.getParameter("lisAddress").trim();
 			if (lisAddress == null || lisAddress.trim().length() == 0) {
-				errorMsgs.add("地址請勿空白");
+				errorMsgs.add("Address請勿空白");
 			}	
 			BigDecimal lisRent = null;
 			try {

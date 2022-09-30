@@ -14,7 +14,7 @@ public class SerClaTest {
 //        ser1.setSerClaName("水泥工程");
 //        dao.insert(ser1);
 
-		// 修改 -測試OK
+		// Edit -測試OK
 //        SerClaVO ser2 = new SerClaVO();
 //        ser2.setSerClaID(18);
 //        ser2.setSerClaName("水電工程");

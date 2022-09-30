@@ -249,7 +249,7 @@
 					<div style="background-color: gray;">
 						<c:if test="${not empty errorMsgs}">
 							<div style="margin: 0px auto;">
-								<font style="color: red">請修正以下錯誤:</font>
+								<font style="color: red">Fix:</font>
 								<ul style="list-style-type: none;">
 									<c:forEach var="message" items="${errorMsgs}">
 										<li style="color: red">${message}</li>

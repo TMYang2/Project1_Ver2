@@ -40,15 +40,15 @@ h4 {
 						<ul
 							class="nav nav-items justify-content-between align-items-center col-9">
 							<li class="nav-item"><a class="nav-link" role="button"
-								href="#">房屋租賃</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">居家服務</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">二手家電</a></li>
+								href="#">RENTAL</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">SERVICE</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">USED HOME APPLIANCES</a></li>
 						</ul>
 						<div
 							class="nav-menu-shopping-bag d-flex col-3 justify-content-sm-end  align-items-center">
 							<a href="#"><i class="bi bi-cart3 mx-2"
 								style="font-size: 3rem; color: #8C4E37;"></i></a> <a class="btn"
-								href="#" role="button" style="background-color: #FD9843">會員登入</a>
+								href="#" role="button" style="background-color: #FD9843">會員Log in</a>
 						</div>
 
 					</div>
@@ -58,7 +58,7 @@ h4 {
 								id="searchinput" aria-describedby="search-input"
 								placeholder="Search" value="">
 							<button type="submit" class="btn btn-primary " id="search-button"
-								style="background-color: #1AA179">開始搜尋</button>
+								style="background-color: #1AA179">開始Search</button>
 						</div>
 					</form>
 				</div>
@@ -72,7 +72,7 @@ h4 {
 			</td>
 			<td>
 				<h4>
-					<a href="serVdrHome.jsp">回首頁</a>
+					<a href="serVdrHome.jsp">回HOME PAGE</a>
 				</h4>
 			</td>
 		</tr>
@@ -81,7 +81,7 @@ h4 {
 
 	<%-- 錯誤表列 --%>
 	<c:if test="${not empty errorMsgs}">
-		<font style="color: red">請修正以下錯誤:</font>
+		<font style="color: red">Fix:</font>
 		<ul>
 			<c:forEach var="message" items="${errorMsgs}">
 				<li style="color: red">${message}</li>
@@ -116,7 +116,7 @@ h4 {
 
 		<li>
 			<FORM METHOD="post" ACTION="GetSerVdrServlet.do">
-				<b>選擇廠商姓名:</b> <select size="1" name="vdrID">
+				<b>選擇廠商Name:</b> <select size="1" name="vdrID">
 					<c:forEach var="serVdrVO" items="${serVdrSvc.all}">
 						<option value="${serVdrVO.vdrID}">${serVdrVO.vdrName}
 					</c:forEach>
@@ -146,14 +146,14 @@ h4 {
 					<div class="footer-service col-xs-6 col-sm-3">
 						<h4 class="my-2">功能服務</h4>
 						<ul class="list-unstyled list-light">
-							<li><a href="#">房屋租賃</a></li>
-							<li><a href="#">居家服務</a></li>
-							<li><a href="#">二手家電</a></li>
+							<li><a href="#">RENTAL</a></li>
+							<li><a href="#">SERVICE</a></li>
+							<li><a href="#">USED HOME APPLIANCES</a></li>
 
 						</ul>
 					</div>
 					<div class="footer-center col-xs-6 col-sm-3">
-						<h4 class="my-2">會員中心</h4>
+						<h4 class="my-2">Member Centre</h4>
 						<ul class="list-unstyled list-light">
 							<li><a href="#">會員註冊</a></li>
 							<li><a href="#">忘記密碼</a></li>

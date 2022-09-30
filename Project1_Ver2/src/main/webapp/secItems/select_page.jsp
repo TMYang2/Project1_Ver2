@@ -44,7 +44,7 @@ h4 {
 
 	<%-- 錯誤表列 --%>
 	<c:if test="${not empty errorMsgs}">
-		<font style="color: red">請修正以下錯誤:</font>
+		<font style="color: red">Fix:</font>
 		<ul>
 			<c:forEach var="message" items="${errorMsgs}">
 				<li style="color: red">${message}</li>
@@ -54,7 +54,7 @@ h4 {
 
 	<%-- 查詢全部商品 --%>
 	<ul>
-		<li><a href='listAllSecItems.jsp'>搜尋</a> 查詢全部商品 <br> <br></li>
+		<li><a href='listAllSecItems.jsp'>Search</a> 查詢全部商品 <br> <br></li>
 
 
 		<li>
@@ -118,7 +118,7 @@ h4 {
 	</ul>
 
 
-	<h3>商品管理</h3>
+	<h3>Product Management</h3>
 
 	<ul>
 		<li><a href='addSecItems.jsp'>新增</a> 新增商品</li>

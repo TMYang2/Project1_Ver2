@@ -39,7 +39,7 @@
 	
 <%-- 錯誤表列 --%>
 <c:if test="${not empty errorMsgs}">
-	<font style="color:red">請修正以下錯誤:</font>
+	<font style="color:red">Fix:</font>
 	<ul>
 	    <c:forEach var="message" items="${errorMsgs}">
 			<li style="color:red">${message}</li>
@@ -51,7 +51,7 @@
   
   <li>
     <FORM METHOD="post" ACTION="<%= request.getContextPath() %>/member/MemberServletUpdate.do" >
-        <b>輸入會員編號:</b>
+        <b>輸入Member ID:</b>
         <input type="text" name="memID">
         <input type="hidden" name="action" value="getOneMem_DisplayFrontEnd">
         <input type="submit" value="送出">

@@ -51,7 +51,7 @@ public class RenAppointmentServlet extends HttpServlet {
 				try {
 					aptId = new Integer(str);
 				} catch (Exception e) {
-					errorMsgs.add("預約訂單ID編號格式不正確");
+					errorMsgs.add("ReservationID編號格式不正確");
 				}
 				// Send the use back to the form, if there were errors
 				if (!errorMsgs.isEmpty()) {
@@ -111,7 +111,7 @@ public class RenAppointmentServlet extends HttpServlet {
 
 				/*************************** 其他可能的錯誤處理 **********************************/
 			} catch (Exception e) {
-				errorMsgs.add("無法取得要修改的資料:" + e.getMessage());
+				errorMsgs.add("無法取得要Edit的資料:" + e.getMessage());
 				RequestDispatcher failureView = req.getRequestDispatcher("/frontend/ren_appointment/select_page.jsp");
 				failureView.forward(req, res);
 			}
@@ -140,7 +140,7 @@ public class RenAppointmentServlet extends HttpServlet {
 
 				/*************************** 其他可能的錯誤處理 **********************************/
 			} catch (Exception e) {
-				errorMsgs.add("無法取得要修改的資料:" + e.getMessage());
+				errorMsgs.add("無法取得要Edit的資料:" + e.getMessage());
 				RequestDispatcher failureView = req.getRequestDispatcher("/frontend/ren_appointment/select_page.jsp");
 				failureView.forward(req, res);
 			}
@@ -185,19 +185,19 @@ public class RenAppointmentServlet extends HttpServlet {
 					return; // 程式中斷
 				}
 
-				/*************************** 2.開始修改資料 *****************************************/
+				/*************************** 2.開始Edit資料 *****************************************/
 				RenAppointmentService renAppSvc = new RenAppointmentService();
 				renAppointmentVO = renAppSvc.updateRenApp(aptId, aptMemId, aptLddId, aptLisId, aptStatus, aptTime);
 
-				/*************************** 3.修改完成,準備轉交(Send the Success view) *************/
+				/*************************** 3.Edit完成,準備轉交(Send the Success view) *************/
 				req.setAttribute("renAppointmentVO", renAppointmentVO); // 資料庫update成功後,正確的的VO物件,存入req
 				String url = "/frontend/ren_appointment/listOneRenAppointment.jsp";
-				RequestDispatcher successView = req.getRequestDispatcher(url); // 修改成功後,轉交
+				RequestDispatcher successView = req.getRequestDispatcher(url); // Edit成功後,轉交
 				successView.forward(req, res);
 
 				/*************************** 其他可能的錯誤處理 *************************************/
 			} catch (Exception e) {
-				errorMsgs.add("修改資料失敗:" + e.getMessage());
+				errorMsgs.add("Edit資料失敗:" + e.getMessage());
 				RequestDispatcher failureView = req
 						.getRequestDispatcher("/frontend/ren_appointment/update_ren_appointment_input.jsp");
 				failureView.forward(req, res);
@@ -243,19 +243,19 @@ public class RenAppointmentServlet extends HttpServlet {
 					return; // 程式中斷
 				}
 
-				/*************************** 2.開始修改資料 *****************************************/
+				/*************************** 2.開始Edit資料 *****************************************/
 				RenAppointmentService renAppSvc = new RenAppointmentService();
 				renAppointmentVO = renAppSvc.updateRenApp(aptId, aptMemId, aptLddId, aptLisId, aptStatus, aptTime);
 
-				/*************************** 3.修改完成,準備轉交(Send the Success view) *************/
+				/*************************** 3.Edit完成,準備轉交(Send the Success view) *************/
 				req.setAttribute("renAppointmentVO", renAppointmentVO); // 資料庫update成功後,正確的的VO物件,存入req
 				String url = "/frontend/ren_appointment/LDDlistOneRenAppointment.jsp";
-				RequestDispatcher successView = req.getRequestDispatcher(url); // 修改成功後,轉交
+				RequestDispatcher successView = req.getRequestDispatcher(url); // Edit成功後,轉交
 				successView.forward(req, res);
 
 				/*************************** 其他可能的錯誤處理 *************************************/
 			} catch (Exception e) {
-				errorMsgs.add("修改資料失敗:" + e.getMessage());
+				errorMsgs.add("Edit資料失敗:" + e.getMessage());
 				RequestDispatcher failureView = req
 						.getRequestDispatcher("/frontend/ren_appointment/update_ren_appointment_input.jsp");
 				failureView.forward(req, res);
@@ -300,7 +300,7 @@ public class RenAppointmentServlet extends HttpServlet {
 					return; // 程式中斷
 				}
 
-				/*************************** 2.開始修改資料 *****************************************/
+				/*************************** 2.開始Edit資料 *****************************************/
 				RenAppointmentService renAppSvc = new RenAppointmentService();
 				renAppointmentVO = renAppSvc.updateRenApp(aptId, aptMemId, aptLddId, aptLisId, aptStatus, aptTime);
 
@@ -312,7 +312,7 @@ public class RenAppointmentServlet extends HttpServlet {
 				/*************************** 其他可能的錯誤處理 *************************************/
 			} catch (Exception e) {
 				e.printStackTrace();
-				errorMsgs.add("修改資料失敗:" + e.getMessage());
+				errorMsgs.add("Edit資料失敗:" + e.getMessage());
 				RequestDispatcher failureView = req
 						.getRequestDispatcher("/frontend/ren_appointment/select_page.jsp");
 				failureView.forward(req, res);
@@ -357,11 +357,11 @@ public class RenAppointmentServlet extends HttpServlet {
 					return; // 程式中斷
 				}
 
-				/*************************** 2.開始修改資料 *****************************************/
+				/*************************** 2.開始Edit資料 *****************************************/
 				RenAppointmentService renAppSvc = new RenAppointmentService();
 				renAppointmentVO = renAppSvc.updateRenApp(aptId, aptMemId, aptLddId, aptLisId, aptStatus, aptTime);
 				
-				/*************************** 3.修改完成,準備轉交(Send the Success view) *************/
+				/*************************** 3.Edit完成,準備轉交(Send the Success view) *************/
 				req.setAttribute("renAppointmentVO", renAppointmentVO); // 資料庫取出的list物件,存入request
 				RequestDispatcher successView = req
 						.getRequestDispatcher("/frontend/ren_appointment/listRenAppByLDD.jsp");
@@ -369,7 +369,7 @@ public class RenAppointmentServlet extends HttpServlet {
 				/*************************** 其他可能的錯誤處理 *************************************/
 			} catch (Exception e) {
 				e.printStackTrace();
-				errorMsgs.add("修改資料失敗:" + e.getMessage());
+				errorMsgs.add("Edit資料失敗:" + e.getMessage());
 				RequestDispatcher failureView = req
 						.getRequestDispatcher("/frontend/ren_appointment/listRenAppByLDD.jsp");
 				failureView.forward(req, res);
@@ -419,7 +419,7 @@ public class RenAppointmentServlet extends HttpServlet {
 					return; // 程式中斷
 				}
 
-				/*************************** 2.開始修改資料 *****************************************/
+				/*************************** 2.開始Edit資料 *****************************************/
 				RenAppointmentService renAppSvc = new RenAppointmentService();
 				renAppointmentVO = renAppSvc.updateRenApp(aptId, aptMemId, aptLddId, aptLisId, aptStatus, aptTime);
 
@@ -431,7 +431,7 @@ public class RenAppointmentServlet extends HttpServlet {
 				/*************************** 其他可能的錯誤處理 *************************************/
 			} catch (Exception e) {
 				e.printStackTrace();
-				errorMsgs.add("修改資料失敗:" + e.getMessage());
+				errorMsgs.add("Edit資料失敗:" + e.getMessage());
 				RequestDispatcher failureView = req
 						.getRequestDispatcher("/frontend/ren_appointment/select_page.jsp");
 				failureView.forward(req, res);
@@ -476,10 +476,10 @@ public class RenAppointmentServlet extends HttpServlet {
 					return; // 程式中斷
 				}
 
-				/*************************** 2.開始修改資料 *****************************************/
+				/*************************** 2.開始Edit資料 *****************************************/
 				RenAppointmentService renAppSvc = new RenAppointmentService();
 				renAppointmentVO = renAppSvc.updateRenApp(aptId, aptMemId, aptLddId, aptLisId, aptStatus, aptTime);
-				/*************************** 3.修改完成,準備轉交(Send the Success view) *************/
+				/*************************** 3.Edit完成,準備轉交(Send the Success view) *************/
 				req.setAttribute("renAppointmentVO", renAppointmentVO); // 資料庫取出的list物件,存入request
 				RequestDispatcher successView = req
 						.getRequestDispatcher("/frontend/ren_appointment/listRenAppByLDD.jsp");
@@ -487,7 +487,7 @@ public class RenAppointmentServlet extends HttpServlet {
 				/*************************** 其他可能的錯誤處理 *************************************/
 			} catch (Exception e) {
 				e.printStackTrace();
-				errorMsgs.add("修改資料失敗:" + e.getMessage());
+				errorMsgs.add("Edit資料失敗:" + e.getMessage());
 				RequestDispatcher failureView = req
 						.getRequestDispatcher("/frontend/ren_appointment/listRenAppByLDD.jsp");
 				failureView.forward(req, res);
@@ -625,7 +625,7 @@ public class RenAppointmentServlet extends HttpServlet {
 //				System.out.println(str);
 //				System.out.println("check1");
 //				if (str == null || (str.trim()).length() == 0) {
-//					errorMsgs.add("請輸入會員編號");
+//					errorMsgs.add("請輸入Member ID");
 //					System.out.println("checknull");
 //				}
 //				// Send the use back to the form, if there were errors
@@ -642,7 +642,7 @@ public class RenAppointmentServlet extends HttpServlet {
 //					System.out.println("check3");
 //					System.out.println(aptMemId);
 //				} catch (Exception e) {
-//					errorMsgs.add("會員編號格式不正確");
+//					errorMsgs.add("Member ID格式不正確");
 //				}
 //				// Send the use back to the form, if there were errors
 //				if (!errorMsgs.isEmpty()) {

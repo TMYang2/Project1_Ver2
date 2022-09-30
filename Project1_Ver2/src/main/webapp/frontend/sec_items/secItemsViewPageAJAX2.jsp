@@ -46,7 +46,7 @@
 		str += "</span>";
 		str += "</a>";
 		str += "<form method='post' action='/CFA104G5/sec_items/ShoppingServlet.do'>";
-		str += "<input type='submit' value='加入購物車' class='btn btn-outline-success text-nowrap'>";
+		str += "<input type='submit' value='加入Cart' class='btn btn-outline-success text-nowrap'>";
 		str += "<input type='hidden' name='shID' value='";
 		str += rs.getInt("sh_id");;
 		str += "'>";
@@ -73,7 +73,7 @@
 //         <span class="item_price">$1100</span>
 //     </a>
 //     <form method="post" action="/CFA104G5/sec_items/ShoppingServlet.do">
-//         <input type="submit" value="加入購物車" class="btn btn-outline-success text-nowrap">
+//         <input type="submit" value="加入Cart" class="btn btn-outline-success text-nowrap">
 //         <input type="hidden" name="shID" value="1">
 //         <input type="hidden" name="shName" value="電暖器">
 //         <input type="hidden" name="shPrice" value="1100">

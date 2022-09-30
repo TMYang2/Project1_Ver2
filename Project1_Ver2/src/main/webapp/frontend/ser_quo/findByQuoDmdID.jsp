@@ -30,7 +30,7 @@ SerQuoVO serQuoVO = (SerQuoVO) request.getAttribute("serQuoVO");
 
 	<%-- 錯誤表列 --%>
 	<c:if test="${not empty errorMsgs}">
-		<font style="color: red">請修正以下錯誤:</font>
+		<font style="color: red">Fix:</font>
 		<ul>
 			<c:forEach var="message" items="${errorMsgs}">
 				<li style="color: red">${message}</li>
@@ -40,7 +40,7 @@ SerQuoVO serQuoVO = (SerQuoVO) request.getAttribute("serQuoVO");
 
 	<FORM METHOD="post"
 		ACTION="<%=request.getContextPath()%>/ser_quo/FindByQuoDmdIDServlet.do"
-		name="form1"><!-- 尚未修改 -->
+		name="form1"><!-- 尚未Edit -->
 		<table>
 			
 			

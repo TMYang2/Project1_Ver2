@@ -101,14 +101,14 @@
 			<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
 				<ul class="navbar-nav ms-auto me-sm-2 mt-2 mt-lg-0">
 					<li class="nav-item active me-3"><a class="nav-link text-dark"
-						href="<%=request.getContextPath()%>/frontend/EZ_home.jsp">首頁 </a></li>
+						href="<%=request.getContextPath()%>/frontend/EZ_home.jsp">HOME PAGE </a></li>
 					<li class="nav-item me-3"><a class="nav-link text-dark"
-						href="#">租賃服務</a></li>
+						href="#">RENTAL</a></li>
 					<li class="nav-item me-3"><a class="nav-link text-dark"
-						href="<%=request.getContextPath()%>/frontend/sec_items/secItemsViewPage.jsp">二手家電</a>
+						href="<%=request.getContextPath()%>/frontend/sec_items/secItemsViewPage.jsp">USED HOME APPLIANCES</a>
 					</li>
 					<li class="nav-item me-3"><a class="nav-link text-dark"
-						href="<%=request.getContextPath()%>/frontend/ser_ad/serAdViewPage.jsp">居家服務</a>
+						href="<%=request.getContextPath()%>/frontend/ser_ad/serAdViewPage.jsp">SERVICE</a>
 					</li>
 
 					<%
@@ -126,13 +126,13 @@
 							class="fa fa-angle-down   "></i></a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<a class="dropdown-item"
-								href="<%=request.getContextPath()%>/frontend/member/memberCenter/buyerMemberCenter.jsp">會員中心</a>
+								href="<%=request.getContextPath()%>/frontend/member/memberCenter/buyerMemberCenter.jsp">Member Centre</a>
 							<a class="dropdown-item"
-								href="<%=request.getContextPath()%>/frontend/member/memberCenter/sellerMemberCenter.jsp">賣家中心</a>
+								href="<%=request.getContextPath()%>/frontend/member/memberCenter/sellerMemberCenter.jsp">Seller Centre</a>
 							<a class="dropdown-item"
-								href="<%=request.getContextPath()%>/frontend/chat/index.jsp">聊聊</a>
+								href="<%=request.getContextPath()%>/frontend/chat/index.jsp">Chat</a>
 							<a class="dropdown-item"
-								href="<%=request.getContextPath()%>/frontend/sec_items/shoppingCart.jsp">購物車</a>
+								href="<%=request.getContextPath()%>/frontend/sec_items/shoppingCart.jsp">Cart</a>
 							<div class="dropdown-divider"></div>
 							<a class="dropdown-item"
 								href="<%=request.getContextPath()%>/member/MemberServlet.do?action=logout">Log out</a>
@@ -141,7 +141,7 @@
 					} else {
 					%>
 					<li class="nav-item me-3"><a class="nav-link text-dark"
-						href="<%=request.getContextPath()%>/frontend/member/login.jsp">登入</a></li>
+						href="<%=request.getContextPath()%>/frontend/member/login.jsp">Log in</a></li>
 					<%
 					}
 					%>
@@ -169,13 +169,13 @@
 				<div class="sb-sidenav-menu">
 					<div class="nav">
 						<!-- ------------------------------------------------------------------------------------------------- -->
-						<div class="sb-sidenav-menu-heading">賣家管理專區</div>
+						<div class="sb-sidenav-menu-heading">SELLER MANAGEMENT</div>
 						<a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
 							data-bs-target="#collapseLayouts" aria-expanded="false"
 							aria-controls="collapseLayouts">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-home"></i>
-							</div> 租賃相關管理
+							</div> RENTAL RELATED MANAGEMENT
 							<div class="sb-sidenav-collapse-arrow">
 								<i class="fas fa-angle-down"></i>
 							</div>
@@ -183,10 +183,10 @@
 						<div class="collapse" id="collapseLayouts"
 							aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
 							<nav class="sb-sidenav-menu-nested nav">
-								 <a class="nav-link" href="layout-static.html">申請成為房東</a>
-                                    <a class="nav-link" href="layout-static.html">房源管理</a>
-                                    <a class="nav-link" href="<%=request.getContextPath()%>/frontend/ren_appointment/listRenAppByLDD.jsp">預約單管理</a>
-                                    <a class="nav-link" href="layout-sidenav-light.html">租賃單管理</a>
+								 <a class="nav-link" href="layout-static.html">Apply to be a Landlord</a>
+                                    <a class="nav-link" href="layout-static.html">Listing Management</a>
+                                    <a class="nav-link" href="<%=request.getContextPath()%>/frontend/ren_appointment/listRenAppByLDD.jsp">Appointment Management</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">Lease Management</a>
 							</nav>
 						</div>
 						<!-- ------------------------------------------------------------------------------------------------- -->
@@ -195,7 +195,7 @@
 							aria-controls="collapsePages">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-couch"></i>
-							</div> 二手相關管理
+							</div> USED HOME APPLIANCES MANAGEMENT
 							<div class="sb-sidenav-collapse-arrow">
 								<i class="fas fa-angle-down"></i>
 							</div>
@@ -203,8 +203,8 @@
 						<div class="collapse" id="collapsePages"
 							aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
 							<nav class="sb-sidenav-menu-nested nav">
-								  <a class="nav-link" href="<%=request.getContextPath()%>/frontend/sec_items/select_page.jsp">商品管理</a>
-                                    <a class="nav-link" href="<%=request.getContextPath()%>/frontend/sec_ord/listAllSecOrd.jsp">訂單管理</a>
+								  <a class="nav-link" href="<%=request.getContextPath()%>/frontend/sec_items/select_page.jsp">Product Management</a>
+                                    <a class="nav-link" href="<%=request.getContextPath()%>/frontend/sec_ord/listAllSecOrd.jsp">Order Management</a>
 							</nav>
 						</div>
 						<!-- ------------------------------------------------------------------------------------------------- -->
@@ -213,7 +213,7 @@
 							aria-controls="collapsePages">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-wrench"></i>
-							</div> 服務相關管理
+							</div> SERVICE MANAGEMENT
 							<div class="sb-sidenav-collapse-arrow">
 								<i class="fas fa-angle-down"></i>
 							</div>
@@ -221,13 +221,13 @@
 						<div class="collapse" id="collapsePages2"
 							aria-labelledby="headingThree" data-bs-parent="#sidenavAccordion">
 							<nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="<%=request.getContextPath()%>/frontend/ser_vdr/update_SerVdr_input.jsp">成為廠商</a>
-                                    <a class="nav-link" href="<%=request.getContextPath()%>/frontend/ser_vdr/listOneSerVdr.jsp">檢視廠商基本資料</a>
-                                    <a class="nav-link" href="<%=request.getContextPath()%>/frontend/ser_ad/addSerAd.jsp">刊登服務</a>
-                                    <a class="nav-link" href="<%=request.getContextPath()%>/frontend/ser_ad/listAllSerAd.jsp">檢視服務</a>
-                                    <a class="nav-link" href="<%=request.getContextPath()%>/frontend/ser_quo/getQuoByVdrID.jsp">需求單管理</a>
-                                    <a class="nav-link" href="<%=request.getContextPath()%>/frontend/ser_ord/findQuoBeforeByVdrID.jsp">新增訂單</a>
-                                    <a class="nav-link" href="<%=request.getContextPath()%>/frontend/ser_ord/getOrdByVdrID.jsp">檢視訂單</a>
+                                    <a class="nav-link" href="<%=request.getContextPath()%>/frontend/ser_vdr/update_SerVdr_input.jsp">Apply to be a Service Provider</a>
+                                    <a class="nav-link" href="<%=request.getContextPath()%>/frontend/ser_vdr/listOneSerVdr.jsp">Company Information</a>
+                                    <a class="nav-link" href="<%=request.getContextPath()%>/frontend/ser_ad/addSerAd.jsp">Post an Ad</a>
+                                    <a class="nav-link" href="<%=request.getContextPath()%>/frontend/ser_ad/listAllSerAd.jsp">Check Services</a>
+                                    <a class="nav-link" href="<%=request.getContextPath()%>/frontend/ser_quo/getQuoByVdrID.jsp">Requests Management</a>
+                                    <a class="nav-link" href="<%=request.getContextPath()%>/frontend/ser_ord/findQuoBeforeByVdrID.jsp">Add an Order</a>
+                                    <a class="nav-link" href="<%=request.getContextPath()%>/frontend/ser_ord/getOrdByVdrID.jsp">Check Orders</a>
 							</nav>
 						</div>
 						<!-- ------------------------------------------------------------------------------------------------- -->
@@ -243,12 +243,12 @@
 <!-- 塞頁面從這裡開始--------------------------------------------------------------------------------- -->
 
 
-	<h3>修改預約訂單</h3>
+	<h3>EditReservation</h3>
 				
 
 	<%-- 錯誤表列 --%>
 	<c:if test="${not empty errorMsgs}">
-		<font style="color: red">請修正以下錯誤:</font>
+		<font style="color: red">Fix:</font>
 		<ul>
 			<c:forEach var="message" items="${errorMsgs}">
 				<li style="color: red">${message}</li>
@@ -261,11 +261,11 @@
 	    <div class="row">
 		    <table class="table table-hover table-striped">
 			<tr>
-				<th id="test">預約訂單編號:</th>
+				<th id="test">Appointment Number:</th>
 				<td><%=renAppointmentVO.getAptId()%></td>
 			</tr>
 			<tr>
-				<th id="test">預約會員:</th>
+				<th id="test">Participant:</th>
 				<td><c:forEach var="memVO" items="${memSvc.all}">
 						<c:if test="${renAppointmentVO.aptMemId==memVO.memID}">
 	                    【${memVO.memID}】 - ${memVO.memUsername}
@@ -273,7 +273,7 @@
 					</c:forEach></td>
 			</tr>
 			<tr>
-				<th id="test">房東:</th>
+				<th id="test">Landlord:</th>
 				<td><c:forEach var="renLDDVO" items="${renLDDSvc.all}">
 						<c:if test="${renAppointmentVO.aptLddId==renLDDVO.lddId}">
 							<c:forEach var="memVO" items="${memSvc.all}">
@@ -285,7 +285,7 @@
 					</c:forEach></td>
 			</tr>
 			<tr>
-				<th id="test">房源:</th>
+				<th id="test">Listing:</th>
 				<td><a href="<%=request.getContextPath()%>/frontend/ren_listing/GetOneRenListingServlet.do?lisID=${renAppointmentVO.aptLisId}&action=getOne_For_Display_A">
 		<c:forEach var="renLisVO" items="${renLisSvc.all}">
 						<c:if test="${renAppointmentVO.aptLisId==renLisVO.lisID}">
@@ -293,15 +293,15 @@
                     </c:if>
 					</c:forEach></a></td>
 			<tr>
-				<th id="test">預約單狀態:</th>
+				<th id="test">Appointment Status:</th>
 				<td>
-					<c:if test="${renAppointmentVO.aptStatus == 0}">預約確認中</c:if> 
-					<c:if test="${renAppointmentVO.aptStatus == 1}">已確認預約</c:if> 
-					<c:if test="${renAppointmentVO.aptStatus == 2}">已取消</c:if>
-					<c:if test="${renAppointmentVO.aptStatus == 3}">預約時間已變更</c:if></td>
+					<c:if test="${renAppointmentVO.aptStatus == 0}">Waiting for Confirmation</c:if> 
+					<c:if test="${renAppointmentVO.aptStatus == 1}">Confirmed</c:if> 
+					<c:if test="${renAppointmentVO.aptStatus == 2}">Cancelled</c:if>
+<%-- 					<c:if test="${renAppointmentVO.aptStatus == 3}">Time Changed</c:if></td> --%>
 			</tr>
 			<tr>
-				<th id="test">預約時間:</th>
+				<th id="test">Appointment Time:</th>
 				<td><input name="aptTime" id="f_date1" type="text" ></td>
 			</tr>
 			
@@ -316,7 +316,7 @@
 		<input type="hidden" name="aptLisId" value="<%=renAppointmentVO.getAptLisId()%>">
 		<input type="hidden" name="aptTime" value="<%=renAppointmentVO.getAptTime()%>">
 		<input type="hidden" name="requestURL" value="<%=request.getParameter("requestURL")%>">
-		<input type="submit" value="送出修改">
+		<input type="submit" value="Confirm">
 		
 	</FORM>
 

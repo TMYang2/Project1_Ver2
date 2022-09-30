@@ -39,7 +39,7 @@ public class RegisterMailServlet extends HttpServlet {
 
 		String to = memberVO.getMemEmail();
 
-		String subject = "EASY SPACE 會員註冊 - 帳號驗證確認";
+		String subject = "EASY SPACE 會員註冊 - Account Name驗證確認";
 
 		String mem_name = memberVO.getMemName();				// 會員名稱
 		String passRandom = registerMailServlet.genAuthCode();	// 驗證碼
@@ -50,7 +50,7 @@ public class RegisterMailServlet extends HttpServlet {
 		jedis.set(memberVO.getMemUsername(), passRandom);
 		jedis.close();
 		
-		String messageText = "親愛的 " + mem_name + " 會員您好" + "\n" + "謝謝您向 EASY SPACE 申請註冊，為了啟用 EASY SPACE 服務並且保護您的帳號安全。"
+		String messageText = "親愛的 " + mem_name + " 會員您好" + "\n" + "謝謝您向 EASY SPACE 申請註冊，為了啟用 EASY SPACE 服務並且保護您的Account Name安全。"
 				+ "\n" + "我們將協助您進行最後一個驗證步驟： " + "E-Mail驗證步驟" + "\n" + "請在 EASY SPACE 驗證網頁中，輸入您的驗證碼： " + passRandom
 				+ "\n" + VerifLink +"\n"+ "註冊完成後，EASY SPACE 將會提供您更多的服務資訊與內容。" + "\n" + "敬祝　有個愉快的一天" + "\n" + "EASY SPACE 你的空間管理大師";
 
@@ -103,7 +103,7 @@ public class RegisterMailServlet extends HttpServlet {
 				props.put("mail.smtp.auth", "true");
 				props.put("mail.smtp.port", "465");
 
-				// ●Setting gmail 的帳號 & 密碼 (將藉由你的Gmail來傳送Email)
+				// ●Setting gmail 的Account Name & 密碼 (將藉由你的Gmail來傳送Email)
 				// ●須將myGmail的【安全性較低的應用程式存取權】打開
 				final String myGmail = "ixlogic.wu@gmail.com";
 				final String myGmail_password = "BBB45678BBB";

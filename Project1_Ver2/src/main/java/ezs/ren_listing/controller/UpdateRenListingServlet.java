@@ -48,7 +48,7 @@ public class UpdateRenListingServlet extends HttpServlet {
 		        successView.forward(req, res);
 		        /***************************其他可能的錯誤處理**********************************/
 			} catch (Exception e) {
-				errorMsgs.add("無法取得修改的資料:" + e.getMessage());
+				errorMsgs.add("無法取得Edit的資料:" + e.getMessage());
 				RequestDispatcher failureView = req
 						.getRequestDispatcher("/frontend/ren_listing/listAllListing.jsp");
 				failureView.forward(req, res);
@@ -87,7 +87,7 @@ public class UpdateRenListingServlet extends HttpServlet {
 	            }
 				String lisAddress = req.getParameter("lisAddress").trim();
 				if (lisAddress == null || lisAddress.trim().length() == 0) {
-					errorMsgs.add("地址請勿空白");
+					errorMsgs.add("Address請勿空白");
 				}	
 				BigDecimal lisRent = null;
 				try {
@@ -213,7 +213,7 @@ public class UpdateRenListingServlet extends HttpServlet {
 					return; //程式中斷
 				}
 				
-				/***************************2.開始修改資料*****************************************/
+				/***************************2.開始Edit資料*****************************************/
 				RenListingService renListingSvc = new RenListingService();
 				renListingVO = renListingSvc.updateRenListing(lisID,lisLddID,lisRtID,lisAreaID,lisTitle,lisAbt,
 						lisAddress,lisRent,lisMngFee,lisPfee,lisSqft,lisFlr,lisRmNo,
@@ -221,15 +221,15 @@ public class UpdateRenListingServlet extends HttpServlet {
 						lisTv,lisWasher,lisDryer,lisTc,lisBed,lisCabinet,lisSofa,lisParking,
 						lisCook,lisPet,lisSmoking,lisMonly,lisFonly,lisSonly,lisStatus,lisApproval);
 				
-				/***************************3.修改完成,準備轉交(Send the Success view)*************/
+				/***************************3.Edit完成,準備轉交(Send the Success view)*************/
 				req.setAttribute("renListingVO", renListingVO); // 資料庫update成功後,正確的的empVO物件,存入req
 				String url = "/frontend/ren_listing/listOneListing.jsp";
-				RequestDispatcher successView = req.getRequestDispatcher(url); // 修改成功後,轉交listOneEmp.jsp
+				RequestDispatcher successView = req.getRequestDispatcher(url); // Edit成功後,轉交listOneEmp.jsp
 				successView.forward(req, res);
 
 				/***************************其他可能的錯誤處理*************************************/
 			} catch (Exception e) {
-				errorMsgs.add("修改資料失敗:"+e.getMessage());
+				errorMsgs.add("Edit資料失敗:"+e.getMessage());
 				RequestDispatcher failureView = req
 						.getRequestDispatcher("/frontend/ren_listing/update_listing_input.jsp");
 				failureView.forward(req, res);

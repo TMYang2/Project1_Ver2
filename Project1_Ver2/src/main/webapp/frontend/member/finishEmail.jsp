@@ -29,7 +29,7 @@ MemberVO memberVO = (MemberVO) request.getAttribute("memberVO");
 				<a
 					href="<%=request.getContextPath()%>/frontend/EZ_home.jsp">
 					<img
-					src="<%=request.getContextPath()%>/images/cmn/member/login_pic.png" width="100" height="32" border="0">回首頁</a>
+					src="<%=request.getContextPath()%>/images/cmn/member/login_pic.png" width="100" height="32" border="0">回HOME PAGE</a>
 			</h4>
 
 

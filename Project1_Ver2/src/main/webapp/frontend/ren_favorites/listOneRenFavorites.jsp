@@ -118,14 +118,14 @@ RenListingPicVO renListingPicVO = (RenListingPicVO) request.getAttribute("renLis
 			<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
 				<ul class="navbar-nav ms-auto me-sm-2 mt-2 mt-lg-0">
 					<li class="nav-item active me-3"><a class="nav-link text-dark"
-						href="<%=request.getContextPath()%>/frontend/EZ_home.jsp">首頁 </a></li>
+						href="<%=request.getContextPath()%>/frontend/EZ_home.jsp">HOME PAGE </a></li>
 					<li class="nav-item me-3"><a class="nav-link text-dark"
-						href="<%=request.getContextPath()%>/frontend/ren_listing/listingView.jsp">租賃服務</a></li>
+						href="<%=request.getContextPath()%>/frontend/ren_listing/listingView.jsp">RENTAL</a></li>
 					<li class="nav-item me-3"><a class="nav-link text-dark"
-						href="<%=request.getContextPath()%>/frontend/sec_items/secItemsViewPage.jsp">二手家電</a>
+						href="<%=request.getContextPath()%>/frontend/sec_items/secItemsViewPage.jsp">USED HOME APPLIANCES</a>
 					</li>
 					<li class="nav-item me-3"><a class="nav-link text-dark"
-						href="<%=request.getContextPath()%>/frontend/ser_ad/serAdViewPage.jsp">居家服務</a>
+						href="<%=request.getContextPath()%>/frontend/ser_ad/serAdViewPage.jsp">SERVICE</a>
 					</li>
 
 					<%
@@ -143,13 +143,13 @@ RenListingPicVO renListingPicVO = (RenListingPicVO) request.getAttribute("renLis
 							class="fa fa-angle-down   "></i></a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<a class="dropdown-item"
-								href="<%=request.getContextPath()%>/frontend/member/memberCenter/buyerMemberCenter.jsp">會員中心</a>
+								href="<%=request.getContextPath()%>/frontend/member/memberCenter/buyerMemberCenter.jsp">Member Centre</a>
 							<a class="dropdown-item"
-								href="<%=request.getContextPath()%>/frontend/member/memberCenter/sellerMemberCenter.jsp">賣家中心</a>
+								href="<%=request.getContextPath()%>/frontend/member/memberCenter/sellerMemberCenter.jsp">Seller Centre</a>
 							<a class="dropdown-item"
-								href="<%=request.getContextPath()%>/frontend/chat/index.jsp">聊聊</a>
+								href="<%=request.getContextPath()%>/frontend/chat/index.jsp">Chat</a>
 							<a class="dropdown-item"
-								href="<%=request.getContextPath()%>/frontend/sec_items/shoppingCart.jsp">購物車</a>
+								href="<%=request.getContextPath()%>/frontend/sec_items/shoppingCart.jsp">Cart</a>
 							<div class="dropdown-divider"></div>
 							<a class="dropdown-item"
 								href="<%=request.getContextPath()%>/member/MemberServlet.do?action=logout">Log out</a>
@@ -158,7 +158,7 @@ RenListingPicVO renListingPicVO = (RenListingPicVO) request.getAttribute("renLis
 					} else {
 					%>
 					<li class="nav-item me-3"><a class="nav-link text-dark"
-						href="<%=request.getContextPath()%>/frontend/member/login.jsp">登入</a></li>
+						href="<%=request.getContextPath()%>/frontend/member/login.jsp">Log in</a></li>
 					<%
 					}
 					%>
@@ -186,20 +186,20 @@ RenListingPicVO renListingPicVO = (RenListingPicVO) request.getAttribute("renLis
 				<div class="sb-sidenav-menu">
 					<div class="nav">
 
-						<div class="sb-sidenav-menu-heading">管理專區</div>
+						<div class="sb-sidenav-menu-heading">INFORMATION MANAGEMENT</div>
 						<a class="nav-link" href="<%= request.getContextPath()%>/frontend/member/listOneMember.jsp">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-tachometer-alt"></i>
 							</div> Member Information Management
 						</a>
 						<!-- ------------------------------------------------------------------------------------------------- -->
-						<div class="sb-sidenav-menu-heading">買家管理專區</div>
+						<div class="sb-sidenav-menu-heading">BUYER MANAGEMENT</div>
 						<a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
 							data-bs-target="#collapseLayouts" aria-expanded="false"
 							aria-controls="collapseLayouts">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-home"></i>
-							</div> 租賃相關管理
+							</div> RENTAL RELATED MANAGEMENT
 							<div class="sb-sidenav-collapse-arrow">
 								<i class="fas fa-angle-down"></i>
 							</div>
@@ -207,9 +207,9 @@ RenListingPicVO renListingPicVO = (RenListingPicVO) request.getAttribute("renLis
 						<div class="collapse" id="collapseLayouts"
 							aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
 							<nav class="sb-sidenav-menu-nested nav">
-								<a class="nav-link" href="<%=request.getContextPath()%>/frontend/ren_appointment/listRenAppByMEM.jsp">預約單管理</a>
-								<a class="nav-link" href="<%=request.getContextPath()%>/frontend/ren_lease/MEMlistOneLease.jsp">租賃單管理</a>
-                                <a class="nav-link" href="<%=request.getContextPath()%>/frontend/ren_favorites/listOneRenFavorites.jsp">收藏房源管理</a>
+								<a class="nav-link" href="<%=request.getContextPath()%>/frontend/ren_appointment/listRenAppByMEM.jsp">Appointment Management</a>
+								<a class="nav-link" href="<%=request.getContextPath()%>/frontend/ren_lease/MEMlistOneLease.jsp">Lease Management</a>
+                                <a class="nav-link" href="<%=request.getContextPath()%>/frontend/ren_favorites/listOneRenFavorites.jsp">Favourites</a>
 							</nav>
 						</div>
 						<!-- ------------------------------------------------------------------------------------------------- -->
@@ -226,7 +226,7 @@ RenListingPicVO renListingPicVO = (RenListingPicVO) request.getAttribute("renLis
 						<div class="collapse" id="collapsePages"
 							aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
 							<nav class="sb-sidenav-menu-nested nav">
-								<a class="nav-link" href="<%=request.getContextPath()%>/sec_ord/SecOrdServlet.do?action=listSecOrd_ByShBuyerID">二手訂單管理</a>
+								<a class="nav-link" href="<%=request.getContextPath()%>/sec_ord/SecOrdServlet.do?action=listSecOrd_ByShBuyerID">Order Management</a>
 							</nav>
 						</div>
 						<!-- ------------------------------------------------------------------------------------------------- -->
@@ -235,7 +235,7 @@ RenListingPicVO renListingPicVO = (RenListingPicVO) request.getAttribute("renLis
 							aria-controls="collapsePages">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-wrench"></i>
-							</div> 居家服務專區
+							</div> SERVICE
 							<div class="sb-sidenav-collapse-arrow">
 								<i class="fas fa-angle-down"></i>
 							</div>
@@ -243,9 +243,9 @@ RenListingPicVO renListingPicVO = (RenListingPicVO) request.getAttribute("renLis
 						<div class="collapse" id="collapsePages2"
 							aria-labelledby="headingThree" data-bs-parent="#sidenavAccordion">
 							<nav class="sb-sidenav-menu-nested nav">
-								<a class="nav-link" href="<%=request.getContextPath()%>/frontend/ser_dmd/addSerDmd.jsp">新增需求單</a>
-								<a class="nav-link" href="<%=request.getContextPath()%>/frontend/ser_dmd/getByDmdMemID.jsp">需求單/報價單管理</a>
-                                <a class="nav-link" href="<%=request.getContextPath()%>/frontend/ser_ord/getOrdByMemID.jsp">服務訂單管理</a>
+								<a class="nav-link" href="<%=request.getContextPath()%>/frontend/ser_dmd/addSerDmd.jsp">Add Requests</a>
+								<a class="nav-link" href="<%=request.getContextPath()%>/frontend/ser_dmd/getByDmdMemID.jsp">Requests & Quotations Management</a>
+                                <a class="nav-link" href="<%=request.getContextPath()%>/frontend/ser_ord/getOrdByMemID.jsp">Order Management</a>
 							</nav>
 						</div>
 						<!-- ------------------------------------------------------------------------------------------------- -->
@@ -261,17 +261,17 @@ RenListingPicVO renListingPicVO = (RenListingPicVO) request.getAttribute("renLis
 <!-- 塞頁面從這裡開始--------------------------------------------------------------------------------- -->
 
 
-		<h3>收藏房源</h3>
+		<h3>Favourites</h3>
 				
 	<div class="container">
 	    <div class="row">
 		    <table class="table table-hover table-striped">
 		        <thead>
 		        <tr class="thead-dark">
-			<th>房源編號</th>
-			<th>房源照片</th>
-			<th>房源標題</th>		
-			<th>刪除</th>
+			<th>Listing ID</th>
+			<th>Listing Picture</th>
+			<th>Listing Title</th>		
+			<th>Delete</th>
 		</tr></thead>
 		        <tbody>
 		<c:forEach var="renFavoritesVO" items="${list}">

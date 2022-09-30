@@ -23,7 +23,7 @@
 
 	<%-- 錯誤表列 --%>
 	<c:if test="${not empty errorMsgs}">
-		<font style="color: red">請修正以下錯誤:</font>
+		<font style="color: red">Fix:</font>
 		<ul>
 			<c:forEach var="message" items="${errorMsgs}">
 				<li style="color: red">${message}</li>
@@ -37,15 +37,15 @@
 	
 	
 	<ul>
-		<li><a href='listOneSerVdr.jsp'>檢視廠商基本資料</a>  <br></li>
+		<li><a href='listOneSerVdr.jsp'>Company Information</a>  <br></li>
 		
 	</ul>
 	<ul>
-		<li><a href='<%=request.getContextPath()%>/frontend/ser_ad/addSerAd.jsp'>刊登服務</a>  <br></li>
+		<li><a href='<%=request.getContextPath()%>/frontend/ser_ad/addSerAd.jsp'>Post an Ad</a>  <br></li>
 		
 	</ul>
 	<ul>
-		<li><a href='<%=request.getContextPath()%>/frontend/ser_ad/listAllSerAd.jsp'>檢視服務內容</a>  <br></li>
+		<li><a href='<%=request.getContextPath()%>/frontend/ser_ad/listAllSerAd.jsp'>Check Services內容</a>  <br></li>
 		
 	</ul>
 	
@@ -58,12 +58,12 @@
 	
 	<ul>
 		<li>
-		<a href="<%=request.getContextPath()%>/frontend/ser_ord/findQuoBeforeByVdrID.jsp">廠商新增訂單</a>
+		<a href="<%=request.getContextPath()%>/frontend/ser_ord/findQuoBeforeByVdrID.jsp">廠商Add an Order</a>
 		</li>
 	</ul>
 	<ul>
 		<li>
-		<a href="<%=request.getContextPath()%>/frontend/ser_ord/getOrdByVdrID.jsp">廠商檢視訂單</a>
+		<a href="<%=request.getContextPath()%>/frontend/ser_ord/getOrdByVdrID.jsp">廠商Check Orders</a>
 		</li>
 	</ul>
 	
@@ -75,7 +75,7 @@
 	
 	
 <!-- 	<ul> -->
-<!-- 		<li><a href='listAllSerVdr.jsp'>廠商修改資料</a>  <br></li> -->
+<!-- 		<li><a href='listAllSerVdr.jsp'>廠商Edit資料</a>  <br></li> -->
 <!-- 	</ul> -->
 <!-- 	<ul> -->
 <!-- 		<li><a href='viewSerVdr.jsp'>會員檢視廠商資料</a> </li> -->

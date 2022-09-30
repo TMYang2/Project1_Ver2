@@ -67,7 +67,7 @@ public class GetSecItemsStatusServlet extends HttpServlet {
 //				try {
 //					shStatus = Integer.valueOf(str);
 //				} catch (Exception e) {
-//					errorMsgs.add("商品搜尋狀態別不正確");
+//					errorMsgs.add("商品Search狀態別不正確");
 //				}
 
 				System.out.println(shStatus);

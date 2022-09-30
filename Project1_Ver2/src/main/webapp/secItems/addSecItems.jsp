@@ -50,7 +50,7 @@
 <table id="table-1">
 	<tr><td>
 		 <h3>商品資料新增 - addSecItems.jsp</h3></td><td>
-		 <h4><a href="select_page.jsp"><img src="images/tomcat.png" width="150" height="150" border="0">回首頁</a></h4>
+		 <h4><a href="select_page.jsp"><img src="images/tomcat.png" width="150" height="150" border="0">回HOME PAGE</a></h4>
 	</td></tr>
 </table>
 
@@ -58,7 +58,7 @@
 
 <%-- 錯誤表列 --%>
 <c:if test="${not empty errorMsgs}">
-	<font style="color:red">請修正以下錯誤:</font>
+	<font style="color:red">Fix:</font>
 	<ul>
 		<c:forEach var="message" items="${errorMsgs}">
 			<li style="color:red">${message}</li>
@@ -84,7 +84,7 @@
 	</tr>
 	<tr>
 	
-		<td>會員編號:</td>
+		<td>Member ID:</td>
 		<td><input type="TEXT" name="id" size="45"
 			 value="<%= (secItemsVO==null)? "1" : secItemsVO.getShSellerID()%>" /></td>
 	</tr>
@@ -151,7 +151,7 @@
 </table>
 <br>
 <input type="hidden" name="action" value="insert">
-<input type="submit" value="送出新增"></FORM>
+<input type="submit" value="Confirm"></FORM>
 </body>
 
 

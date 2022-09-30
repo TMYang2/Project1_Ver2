@@ -187,8 +187,8 @@ pageContext.setAttribute("list", list);
 		<div id="layoutSidenav_content">
 			<main>
 				<div class="container-fluid px-4">
-					<h1 class="mt-4">所有刊登服務</h1>
-					<a href="<%=request.getContextPath()%>/backend/ser/serAd/select_page.jsp">回首頁</a>
+					<h1 class="mt-4">所有Post an Ad</h1>
+					<a href="<%=request.getContextPath()%>/backend/ser/serAd/select_page.jsp">回HOME PAGE</a>
 				</div>
 	<div class="container">
 					<div class="row">
@@ -227,7 +227,7 @@ pageContext.setAttribute("list", list);
 									<FORM METHOD="post"
 										ACTION="<%=request.getContextPath()%>/ser_ad/BackOneUpdateSerAdServlet.do"
 										style="margin-bottom: 0px;">
-										<input type="submit" value="修改"> <input type="hidden"
+										<input type="submit" value="Edit"> <input type="hidden"
 											name="adVdrID" value="${serAdVO.adVdrID}"> <input
 											type="hidden" name="adSerClaID" value="${serAdVO.adSerClaID}">
 										<input type="hidden" name="action" value="getOne_For_Update">
@@ -255,7 +255,7 @@ pageContext.setAttribute("list", list);
 	  <%@ include file="page2.file"%>
 	  <%-- 錯誤表列 --%>
 	<c:if test="${not empty errorMsgs}">
-		<font style="color: red">請修正以下錯誤:</font>
+		<font style="color: red">Fix:</font>
 		<ul>
 			<c:forEach var="message" items="${errorMsgs}">
 				<li style="color: red">${message}</li>

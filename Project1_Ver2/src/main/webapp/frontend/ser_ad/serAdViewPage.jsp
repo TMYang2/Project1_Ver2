@@ -279,14 +279,14 @@ header {
 						<div class="footer-service col-xs-6 col-sm-3">
 							<h4 class="my-2">功能服務</h4>
 							<ul class="list-unstyled list-light">
-								<li><a href="#">房屋租賃</a></li>
-								<li><a href="#">居家服務</a></li>
-								<li><a href="#">二手家電</a></li>
+								<li><a href="#">RENTAL</a></li>
+								<li><a href="#">SERVICE</a></li>
+								<li><a href="#">USED HOME APPLIANCES</a></li>
 
 							</ul>
 						</div>
 						<div class="footer-center col-xs-6 col-sm-3">
-							<h4 class="my-2">會員中心</h4>
+							<h4 class="my-2">Member Centre</h4>
 							<ul class="list-unstyled list-light">
 								<li><a href="#">會員註冊</a></li>
 								<li><a href="#">忘記密碼</a></li>

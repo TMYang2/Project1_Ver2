@@ -37,7 +37,7 @@ public class RenLeaseServletMEM extends HttpServlet {
 				/***************************1.接收請求參數 - 輸入格式的錯誤處理**********************/
 				String str = req.getParameter("lseLeaseMemId");
 				if (str == null || (str.trim()).length() == 0) {
-					errorMsgs.add("請輸入會員編號");
+					errorMsgs.add("請輸入Member ID");
 				}
 				if (!errorMsgs.isEmpty()) {
 					RequestDispatcher failureView = req
@@ -50,7 +50,7 @@ public class RenLeaseServletMEM extends HttpServlet {
 				try {
 					lseLeaseMemId = new Integer(str);
 				} catch (Exception e) {
-					errorMsgs.add("會員編號格式不正確");
+					errorMsgs.add("Member ID格式不正確");
 				}
 				if (!errorMsgs.isEmpty()) {
 					RequestDispatcher failureView = req

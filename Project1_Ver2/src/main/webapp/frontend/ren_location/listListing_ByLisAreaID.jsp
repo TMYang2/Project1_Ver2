@@ -63,12 +63,12 @@
 <table id="table-2">
 	<tr><td>
 		 <h3>此區房源 - listListing_ByLisAreaID.jsp</h3>
-			<h4><a href="listing_select_page.jsp">回首頁</a></h4>	</td></tr>
+			<h4><a href="listing_select_page.jsp">回HOME PAGE</a></h4>	</td></tr>
 </table>
 
 <%-- 錯誤表列 --%>
 <c:if test="${not empty errorMsgs}">
-	<font style="color:red">請修正以下錯誤:</font>
+	<font style="color:red">Fix:</font>
 	<ul>
 		<c:forEach var="message" items="${errorMsgs}">
 			<li style="color:red">${message}</li>

@@ -184,8 +184,8 @@ SerAdVO serAdVO = (SerAdVO) request.getAttribute("serAdVO"); //EmpServlet.java(C
 		<div id="layoutSidenav_content">
 			<main>
 				<div class="container-fluid px-4">
-					<h1 class="mt-4">刊登服務</h1>
-					<a href="<%=request.getContextPath()%>/backend/ser/serAd/select_page.jsp">回首頁</a>
+					<h1 class="mt-4">Post an Ad</h1>
+					<a href="<%=request.getContextPath()%>/backend/ser/serAd/select_page.jsp">回HOME PAGE</a>
 	
 					<div class="container">
        						<div class="row">

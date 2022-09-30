@@ -492,7 +492,7 @@
 
 	<div class="wrap cf">
         <div class="heading cf">
-          <h1>EASY SPACE | 購物車</h1>
+          <h1>EASY SPACE | Cart</h1>
           <a href="<%= request.getContextPath() %>/frontend/sec_items/secItemsViewPage.jsp" class="continue">繼續購物</a>
         </div>
         <div class="cart">

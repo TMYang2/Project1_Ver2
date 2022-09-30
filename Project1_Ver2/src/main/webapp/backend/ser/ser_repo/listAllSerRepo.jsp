@@ -192,7 +192,7 @@ pageContext.setAttribute("list", list);
 				</div>
 	<%-- 錯誤表列 --%>
 	<c:if test="${not empty errorMsgs}">
-		<font style="color: red">請修正以下錯誤:</font>
+		<font style="color: red">Fix:</font>
 		<ul>
 			<c:forEach var="message" items="${errorMsgs}">
 				<li style="color: red">${message}</li>
@@ -206,7 +206,7 @@ pageContext.setAttribute("list", list);
 								<tr class="thead-dark" style="text-align: left;">
 									<th>檢舉編號</th>
 							<th>訂單編號</th>
-							<th>會員編號</th>
+							<th>Member ID</th>
 							<th>檢舉內容</th>
 							<th>檢舉時間</th>
 							<th>檢舉狀態</th>
@@ -235,7 +235,7 @@ pageContext.setAttribute("list", list);
 									<FORM METHOD="post"
 										ACTION="<%=request.getContextPath()%>/ser_repo/GetOneForUpdateSerRepoServlet.do"
 										style="margin-bottom: 0px;">
-										<input type="submit" value="修改"> <input type="hidden"
+										<input type="submit" value="Edit"> <input type="hidden"
 											name="rpID" value="${serRepVO.rpID}"> <input
 											type="hidden" name="action" value="getOne_For_Update">
 									</FORM>

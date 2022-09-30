@@ -229,29 +229,29 @@ a {
 	<div class="login-wrap">
 		<div class="login-html">
 			<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label
-				for="tab-1" class="tab">會員登入</label> <input id="tab-2" type="radio"
-				name="tab" class="for-pwd"><label for="tab-2" class="tab">忘記密碼</label>
+				for="tab-1" class="tab">Log in</label> <input id="tab-2" type="radio"
+				name="tab" class="for-pwd"><label for="tab-2" class="tab">Forget Password</label>
 			<div class="login-form">
 				<div class="sign-in-htm">
 					<form id="login-form" method="post"
 						action="<%=request.getContextPath()%>/member/MemberServlet.do">
 						<div class="group">
-							<label for="user" class="label">帳號</label> <input id="user"
+							<label for="user" class="label">Account Name</label> <input id="user"
 								type="text" class="input" name="name">
 						</div>
 						<div class="group">
-							<label for="pass" class="label">密碼</label> <input id="pass"
+							<label for="pass" class="label">Password</label> <input id="pass"
 								type="password" class="input" data-type="password" name="psw">
 						</div>
 						<div class="group">
-							<input type="submit" class="button" value="登入"> <input
+							<input type="submit" class="button" value="Log in"> <input
 								type="hidden" name="action" value="getOne_For_Display">
 						</div>
 					</form>
 					<div class="group">
 						<form
 							action="<%=request.getContextPath()%>/frontend/member/memberRegister.jsp">
-							<input type="submit" class="button" value="註冊會員">
+							<input type="submit" class="button" value="Register">
 						</form>
 					</div>
 					<div class="hr"></div>
@@ -262,12 +262,12 @@ a {
 						ACTION="<%=request.getContextPath()%>/member/ForgetPasswordServlet.do"
 						method="post">
 						<div class="group">
-							<label for="email" class="label">請輸入Email</label> <input
+							<label for="email" class="label">Enter Email</label> <input
 								type="text" class="input" name="email" id="email"> <input
 								type="hidden" name="action" value="reset_Password_Email">
 						</div>
 						<div class="group">
-							<input type="submit" class="button" value="重置密碼">
+							<input type="submit" class="button" value="Reset Password">
 						</div>
 						<div class="hr"></div>
 					</form>
@@ -278,7 +278,7 @@ a {
 	<div style="text-align: center; background-color: gray; width: 400px; margin: auto;">
 		<%-- 錯誤表列 --%>
 		<c:if test="${not empty errorMsgs}">
-<!-- 			<front style="color: red">請修正以下錯誤:</front> -->
+<!-- 			<front style="color: red">Fix:</front> -->
 			<ul>
 				<c:forEach var="message" items="${errorMsgs}">
 					<p style="color: red">${message}</p>

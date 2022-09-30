@@ -157,7 +157,7 @@ public class UpdateSecItemsServlet extends HttpServlet {
 					return; // 程式中斷
 				}
 
-				/*************************** 2.開始修改資料 *****************************************/
+				/*************************** 2.開始Edit資料 *****************************************/
 				SecItemsService secItemsSvc = new SecItemsService();
 				secItemsVO = secItemsSvc.updateSecItems(shID, shCateID, shSellerID, shName, shPrice1, shQTY, shSize,
 						shDescription, shCondition, shTime, shGuarantee, shStatus, shCounty, shDist);
@@ -165,17 +165,17 @@ public class UpdateSecItemsServlet extends HttpServlet {
 				SecPicsService secPicsSvc = new SecPicsService();
 				secPicsSvc.updateSecPics(shID, shPic);
 				System.out.println("2"+ shID);
-				/*************************** 3.修改完成,準備轉交(Send the Success view) *************/
+				/*************************** 3.Edit完成,準備轉交(Send the Success view) *************/
 				req.setAttribute("secItemsVO", secItemsVO); // 資料庫update成功後,正確的的empVO物件,存入req
 				String url = "/frontend/sec_items/listOneSecItems.jsp";
-				RequestDispatcher successView = req.getRequestDispatcher(url); // 修改成功後,轉交listOneEmp.jsp
+				RequestDispatcher successView = req.getRequestDispatcher(url); // Edit成功後,轉交listOneEmp.jsp
 				successView.forward(req, res);
 				System.out.println("3"+secItemsVO);
 				/*************************** 其他可能的錯誤處理 *************************************/
 //			最外面的catch是因為要讓錯誤產生時候還能導回該頁面
 //			} catch (Exception e) {
 //				e.printStackTrace();      //為了抓錯誤
-//				errorMsgs.add("修改資料失敗:" + e.getMessage());
+//				errorMsgs.add("Edit資料失敗:" + e.getMessage());
 //				RequestDispatcher failureView = req.getRequestDispatcher("/frontend/sec_items/update_secItems_input.jsp");
 //				failureView.forward(req, res);
 //			}

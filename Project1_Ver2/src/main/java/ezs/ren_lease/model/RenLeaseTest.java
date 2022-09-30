@@ -22,7 +22,7 @@ public class RenLeaseTest {
 //		leaseVO1.setLseEnd(java.sql.Date.valueOf("2024-02-01"));
 //		dao.insert(leaseVO1);	
 
-		// 修改
+		// Edit
 //		RenLeaseVO leaseVO2 = new RenLeaseVO();
 //		leaseVO2.setLseId(5);
 //		leaseVO2.setLseMemId(2);

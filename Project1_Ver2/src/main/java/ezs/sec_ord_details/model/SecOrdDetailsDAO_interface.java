@@ -13,7 +13,7 @@ public interface SecOrdDetailsDAO_interface {
      public List<SecOrdDetailsVO> getAll();
      public List<SecOrdDetailsVO> findByShOrdID(Integer shOrdID);
      
-   //同時新增訂單與訂單明細
+   //同時Add an Order與訂單明細
      public void insert2 (SecOrdDetailsVO secOrdDetailsVO , java.sql.Connection con);
      
 }

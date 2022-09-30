@@ -39,7 +39,7 @@ public class AdminEmpServlet extends HttpServlet {
 				String admPassword = req.getParameter("admPassword");
 
 				if (admUsername == null || (admUsername.trim()).length() == 0) {
-					errorMsgs.add("帳號密碼不得為空");
+					errorMsgs.add("Account Name密碼不得為空");
 				}
 				if (!errorMsgs.isEmpty()) {
 					RequestDispatcher failureView = req.getRequestDispatcher("/backend/login.jsp");
@@ -48,7 +48,7 @@ public class AdminEmpServlet extends HttpServlet {
 				}
 
 				if (admPassword == null || (admPassword.trim()).length() == 0) {
-					errorMsgs.add("帳號密碼不得為空");
+					errorMsgs.add("Account Name密碼不得為空");
 				}
 				if (!errorMsgs.isEmpty()) {
 					RequestDispatcher failureView = req.getRequestDispatcher("/backend/login.jsp");
@@ -59,7 +59,7 @@ public class AdminEmpServlet extends HttpServlet {
 				AdminEmpService adminEmpService = new AdminEmpService();
 				AdminEmpVO adminEmpVO = adminEmpService.Search(admUsername, admPassword);
 				if (adminEmpVO == null) {
-					errorMsgs.add("帳號或密碼有誤，請重新輸入");
+					errorMsgs.add("Account Name或密碼有誤，請重新輸入");
 				}
 				// Send the use back to the form, if there were errors
 				if (!errorMsgs.isEmpty()) {
@@ -167,7 +167,7 @@ public class AdminEmpServlet extends HttpServlet {
 System.out.println(successView);
 				/***************************其他可能的錯誤處理**********************************/
 			} catch (Exception e) {
-				errorMsgs.add("無法取得要修改的資料:" + e.getMessage());
+				errorMsgs.add("無法取得要Edit的資料:" + e.getMessage());
 				RequestDispatcher failureView = req.getRequestDispatcher("/backend/adminEmp/adminEmp.jsp");
 				failureView.forward(req, res);
 			}
@@ -223,10 +223,10 @@ System.out.println(successView);
 					return;
 				}
 				
-				/***************************2.開始修改資料*****************************************/
+				/***************************2.開始Edit資料*****************************************/
 				AdminEmpService admSvc = new AdminEmpService();
 				adminEmpVO = admSvc.updateAdminEmp(admID,admUsername, admPassword, admStatus);
-				/***************************3.修改完成,準備轉交(Send the Success view)*************/
+				/***************************3.Edit完成,準備轉交(Send the Success view)*************/
 				req.setAttribute("adminEmpVO", adminEmpVO);         // 資料庫取出的empVO物件,存入req
 				String url = "/backend/adminEmp/adminEmp.jsp";
 				RequestDispatcher successView = req.getRequestDispatcher(url);// 成功轉交 update_emp_input.jsp

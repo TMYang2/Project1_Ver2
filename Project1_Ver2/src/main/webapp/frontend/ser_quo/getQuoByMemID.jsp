@@ -43,13 +43,13 @@
 <table id="table-1">
 	<tr><td>
 		 <h3>廠商檢視估價單資料 - listAllSerDmd.jsp</h3>
-		 <h4><a href="<%=request.getContextPath()%>/frontend/ser_quo/serQuoHome.jsp">回首頁</a></h4>
+		 <h4><a href="<%=request.getContextPath()%>/frontend/ser_quo/serQuoHome.jsp">回HOME PAGE</a></h4>
 	</td></tr>
 </table>
 
 <%-- 錯誤表列 --%>
 <c:if test="${not empty errorMsgs}">
-	<font style="color:red">請修正以下錯誤:</font>
+	<font style="color:red">Fix:</font>
 	<ul>
 		<c:forEach var="message" items="${errorMsgs}">
 			<li style="color:red">${message}</li>
@@ -67,7 +67,7 @@
 			<th>有效限期</th>
 			<th>估價項目</th>
 			<th>估價總價</th>
-			<th>修改</th>
+			<th>Edit</th>
 			<th>刪除</th>
 	</tr>
 	
@@ -90,7 +90,7 @@
 				<td>${serQuoVO.quoTotalPrice}</td>
 			<td>
 			  <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/ser_quo/UpdateQuoServlet.do" style="margin-bottom: 0px;">
-			     <input type="submit" value="修改">
+			     <input type="submit" value="Edit">
 			     <input type="hidden" name="quoID"  value="${serQuoVO.quoID}">
 			     <input type="hidden" name="action"	value="updateOneQuo"></FORM>
 			</td>

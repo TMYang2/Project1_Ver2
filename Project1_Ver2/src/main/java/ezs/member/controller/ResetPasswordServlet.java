@@ -41,7 +41,7 @@ public class ResetPasswordServlet extends HttpServlet {
 
 				String str = req.getParameter("memID");
 				if (str == null || (str.trim()).length() == 0) {
-					errorMsgs.add("請輸入會員編號");
+					errorMsgs.add("請輸入Member ID");
 				}
 				
 
@@ -55,7 +55,7 @@ public class ResetPasswordServlet extends HttpServlet {
 				try {
 					memID = new Integer(str);
 				} catch (Exception e) {
-					errorMsgs.add("會員編號格式不正確");
+					errorMsgs.add("Member ID格式不正確");
 				}
 
 				
@@ -78,14 +78,14 @@ System.out.println(memPassword);
 					return; // 程式中斷
 				}
 
-				/*************************** 2.開始修改資料 *****************************************/
+				/*************************** 2.開始Edit資料 *****************************************/
 				MemberService memberSvc = new MemberService();
 				 memberSvc.updateMemberPassword(memberVO);
 				 System.out.println("=======================");
-				/*************************** 3.修改完成,準備轉交(Send the Success view) *************/
+				/*************************** 3.Edit完成,準備轉交(Send the Success view) *************/
 				req.setAttribute("memberVO", memberVO); // 資料庫update成功後,正確的的memberVO物件,存入req
-				String url = "/frontend/EZ_home.jsp"; // 更新完成跳轉至首頁
-				RequestDispatcher successView = req.getRequestDispatcher(url); // 修改成功後,轉交listOneEmp.jsp
+				String url = "/frontend/EZ_home.jsp"; // 更新完成跳轉至HOME PAGE
+				RequestDispatcher successView = req.getRequestDispatcher(url); // Edit成功後,轉交listOneEmp.jsp
 				successView.forward(req, res);
 
 				System.out.println(successView);
@@ -95,7 +95,7 @@ System.out.println(memPassword);
 				/*************************** 其他可能的錯誤處理 *************************************/
 			} catch (Exception e) {
 				e.printStackTrace();
-				errorMsgs.add("修改資料失敗:" + e.getMessage());
+				errorMsgs.add("Edit資料失敗:" + e.getMessage());
 				RequestDispatcher failureView = req.getRequestDispatcher("/frontend/member/updateMemberPassword.jsp");
 				failureView.forward(req, res);
 			}

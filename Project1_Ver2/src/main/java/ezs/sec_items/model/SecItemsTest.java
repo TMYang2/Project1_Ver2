@@ -30,7 +30,7 @@ public class SecItemsTest {
 //		Integer shID = 5;
 //		dao.delete(shID);
 //		
-//		3. 修改
+//		3. Edit
 //		secItemsVO.setShCateID(3);
 //		secItemsVO.setShSellerID(3);
 //		secItemsVO.setShName("測試測試");

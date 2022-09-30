@@ -65,7 +65,7 @@ public class ShoppingServlet extends HttpServlet {
 //	結帳
 		else if (action.equals("CHECKOUT")) {
 			
-			/*************************** 0.確認使用者已登入 ****************************************/
+			/*************************** 0.確認使用者已Log in ****************************************/
 			try{
 				session.getAttribute("memID").toString();
 			} catch (Exception e) {

@@ -12,7 +12,7 @@ public class AdminFuncTest {
 //		System.out.println("成功");
 //		dao.insert(admFuncVO1);
 //
-//		2. 修改
+//		2. Edit
 //		AdminFuncVO admFuncVO2 = new AdminFuncVO();
 //		admFuncVO2.setFunID(4);
 //		admFuncVO2.setFunName("Staff Management");

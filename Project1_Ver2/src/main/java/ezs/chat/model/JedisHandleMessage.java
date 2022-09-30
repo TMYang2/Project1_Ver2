@@ -6,7 +6,7 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
 public class JedisHandleMessage {
-	// 此範例key的設計為(發送者名稱:接收者名稱)，實際應採用(發送者會員編號:接收者會員編號)
+	// 此範例key的設計為(發送者名稱:接收者名稱)，實際應採用(發送者Member ID:接收者Member ID)
 
 	private static JedisPool pool = JedisPoolUtil.getJedisPool();
 

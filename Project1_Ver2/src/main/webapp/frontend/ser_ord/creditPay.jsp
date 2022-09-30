@@ -487,7 +487,7 @@ pageContext.setAttribute("ordID", ordID);
     </div>
     <div class="form-container">
         <div class="field-container">
-            <label for="name">持卡人姓名</label>
+            <label for="name">持卡人Name</label>
             <input id="name" maxlength="20" type="text">
         </div>
         <div class="field-container">

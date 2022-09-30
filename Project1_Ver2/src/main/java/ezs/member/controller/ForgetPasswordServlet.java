@@ -78,7 +78,7 @@ public class ForgetPasswordServlet extends HttpServlet {
 					String messageText = "親愛的 " + memberVO.getMemName() +"您好!"+ " 請立即開啟連結，完成密碼變更 " +  "\n" 
 							+ "貼心提醒：\r\n"
 							+ "1.此密碼有效時間為30分鐘，如逾時失效，請至EASY SPACE重新申請「忘記密碼」，系統將重新派送。\r\n"
-							+ "2.密碼變更完成後，請使用新密碼重新登入，並請妥善保管您的個人資料，切勿提供他人，以保障您的帳號安全。\r\n";
+							+ "2.密碼變更完成後，請使用新密碼重新Log in，並請妥善保管您的個人資料，切勿提供他人，以保障您的Account Name安全。\r\n";
 					String link = req.getScheme() + "://" + req.getServerName() + ":" + req.getServerPort() + req.getContextPath() +
 							"/frontend/member/updateMemberPassword.jsp?memid=" + memberVO.getMemID(); 
 					System.out.println(link);

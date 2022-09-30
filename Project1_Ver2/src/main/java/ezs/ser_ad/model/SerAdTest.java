@@ -94,7 +94,7 @@ public class SerAdTest {
 //		ser1.setAdPic(null);
 //		dao.insert(ser1);
 
-		// 修改 測試ok
+		// Edit 測試ok
 //		SerAdVO ser2 = new SerAdVO();
 //		ser2.setAdVdrID(2);
 //		ser2.setAdStatus((byte) 1);

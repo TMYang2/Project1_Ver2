@@ -182,7 +182,7 @@ SerClaVO serClaVO = (SerClaVO) request.getAttribute("serClaVO"); //EmpServlet.ja
 			<main>
 				<div class="container-fluid px-4">
 					<h1 class="mt-4">服務類別</h1>
-					<a href="<%=request.getContextPath()%>/backend/ser/ser_cla/select_page.jsp">回首頁</a>
+					<a href="<%=request.getContextPath()%>/backend/ser/ser_cla/select_page.jsp">回HOME PAGE</a>
 			</div>
 	<div class="container">
 		<div class="row">

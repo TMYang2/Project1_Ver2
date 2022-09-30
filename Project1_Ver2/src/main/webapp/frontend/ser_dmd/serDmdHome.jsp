@@ -41,7 +41,7 @@ body {
 		
 		<ul>
 			<li>
-				<a href="<%=request.getContextPath()%>/frontend/ser_dmd/addSerDmd.jsp">新增需求單</a>
+				<a href="<%=request.getContextPath()%>/frontend/ser_dmd/addSerDmd.jsp">Add Requests</a>
 			</li>
 		</ul>
 

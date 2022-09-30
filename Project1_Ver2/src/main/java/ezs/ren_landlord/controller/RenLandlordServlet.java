@@ -101,7 +101,7 @@ public class RenLandlordServlet extends HttpServlet {
 
 					/***************************其他可能的錯誤處理**********************************/
 				} catch (Exception e) {
-					errorMsgs.add("無法取得要修改的資料:" + e.getMessage());
+					errorMsgs.add("無法取得要Edit的資料:" + e.getMessage());
 					RequestDispatcher failureView = req
 							.getRequestDispatcher("/backend/ren/listAllLandlord.jsp");
 					failureView.forward(req, res);
@@ -132,19 +132,19 @@ public class RenLandlordServlet extends HttpServlet {
 						return; //程式中斷
 					}
 					
-					/***************************2.開始修改資料*****************************************/
+					/***************************2.開始Edit資料*****************************************/
 					RenLandlordService renLandlordSvc = new RenLandlordService();
 					renLandlordVO = renLandlordSvc.updateLandlord(lddId,lddMemId,lddApproval);
 					
-					/***************************3.修改完成,準備轉交(Send the Success view)*************/
+					/***************************3.Edit完成,準備轉交(Send the Success view)*************/
 					req.setAttribute("renLandlordVO", renLandlordVO); // 資料庫update成功後,正確的的LandlordVO物件,存入req
 					String url = "/backend/ren/listOneLandlord.jsp";
-					RequestDispatcher successView = req.getRequestDispatcher(url); // 修改成功後,轉交listOneEmp.jsp
+					RequestDispatcher successView = req.getRequestDispatcher(url); // Edit成功後,轉交listOneEmp.jsp
 					successView.forward(req, res);
 
 					/***************************其他可能的錯誤處理*************************************/
 				} catch (Exception e) {
-					errorMsgs.add("修改資料失敗:"+e.getMessage());
+					errorMsgs.add("Edit資料失敗:"+e.getMessage());
 					RequestDispatcher failureView = req
 							.getRequestDispatcher("/backend/ren/update_landlord_input.jsp");
 					failureView.forward(req, res);

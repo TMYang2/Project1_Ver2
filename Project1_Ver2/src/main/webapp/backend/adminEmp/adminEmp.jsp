@@ -207,7 +207,7 @@ pageContext.setAttribute("funList", funList);
 							<thead>
 								<tr class="thead-dark" style="text-align: left;">
 									<th>管理員ID</th>
-									<th>管理員帳號</th>
+									<th>管理員Account Name</th>
 									<th>管理員密碼</th>
 									<th>管理員狀態</th>
 									<th>管理員權限</th>
@@ -266,7 +266,7 @@ pageContext.setAttribute("funList", funList);
 
 
 
-											<td><input type="submit" value="修改權限"> <input
+											<td><input type="submit" value="Edit權限"> <input
 												type="hidden" name="admID" value="${adminEmpVO.admID}">
 												<input type="hidden" name="action" value="update"></td>
 										</FORM>
@@ -291,7 +291,7 @@ pageContext.setAttribute("funList", funList);
 				<%@ include file="page2.file"%>
 				<%-- 錯誤表列 --%>
 				<c:if test="${not empty errorMsgs}">
-					<font style="color: red">請修正以下錯誤:</font>
+					<font style="color: red">Fix:</font>
 					<ul>
 						<c:forEach var="message" items="${errorMsgs}">
 							<p style="color: red">${message}</p>

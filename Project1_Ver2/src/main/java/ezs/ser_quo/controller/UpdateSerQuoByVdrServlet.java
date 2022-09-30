@@ -41,7 +41,7 @@ public class UpdateSerQuoByVdrServlet extends HttpServlet {
 
 				// 其他錯誤處理
 			} catch (Exception e) {
-				errorMsgs.add("無法取得要修改的資料:" + e.getMessage());
+				errorMsgs.add("無法取得要Edit的資料:" + e.getMessage());
 				RequestDispatcher failureView = req.getRequestDispatcher("/backend/ser/serQuo/listOneSerQuo.jsp");
 				failureView.forward(req, res);
 			}
@@ -102,7 +102,7 @@ public class UpdateSerQuoByVdrServlet extends HttpServlet {
 				successView.forward(req, res);
 
 			} catch (Exception e) {
-				errorMsgs.add("修改資料失敗:" + e.getMessage());
+				errorMsgs.add("Edit資料失敗:" + e.getMessage());
 				RequestDispatcher failureView = req.getRequestDispatcher("/backend/ser/serQuo/updateSerQuo.jsp");
 				failureView.forward(req, res);
 			}

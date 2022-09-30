@@ -76,23 +76,23 @@ public class UpdateSerRepoServlet extends HttpServlet {
 					return; // 程式中斷
 				}
 
-				/*************************** 2.開始修改資料 *****************************************/
+				/*************************** 2.開始Edit資料 *****************************************/
 				SerRepoService serRepoSvc = new SerRepoService();
 				serRepoSvc.updateSerRepo(rpID, rpOrdID, rpMemID, rpTxt, rpDate, rpStatus);
 				if(rpStatus == 1) { //檢舉判斷為通過
 					serRepoSvc.updateMemSupReported(rpMemID);
 				}
 
-				/*************************** 3.修改完成,準備轉交(Send the Success view) *************/
+				/*************************** 3.Edit完成,準備轉交(Send the Success view) *************/
 				req.setAttribute("serRepVO", serRepVO); // 資料庫update成功後,正確的的empVO物件,存入req
 				String url = "/backend/ser/ser_repo/listOneSerRepo.jsp";
-				RequestDispatcher successView = req.getRequestDispatcher(url); // 修改成功後,轉交listOneEmp.jsp
+				RequestDispatcher successView = req.getRequestDispatcher(url); // Edit成功後,轉交listOneEmp.jsp
 				successView.forward(req, res);
 
 				/*************************** 其他可能的錯誤處理 *************************************/
 			} catch (Exception e) {
 				e.printStackTrace();
-				errorMsgs.add("修改資料失敗:" + e.getMessage());
+				errorMsgs.add("Edit資料失敗:" + e.getMessage());
 				RequestDispatcher failureView = req.getRequestDispatcher("/backend/ser/ser_repo/update_SerRepo_input.jsp");
 				failureView.forward(req, res);
 			}

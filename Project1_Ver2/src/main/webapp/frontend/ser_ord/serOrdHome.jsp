@@ -31,22 +31,22 @@
 		
 		<ul>
 			<li><a
-				href="<%=request.getContextPath()%>/frontend/ser_ord/getOrdByVdrID.jsp">廠商檢視訂單</a>
+				href="<%=request.getContextPath()%>/frontend/ser_ord/getOrdByVdrID.jsp">廠商Check Orders</a>
 			</li>
 		</ul>
 		<ul>
 			<li><a
-				href="<%=request.getContextPath()%>/frontend/ser_ord/getOrdByMemID.jsp">會員檢視訂單</a>
+				href="<%=request.getContextPath()%>/frontend/ser_ord/getOrdByMemID.jsp">會員Check Orders</a>
 			</li>
 		</ul>
 		<ul>
 			<li><a
-				href="<%=request.getContextPath()%>/frontend/ser_ord/findQuoBeforeByVdrID.jsp">新增訂單</a>
+				href="<%=request.getContextPath()%>/frontend/ser_ord/findQuoBeforeByVdrID.jsp">Add an Order</a>
 			</li>
 		</ul>
 		<ul>
 			<li><a
-				href="<%=request.getContextPath()%>/frontend/ser_ord/updateSerOrd.jsp">修改訂單</a>
+				href="<%=request.getContextPath()%>/frontend/ser_ord/updateSerOrd.jsp">Edit訂單</a>
 			</li>
 		</ul>
 		

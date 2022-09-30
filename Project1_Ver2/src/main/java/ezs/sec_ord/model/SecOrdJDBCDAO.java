@@ -414,7 +414,7 @@ public class SecOrdJDBCDAO implements SecOrdDAO_interface {
 				System.out.println("未取得自增主鍵值");
 			}
 			rs.close();
-			// 再同時新增訂單明細
+			// 再同時Add an Order明細
 			SecOrdDetailsJDBCDAO dao = new SecOrdDetailsJDBCDAO();
 //			System.out.println("list.size()-A=" + list.size());
 			for (SecOrdDetailsVO aSecOrdDetails : list) {
@@ -426,7 +426,7 @@ public class SecOrdJDBCDAO implements SecOrdDAO_interface {
 			con.commit();
 			con.setAutoCommit(true);
 //			System.out.println("list.size()-B=" + list.size());
-//			System.out.println("新增訂單編號" + next_secOrdno + "時,共有訂單明細" + list.size() + "筆同時被新增");
+//			System.out.println("Add an Order編號" + next_secOrdno + "時,共有訂單明細" + list.size() + "筆同時被新增");
 
 			// Handle any SQL errors
 		} catch (SQLException se) {
@@ -448,7 +448,7 @@ public class SecOrdJDBCDAO implements SecOrdDAO_interface {
 	}
 
 	
-// 	測試新增訂單時，同時會增加訂單明細
+// 	測試Add an Order時，同時會增加訂單明細
 	public static void main(String[] args) {
 
 		SecOrdJDBCDAO dao = new SecOrdJDBCDAO();

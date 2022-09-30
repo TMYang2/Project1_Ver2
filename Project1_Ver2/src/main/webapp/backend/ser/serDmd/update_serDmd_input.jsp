@@ -56,18 +56,18 @@ SerDmdVO serDmdVO = (SerDmdVO) request.getAttribute("serDmdVO");
 
 <table id="table-1">
 	<tr><td>
-		 <h3>需求單資料修改 - update_serDmd_input.jsp</h3>
-		 <h4><a href="<%=request.getContextPath()%>/backend/ser/serDmd/select_page.jsp">回首頁</a></h4>
+		 <h3>需求單資料Edit - update_serDmd_input.jsp</h3>
+		 <h4><a href="<%=request.getContextPath()%>/backend/ser/serDmd/select_page.jsp">回HOME PAGE</a></h4>
 	</td></tr>
 </table>
 <div style="text-align: center">
-<h3>資料修改</h3>
+<h3>資料Edit</h3>
 </div>
 
 
 <%-- 錯誤表列 --%>
 <c:if test="${not empty errorMsgs}">
-	<font style="color:red">請修正以下錯誤:</font>
+	<font style="color:red">Fix:</font>
 	<ul>
 		<c:forEach var="message" items="${errorMsgs}">
 			<li style="color:red">${message}</li>
@@ -99,12 +99,12 @@ SerDmdVO serDmdVO = (SerDmdVO) request.getAttribute("serDmdVO");
 			 value="<%= serDmdVO.getDmdSerClaID() %>"/></td>
 	</tr>
 	<tr>
-		<td>需求人姓名:</td>
+		<td>需求人Name:</td>
 		<td><input type="TEXT" name="dmdName" 
 			 value="<%= serDmdVO.getDmdName() %>"/></td>
 	</tr>
 	<tr>
-		<td>需求人電話:</td>
+		<td>需求人Phone Number:</td>
 		<td><input type="TEXT" name="dmdTel" 
 			 value="<%=  serDmdVO.getDmdTel() %>"/></td>
 	</tr>
@@ -124,7 +124,7 @@ SerDmdVO serDmdVO = (SerDmdVO) request.getAttribute("serDmdVO");
 			 value="<%= serDmdVO.getDmdRegion() %>"/></td>
 	</tr>
 	<tr>
-		<td>案場詳細地址:</td>
+		<td>案場詳細Address:</td>
 		<td><input type="TEXT" name="dmdAddress" size="50"
 			 value="<%= serDmdVO.getDmdAddress() %>"/></td>
 	</tr>
@@ -161,7 +161,7 @@ SerDmdVO serDmdVO = (SerDmdVO) request.getAttribute("serDmdVO");
 <br>
 <input type="hidden" name="action" value="update">
 <input type="hidden" name="dmdID" value="<%=serDmdVO.getDmdID()%>">
-<input type="submit" value="送出修改"></FORM>
+<input type="submit" value="送出Edit"></FORM>
 </body>
 <script>
 	// 	// // change這個event有只代表改變，並不代表有檔案。

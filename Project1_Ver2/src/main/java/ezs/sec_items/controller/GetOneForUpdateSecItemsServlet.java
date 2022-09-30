@@ -68,7 +68,7 @@ System.out.println("=>>>"+successView);
 				/*************************** 其他可能的錯誤處理 **********************************/
 			} catch (Exception e) {
 				e.printStackTrace();
-				errorMsgs.add("無法取得要修改的資料:" + e.getMessage());
+				errorMsgs.add("無法取得要Edit的資料:" + e.getMessage());
 				RequestDispatcher failureView = req.getRequestDispatcher("/frontend/sec_items/listAllSecItems.jsp");
 				failureView.forward(req, res);
 			}

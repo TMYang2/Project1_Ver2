@@ -176,7 +176,7 @@ figure img {
 
 	<ul>
 		<li>
-			<a href='<%=request.getContextPath()%>/backend/ser/serAd/viewSerAd.jsp'>檢視刊登服務</a> <br>
+			<a href='<%=request.getContextPath()%>/backend/ser/serAd/viewSerAd.jsp'>檢視Post an Ad</a> <br>
 		</li>
 	</ul>
 

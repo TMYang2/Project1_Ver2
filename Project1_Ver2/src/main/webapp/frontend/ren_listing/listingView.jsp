@@ -268,7 +268,7 @@
 						<div class="img_block">
 							<img src="<%=request.getContextPath()%>/ren_listing/RenListing_pic_ReaderServlet.do?LIS_ID=${renListingVO.lisID}" width = 200px>
 						</div> 
-								<span class="item_text">房源編號:${renListingVO.lisID}</span>
+								<span class="item_text">Listing ID:${renListingVO.lisID}</span>
 								<span class="item_text">${renListingVO.lisTitle}</span>
 								<span class="item_text"><c:forEach var="renRoomtypeVO" items="${renRoomtypeSvc.all}">
                     										<c:if test="${renListingVO.lisRtID==renRoomtypeVO.rtID}">
@@ -282,7 +282,7 @@
                     											</c:if>
                 										</c:forEach>
                 				</span>
-								<span class="item_text">地址:${renListingVO.lisAddress}</span>
+								<span class="item_text">Address:${renListingVO.lisAddress}</span>
 								<span class="item_text">坪數:${renListingVO.lisSqft}</span>
 								<span class="item_text">樓層:${renListingVO.lisFlr}</span>
 								<span class="item_text">${renListingVO.lisRmNo}房</span>

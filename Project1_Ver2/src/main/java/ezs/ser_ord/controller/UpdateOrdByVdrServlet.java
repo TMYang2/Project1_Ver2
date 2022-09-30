@@ -40,7 +40,7 @@ public class UpdateOrdByVdrServlet extends HttpServlet {
 
 				// 其他錯誤處理
 			} catch (Exception e) {
-				errorMsgs.add("無法取得要修改的資料:" + e.getMessage());
+				errorMsgs.add("無法取得要Edit的資料:" + e.getMessage());
 				RequestDispatcher failureView = req.getRequestDispatcher("/backend/ser/serOrd/listOneSerOrd.jsp");
 				failureView.forward(req, res);
 			}
@@ -146,7 +146,7 @@ public class UpdateOrdByVdrServlet extends HttpServlet {
 						ordAddr, ordItem, ordTotalPrice, ordPrePay, ordPayType, ordPayDate, ordFpay, ordFpayType,
 						ordFpayDate, ordBuyerScore, ordBuyerTxt, ordVdrScore, ordVdrTxt, ordNote, ordID);
 
-				// 3.修改完成，轉交
+				// 3.Edit完成，轉交
 				String url = "/frontend/ser_ord/getOrdByVdrID.jsp";
 				RequestDispatcher successView = req.getRequestDispatcher(url); // 新增成功後轉交listAllEmp.jsp
 				successView.forward(req, res);

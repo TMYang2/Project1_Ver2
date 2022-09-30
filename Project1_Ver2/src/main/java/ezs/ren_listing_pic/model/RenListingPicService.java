@@ -23,7 +23,7 @@ public class RenListingPicService {
 		
 		return renListingPicVO;
 	}
-	//修改
+	//Edit
 	public RenListingPicVO updateRenListingPic(Integer lspID,Integer lspLisID,byte[] lspPic) {
 		
 		RenListingPicVO renListingPicVO = new RenListingPicVO();

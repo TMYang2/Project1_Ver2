@@ -29,7 +29,7 @@ SerOrdVO serOrdVO = (SerOrdVO) request.getAttribute("serOrdVO");
 				
 				<h4>
 					<a
-						href="<%=request.getContextPath()%>/backend/ser/serOrd/ordBackend.jsp">回首頁</a>
+						href="<%=request.getContextPath()%>/backend/ser/serOrd/ordBackend.jsp">回HOME PAGE</a>
 				</h4>
 			</td>
 		</tr>
@@ -57,12 +57,12 @@ SerOrdVO serOrdVO = (SerOrdVO) request.getAttribute("serOrdVO");
 							<th>廠商ID</th>
 							<th>會員統一編號</th>
 							<th>廠商統一編號</th>
-							<th>業主姓名</th>
-							<th>業主電話</th>
+							<th>業主Name</th>
+							<th>業主Phone Number</th>
 							<th>施作日期</th>
 							<th>案場縣市</th>
 							<th>案場地區</th>
-							<th>案場詳細地址</th>
+							<th>案場詳細Address</th>
 							<th>施工項目</th>
 							<th>總金額</th>
 							<th>訂金</th>
@@ -76,7 +76,7 @@ SerOrdVO serOrdVO = (SerOrdVO) request.getAttribute("serOrdVO");
 							<th>客戶評價廠商星數</th>
 							<th>客戶評價廠商留言</th> --%>	
 							<th>備註</th>
-							<th>修改</th>
+							<th>Edit</th>
 							<th>刪除</th>
 
 						</tr>
@@ -116,7 +116,7 @@ SerOrdVO serOrdVO = (SerOrdVO) request.getAttribute("serOrdVO");
 								<FORM METHOD="post"
 									ACTION="<%=request.getContextPath()%>/ser_ord/UpdateOrdServlet.do"
 									style="margin-bottom: 0px;">
-									<input type="submit" value="修改"> <input type="hidden"
+									<input type="submit" value="Edit"> <input type="hidden"
 										name="ordID" value="${serOrdVO.ordID}"> <input
 										type="hidden" name="action" value="updateOneOrd">
 								</FORM>

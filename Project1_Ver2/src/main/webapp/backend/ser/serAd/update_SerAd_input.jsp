@@ -183,14 +183,14 @@ SerAdVO serAdVO = (SerAdVO) request.getAttribute("serAdVO"); //EmpServlet.java (
 		<div id="layoutSidenav_content">
 			<main>
 				<div class="container-fluid px-4">
-					<h1 class="mt-4">刊登服務修改</h1>
+					<h1 class="mt-4">Post an AdEdit</h1>
 				
-					<a href="<%=request.getContextPath()%>/backend/ser/serAd/select_page.jsp">回首頁</a>
+					<a href="<%=request.getContextPath()%>/backend/ser/serAd/select_page.jsp">回HOME PAGE</a>
 				
 
 	<%-- 錯誤表列 --%>
 	<c:if test="${not empty errorMsgs}">
-		<font style="color: red">請修正以下錯誤:</font>
+		<font style="color: red">Fix:</font>
 		<ul>
 			<c:forEach var="message" items="${errorMsgs}">
 				<li style="color: red">${message}</li>
@@ -258,7 +258,7 @@ SerAdVO serAdVO = (SerAdVO) request.getAttribute("serAdVO"); //EmpServlet.java (
 		<input type="hidden" name="adDist" value="<%=serAdVO.getAdDist()%>">
 		<input type="hidden" name="adTxt" value="<%=serAdVO.getAdTxt()%>">
 		<input type="hidden" name="adPic" value="<%=serAdVO.getAdPic()%>">
-		 <input type="submit" value="送出修改">
+		 <input type="submit" value="送出Edit">
 	</FORM>
 </div>
 			</main>

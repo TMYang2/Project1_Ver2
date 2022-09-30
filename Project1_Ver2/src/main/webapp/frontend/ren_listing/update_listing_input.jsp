@@ -53,15 +53,15 @@ RenListingPicVO renListingPicVO = (RenListingPicVO) request.getAttribute("renLis
  
 
 	<tr><td>
-		<h3>房東修改</h3>
-		<h4><a href="listing_select_page.jsp">回首頁</a></h4>
+		<h3>房東Edit</h3>
+		<h4><a href="listing_select_page.jsp">回HOME PAGE</a></h4>
 	</td></tr>
 </table>
-	<h3>資料修改</h3>
+	<h3>資料Edit</h3>
 	
 <%-- 錯誤表列 --%>
 <c:if test="${not empty errorMsgs}">
-	<font style="color:red">請修正以下錯誤:</font>
+	<font style="color:red">Fix:</font>
 	<ul>
 		<c:forEach var="message" items="${errorMsgs}">
 			<li style="color:red">${message}</li>
@@ -72,7 +72,7 @@ RenListingPicVO renListingPicVO = (RenListingPicVO) request.getAttribute("renLis
 <FORM METHOD="post" enctype="multipart/form-data" ACTION="RenListingServlet.do" name="form1">
 <table>
 	<tr>
-		<td>房源編號:</td>
+		<td>Listing ID:</td>
 		<td><%=(renListingVO == null) ? "" : renListingVO.getLisID()%></td>
 	</tr>
 	<tr>
@@ -96,7 +96,7 @@ RenListingPicVO renListingPicVO = (RenListingPicVO) request.getAttribute("renLis
 				</c:forEach>
 		</select></td>
 	<tr>
-		<td>詳細地址<font color=red><b>*</b></font></td>
+		<td>詳細Address<font color=red><b>*</b></font></td>
 		<td><input type="TEXT" name="lisAddress" size="45" value="<%=(renListingVO == null) ? "" :renListingVO.getLisAddress()%>" /></td>
 	</tr>
 	<tr>
@@ -330,7 +330,7 @@ RenListingPicVO renListingPicVO = (RenListingPicVO) request.getAttribute("renLis
 <br>
 <input type="hidden" name="action" value="update">
 <input type="hidden" name="lisID" value="<%=(renListingVO == null) ? "" : renListingVO.getLisID()%>">
-<input type="submit" value="送出修改">
+<input type="submit" value="送出Edit">
 </FORM>
 </body>
 

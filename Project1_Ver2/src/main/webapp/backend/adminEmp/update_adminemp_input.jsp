@@ -42,17 +42,17 @@ AdminEmpVO admEmpVO =  (AdminEmpVO) request.getAttribute("adminEmpVO"); //EmpSer
 				<th>
 					<input type="hidden" name="admUsername" value="<%=admEmpVO.getAdmUsername()%>"/>
 					<input type="hidden" name="action" value="update">
-					<input type=submit  value="確認修改" >
+					<input type=submit  value="確認Edit" >
 				</tr></div>
 			
 			</table>
 		</div>
 
 	</form>
-	<div><a href="<%=request.getContextPath()%>/backend/adminEmp/adminEmp.jsp">回首頁</a></div>
+	<div><a href="<%=request.getContextPath()%>/backend/adminEmp/adminEmp.jsp">回HOME PAGE</a></div>
 	<div><%-- 錯誤表列 --%>
 					<c:if test="${not empty errorMsgs}">
-						<font style="color: red">請修正以下錯誤:</font>
+						<font style="color: red">Fix:</font>
 						<ul>
 							<c:forEach var="message" items="${errorMsgs}">
 								<li style="color: red">${message}</li>

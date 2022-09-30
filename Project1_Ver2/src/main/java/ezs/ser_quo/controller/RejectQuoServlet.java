@@ -48,7 +48,7 @@ public class RejectQuoServlet extends HttpServlet {
 				successView.forward(req, res);
 				// 其他錯誤處理
 			} catch (Exception e) {
-				errorMsgs.add("無法取得要修改的資料:" + e.getMessage());
+				errorMsgs.add("無法取得要Edit的資料:" + e.getMessage());
 				RequestDispatcher failureView = req.getRequestDispatcher("/backend/ser/serQuo/listOneSerQuo.jsp");
 				failureView.forward(req, res);
 			}

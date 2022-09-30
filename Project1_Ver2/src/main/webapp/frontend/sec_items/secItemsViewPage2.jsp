@@ -209,7 +209,7 @@
 					<c:forEach var="secItemsVO" items="${secItemslist}">
 						<c:if test="${secItemsVO.shID==secPicsVO.shID}">
 							<form method="post" action="<%=request.getContextPath()%>/sec_items/ShoppingServlet.do">
-								<input type="submit" value="加入購物車">
+								<input type="submit" value="加入Cart">
 								<input type="hidden" name="shID" value="${secItemsVO.shID}">
 								<input type="hidden" name="shName" value="${secItemsVO.shName}">
 								<input type="hidden" name="shPrice" value="${secItemsVO.shPrice}">

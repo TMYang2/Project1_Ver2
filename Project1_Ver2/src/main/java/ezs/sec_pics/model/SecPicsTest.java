@@ -24,7 +24,7 @@ public class SecPicsTest {
 //		Integer shPicID = 4;
 //		dao.delete(shPicID);
 //		
-//		3.修改
+//		3.Edit
 //		try {
 //			secPicsVO.setShPicID(3);
 //			secPicsVO.setShID(2);
