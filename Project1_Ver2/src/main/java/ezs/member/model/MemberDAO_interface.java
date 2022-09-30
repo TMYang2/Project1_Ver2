@@ -16,6 +16,8 @@ public interface MemberDAO_interface {
 
 	public List<MemberVO> getAll();
 
+	public List<MemberVO> findByMemID(Integer MemID);
+
 	public MemberVO Search(String memUsername, String memPassword);
 
 	public void verifyMember(String memName);

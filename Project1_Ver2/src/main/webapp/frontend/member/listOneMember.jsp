@@ -7,7 +7,13 @@
 <%
 	Integer memID = (Integer)session.getAttribute("memID");
 	MemberService memSvc = new MemberService();
-    MemberVO memberVO = memSvc.getOneMember(memID);
+	
+	List<MemberVO> memberList = memSvc.findByMemID(memID);
+	pageContext.setAttribute("memberList", memberList);
+	
+	MemberVO memberVO = (MemberVO) request.getAttribute("memberVO");
+	
+//     MemberVO memberVO = memSvc.getOneMember(memID);
 %>
 
 <html>
@@ -257,6 +263,9 @@ text-align: center;
 <div class="container">
 	    <div class="row">
 		    <table class="table table-hover table-striped">
+		    
+		    <c:forEach var="memberVO" items="${memberList}">
+						
 
 	<tr>
 		<th id="test">Profile Picture</th>
@@ -297,7 +306,7 @@ text-align: center;
 					</form></td>
 	</tr>
 
-
+</c:forEach>
 </table>
 </div>
     </div>

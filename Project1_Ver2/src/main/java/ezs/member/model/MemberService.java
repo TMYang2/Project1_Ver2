@@ -78,18 +78,19 @@ public MemberVO addMember(String memUsername, String memPassword, String memName
 	public List<MemberVO> getAll() {
 		return dao.getAll();
 	}
+	
+	public List<MemberVO> findByMemID(Integer MemID){
+		return dao.findByMemID(MemID);
+	}
 
 	public MemberVO Search(String memUsername, String memPassword) {
 		return dao.Search(memUsername, memPassword);
 	}
-	
-
 
 	public void verifyMember(String memName) {
 		dao.verifyMember(memName);
 
-	}
-	
+	}	
 
 	public MemberVO searchEmail(String memEmail) {
 		return dao.searchEmail(memEmail);

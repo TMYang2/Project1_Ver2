@@ -39,6 +39,9 @@ public class MemberJDBCDAO implements MemberDAO_interface {
 
 	private static final String SEARCH_PID = "SELECT * FROM `CFA104G5`.`MEMBER` WHERE mem_pid = ?";
 
+
+	public static final String FIND_BY_MEMID = "SELECT * FROM `CFA104G5`.`MEMBER` WHERE mem_id = ?";
+	
 	static {
 		try {
 			Class.forName(Util.DRIVER);
@@ -442,6 +445,55 @@ public class MemberJDBCDAO implements MemberDAO_interface {
 		}
 		return memberVO;
 
+	}
+	
+	@Override
+	public List<MemberVO> findByMemID(Integer MemID) {
+		List<MemberVO> list = new ArrayList<MemberVO>();
+		MemberVO memberVO = null;
+
+		try {
+			con = DriverManager.getConnection(Util.URL, Util.USER, Util.PASSWORD);
+			pstmt = con.prepareStatement(FIND_BY_MEMID);
+			pstmt.setInt(1, MemID);
+			rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				memberVO = new MemberVO();
+				memberVO.setMemID(rs.getInt("MEM_ID"));
+				memberVO.setMemUsername(rs.getString("MEM_USERNAME"));
+				memberVO.setMemPassword(rs.getString("MEM_PASSWORD"));
+				memberVO.setMemName(rs.getString("MEM_NAME"));
+				memberVO.setMemLandlord(rs.getByte("MEM_LANDLORD"));
+				memberVO.setMemSupplier(rs.getByte("MEM_SUPPLIER"));
+				memberVO.setMemSeller(rs.getByte("MEM_SELLER"));
+				memberVO.setMemPhone(rs.getString("MEM_PHONE"));
+				memberVO.setMemAddress(rs.getString("MEM_ADDRESS"));
+				memberVO.setMemEmail(rs.getString("MEM_EMAIL"));
+				memberVO.setMemPID(rs.getString("MEM_PID"));
+				memberVO.setMemStatus(rs.getByte("MEM_STATUS"));
+				memberVO.setMemHeadshot(rs.getBytes("MEM_HEADSHOT"));
+				memberVO.setMemRevCount(rs.getInt("MEM_REV_COUNT"));
+				memberVO.setMemRevScore(rs.getInt("MEM_REV_SCORE"));
+				memberVO.setMemRedCount(rs.getInt("MEM_RED_COUNT"));
+				memberVO.setMemRedScore(rs.getInt("MEM_RED_SCORE"));
+				memberVO.setMemReported(rs.getInt("MEM_REPORTED"));
+				memberVO.setMemLddReported(rs.getInt("MEM_LDD_REPORTED"));
+				memberVO.setMemSupReported(rs.getInt("MEM_SUP_REPORTED"));
+				memberVO.setMemSelReported(rs.getInt("MEM_SEL_REPORTED"));
+				memberVO.setMemVatno(null);
+				list.add(memberVO);
+			}
+
+		}
+
+		catch (SQLException se) {
+			se.printStackTrace();
+		} finally {
+			Util.closeResource(con, pstmt, rs);
+
+		}
+		return list;
 	}
 
 }
