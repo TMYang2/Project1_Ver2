@@ -270,7 +270,7 @@
 			</li>
 			
 			<li>
-				<button id="addApp" class="float-left submit-button" >預約看房</button>
+				<button id="addApp" class="float-left submit-button" >Make an Appointment</button>
 				<script type="text/javascript">
     				document.getElementById("addApp").onclick = function () {
        					location.href = "<%=request.getContextPath()%>/frontend/ren_appointment/addRenAppointment.jsp?aptLisId=${renListingVO.lisID}&aptLddId=${renListingVO.lisLddID}";

@@ -1,15 +1,18 @@
+<%@page import="ezs.ren_listing.model.RenListingService"%>
 <%@page import="java.sql.Timestamp"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page import="ezs.ren_appointment.model.*"%>
 <%@ page import="java.util.*"%>
-
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%
 	RenAppointmentVO renAppointmentVO = (RenAppointmentVO) request.getAttribute("renAppointmentVO");
 %>
 <%
     Integer memID = (Integer)session.getAttribute("memID");
     RenAppointmentService renAppSvc = new RenAppointmentService();
+//     RenListingService renLisSvc = new RenListingService();
+    
 
     String aptLisId = (String) request.getParameter("aptLisId");
     pageContext.setAttribute("aptLisId", aptLisId);
@@ -305,10 +308,42 @@
 		    <table class="table table-hover table-striped">
 
 	<tr>
-		<th id="test">Listing ID:<font color=red><b>*</b></font></th>
-		<td><input type="TEXT" readonly="readonly" name="aptLisId"
-			 value="${aptLisId}" /></td>
+		<th id="test">Listing:</th>
+		<td><c:forEach var="renLisVO" items="${renLisSvc.all}">
+                    <c:if test="${aptLisId==renLisVO.lisID}">
+	                    【${renLisVO.lisID}】 - ${renLisVO.lisTitle}
+                    </c:if>
+                </c:forEach></td>
 	</tr>
+	
+	<tr>
+	<th id="test">Landlord:</th>
+	<td><c:forEach var="renLDDVO" items="${renLDDSvc.all}">
+                    <c:if test="${aptLddId==renLDDVO.lddId}">
+                    	<c:forEach var="memVO" items="${memSvc.all}">
+                    	 <c:if test="${memVO.memID==renLDDVO.lddMemId}">
+	                    【${memVO.memID}】 - ${memVO.memUsername}
+	                    </c:if> </c:forEach>
+                    </c:if> </c:forEach>
+			</td>
+	</tr>
+	<tr>
+	<th id="test">Landlord Score:</th>
+	<td><c:forEach var="renLDDVO" items="${renLDDSvc.all}">
+					<c:if test="${aptLddId==renLDDVO.lddId}">
+                    	<c:forEach var="memVO" items="${memSvc.all}">
+                    		<c:if test="${memVO.memID==renLDDVO.lddMemId}">
+                    		<c:choose>
+								<c:when test="${(memVO.memRedCount) == 0}">N/A</c:when>
+							<c:otherwise>
+								<fmt:formatNumber type="number" maxFractionDigits="1" 
+									value="${(memVO.memRedScore/memVO.memRedCount)}"/>
+							</c:otherwise></c:choose></c:if> </c:forEach> </c:if> </c:forEach></td>
+	</tr>		
+	
+	
+	
+	
 	<tr>
 		<th id="test">Appointment Time:</th>
 		<td><input name="aptTime" id="f_date1" type="text"></td>
@@ -318,6 +353,7 @@
     </div>
 <br>
 <input type="hidden" name="aptMemId" value="${memID}"/>
+<input type="hidden" name="aptLisId" value="${aptLisId}"/>
 <input type="hidden" name="aptLddId" value="${aptLddId}"/>
 <input type="hidden" name="action" value="insert">
 <input type="submit" value="Confirm"></FORM>
