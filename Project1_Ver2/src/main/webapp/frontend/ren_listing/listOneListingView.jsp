@@ -9,7 +9,8 @@
  RenListingVO renListingVO = (RenListingVO) request.getAttribute("renListingVO");
 %>
 <%
- RenFavoritesVO renFavoritesVO = (RenFavoritesVO) request.getAttribute("renFavoritesVO");
+ 	RenFavoritesVO renFavoritesVO = (RenFavoritesVO) request.getAttribute("renFavoritesVO");
+	Integer memID = (Integer)session.getAttribute("memID");
 
 %>
 
@@ -190,6 +191,51 @@
       }
     </style>
   </head>
+  
+  
+<!--   IGNORE THESE  -->
+  <script language="javascript">
+    const addToFav = document.getElementById('addFav');
+    addToFav.addEventListener('click', event => {
+    	if(event.target.matches('.icon_heart')){
+    		addFavorites(event.target.dataset.id);
+    	}
+    })
+    
+    function addFavorites(favid){
+    	let addFav = favid.split("v");
+    	$.ajax({
+    		type:"POST",
+    		dataType: "json",
+    		data:{
+    			""
+    		}
+    		url: "<%=request.getContextPath()%>/RenFavoritesServlet.do?action=add&favLisId=" + addFav,
+    		success: function(res){
+    			if(icon.getAttribute("name") === "heart_outline"){
+					$.ajax({
+						type : "POST",
+						success : function() {
+							alert('Added to Favourites!');
+							icon.setAttribute("name","heart");
+						}
+					});
+				}else{
+					$.ajax({
+						type : "POST",
+						success : function() {
+							alert('Removed from Favourites!');
+							icon.setAttribute("name","heart_outline");
+						}
+					});
+				}
+    		}		
+    	})
+    }  
+</script>
+<!--   IGNORE THESE  -->
+
+  
 <body>
 <%--   	<jsp:include page="/frontend/EZ_nav.jsp"/> --%>
     <jsp:include page="/frontend/EZ_LoginHeader.jsp" />
@@ -208,23 +254,29 @@
           <ul>
             <li class="probootstrap-animate active" data-animate-effect="fadeInLeft"><a href="<%=request.getContextPath() %>/frontend/ren_listing/listingView.jsp">瀏覽租屋案件</a></li>
             <li>   
-
-
-<button id="addFav" class="float-left submit-button" >收藏房源</button>
-<script type="text/javascript">
-    document.getElementById("addFav").onclick = function () {
-        location.href = "<%=request.getContextPath()%>/frontend/ren_favorites/addRenFavorites.jsp?favLisId=${renListingVO.lisID}";
-    };
-</script>
-</li>
-<li>
-<button id="addApp" class="float-left submit-button" >預約看房</button>
-<script type="text/javascript">
-    document.getElementById("addApp").onclick = function () {
-        location.href = "<%=request.getContextPath()%>/frontend/ren_appointment/addRenAppointment.jsp?aptLisId=${renListingVO.lisID}&aptLddId=${renListingVO.lisLddID}";
-    };
-</script>
-</li>
+				<FORM METHOD="post" ACTION="<%=request.getContextPath()%>/RenFavoritesServlet.do">
+					<input type="hidden" name="favLisId" value="${renListingVO.lisID}"> 
+					<input type="hidden" name="favMemId" value="${memID}"> 
+					
+					
+					<c:choose>
+						<c:when test=""></c:when>
+					</c:choose>
+					
+					
+					<input type="hidden" name="action" value="add">		
+					<button id="addFav" class="float-left submit-button">Add to Favorites</button>
+				</FORM>
+			</li>
+			
+			<li>
+				<button id="addApp" class="float-left submit-button" >預約看房</button>
+				<script type="text/javascript">
+    				document.getElementById("addApp").onclick = function () {
+       					location.href = "<%=request.getContextPath()%>/frontend/ren_appointment/addRenAppointment.jsp?aptLisId=${renListingVO.lisID}&aptLddId=${renListingVO.lisLddID}";
+    				};
+				</script>
+			</li>
 
 	
 	<li>

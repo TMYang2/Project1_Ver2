@@ -229,7 +229,7 @@ a {
 	<div class="login-wrap">
 		<div class="login-html">
 			<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label
-				for="tab-1" class="tab">Log in</label> <input id="tab-2" type="radio"
+				for="tab-1" class="tab">Login</label> <input id="tab-2" type="radio"
 				name="tab" class="for-pwd"><label for="tab-2" class="tab">Forget Password</label>
 			<div class="login-form">
 				<div class="sign-in-htm">

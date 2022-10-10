@@ -275,7 +275,7 @@
 </table></div>
     </div>
 <br>
-<input type="hidden" name="action" value="insert">
+<input type="hidden" name="action" value="add">
 <input type="hidden" name="favMemId" value="${memID}" />
 <input type="submit" value="Add"></FORM>
 
